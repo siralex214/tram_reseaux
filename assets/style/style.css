@@ -1,5 +1,5 @@
 /* RESET CSS*/
-body{
+body {
     margin: 0%;
 }
 
@@ -8,6 +8,7 @@ header {
     font-family: 'Reem Kufi', sans-serif;
 
 }
+
 a {
     text-decoration: none;
 }
@@ -37,7 +38,7 @@ ul {
     position: relative;
     color: white;
     border: none;
-    
+
 }
 
 #triangle {
@@ -54,7 +55,8 @@ ul {
     top: 55px;
     right: -46px;
 }
-#ligne1{
+
+#ligne1 {
     background-color: rgb(255, 255, 255);
     width: 520px;
     height: 2px;
@@ -62,7 +64,8 @@ ul {
     top: 22px;
     left: -302px;
 }
-#ligne2{
+
+#ligne2 {
     background-color: rgb(255, 255, 255);
     width: 520px;
     height: 2px;
@@ -70,7 +73,8 @@ ul {
     top: 89px;
     left: -89px;
 }
-#ligne3{
+
+#ligne3 {
     background-color: rgb(255 255 255);
     width: 520px;
     height: 2px;
@@ -78,7 +82,8 @@ ul {
     top: 76px;
     left: -284px;
 }
-#accueil{
+
+#accueil {
     position: absolute;
     top: 6px;
     left: 258px;
@@ -87,7 +92,8 @@ ul {
     border-radius: 30px;
     padding: 7px 10px 7px 10px;
 }
-#quisommesnous{
+
+#quisommesnous {
     position: absolute;
     top: 6px;
     left: 457px;
@@ -95,8 +101,9 @@ ul {
     border: 3px solid white;
     border-radius: 30px;
     padding: 7px 10px 7px 10px;
-} 
-  #tourne {
+}
+
+#tourne {
     transform: rotate(34deg);
     width: 50px;
     height: 2px;
@@ -104,9 +111,9 @@ ul {
     position: absolute;
     top: 36px;
     left: 213px;
-  }
-  
-  #tourner {
+}
+
+#tourner {
     transform: rotate(124deg);
     width: 50px;
     height: 2px;
@@ -114,28 +121,28 @@ ul {
     position: absolute;
     top: 69px;
     left: 420px;
-  }
+}
 
-  /* ANIMATIONS LIGNE */
+/* ANIMATIONS LIGNE */
 
-  @-webkit-keyframes pointLumineux {
+@-webkit-keyframes pointLumineux {
     0% {
-      left: 0%;
+        left: 0%;
     }
     50% {
-      left: 13.9%;
-    }   
+        left: 13.9%;
+    }
     80% {
-        left:16%;
-        bottom:10%;
+        left: 16%;
+        bottom: 10%;
     }
     100% {
         left: 10px;
-        
-    }
-  }
 
-  #point_lumineux {
+    }
+}
+
+#point_lumineux {
     background-color: rgb(255, 230, 0);
     position: relative;
     border-radius: 100%;
@@ -153,25 +160,26 @@ ul {
     animation-name: pointLumineux;
     animation-duration: 8s;
     animation-iteration-count: infinite;
-  }
+}
 
-  @-webkit-keyframes pointLumineux2 {
+@-webkit-keyframes pointLumineux2 {
     0% {
-      left: 0%;
+        left: 0%;
     }
     50% {
-      left: 13.9%;
-    }   
+        left: 13.9%;
+    }
     80% {
-        left:16%;
-        bottom:10%;
+        left: 16%;
+        bottom: 10%;
     }
     100% {
         left: 10px;
-        
+
     }
-  }
-  #point_lumineux2 {
+}
+
+#point_lumineux2 {
     background-color: rgb(255, 230, 0);
     position: relative;
     border-radius: 100%;
@@ -189,8 +197,8 @@ ul {
     animation-name: pointLumineux2;
     animation-duration: 10s;
     animation-iteration-count: infinite;
-  }
-  
+}
+
 
 #ligne2 {
     background-color: black;
