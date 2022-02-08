@@ -120,203 +120,203 @@ h3,
   }
 }
 
-  /* RESET CSS*/
-  body {
-    margin: 0%;
-  }
+/* RESET CSS*/
+body {
+  margin: 0%;
+}
 
-  /* HEADER */
-  header {
-    font-family: "Reem Kufi", sans-serif;
-  }
-  a {
-    text-decoration: none;
-  }
+/* HEADER */
+header {
+  font-family: "Reem Kufi", sans-serif;
+}
+a {
+  text-decoration: none;
+}
 
-  * {
-    scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-  body {
-    overflow-x: hidden;
-  }
+body {
+  overflow-x: hidden;
+}
 
-  ul {
-    list-style: none;
-  }
+ul {
+  list-style: none;
+}
 
-  #nav {
-    width: 100%;
-    height: 100px;
-    background-color: #279b8f;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    color: white;
-    border: none;
-  }
+#nav {
+  width: 100%;
+  height: 100px;
+  background-color: #279b8f;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  color: white;
+  border: none;
+}
 
-  #triangle {
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 100px solid #ffffff;
-    position: relative;
-  }
+#triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid #ffffff;
+  position: relative;
+}
 
-  #logo {
-    position: absolute;
-    top: 55px;
-    right: -46px;
-  }
-  #ligne1 {
-    background-color: rgb(255, 255, 255);
-    width: 520px;
-    height: 2px;
-    position: absolute;
-    top: 22px;
-    left: -302px;
-  }
-  #ligne2 {
-    background-color: rgb(255, 255, 255);
-    width: 520px;
-    height: 2px;
-    position: absolute;
-    top: 89px;
-    left: -89px;
-  }
-  #ligne3 {
-    background-color: rgb(255 255 255);
-    width: 520px;
-    height: 2px;
-    position: absolute;
-    top: 76px;
-    left: -284px;
-  }
-  #accueil {
-    position: absolute;
-    top: 6px;
-    left: 258px;
-    color: white;
-    border: 3px solid white;
-    border-radius: 30px;
-    padding: 7px 10px 7px 10px;
-  }
-  #quisommesnous {
-    position: absolute;
-    top: 6px;
-    left: 457px;
-    color: white;
-    border: 3px solid white;
-    border-radius: 30px;
-    padding: 7px 10px 7px 10px;
-  }
-  #tourne {
-    transform: rotate(34deg);
-    width: 50px;
-    height: 2px;
-    background-color: rgb(255, 255, 255);
-    position: absolute;
-    top: 36px;
-    left: 213px;
-  }
+#logo {
+  position: absolute;
+  top: 55px;
+  right: -46px;
+}
+#ligne1 {
+  background-color: rgb(255, 255, 255);
+  width: 520px;
+  height: 2px;
+  position: absolute;
+  top: 22px;
+  left: -302px;
+}
+#ligne2 {
+  background-color: rgb(255, 255, 255);
+  width: 520px;
+  height: 2px;
+  position: absolute;
+  top: 89px;
+  left: -89px;
+}
+#ligne3 {
+  background-color: rgb(255 255 255);
+  width: 520px;
+  height: 2px;
+  position: absolute;
+  top: 76px;
+  left: -284px;
+}
+#accueil {
+  position: absolute;
+  top: 6px;
+  left: 258px;
+  color: white;
+  border: 3px solid white;
+  border-radius: 30px;
+  padding: 7px 10px 7px 10px;
+}
+#quisommesnous {
+  position: absolute;
+  top: 6px;
+  left: 457px;
+  color: white;
+  border: 3px solid white;
+  border-radius: 30px;
+  padding: 7px 10px 7px 10px;
+}
+#tourne {
+  transform: rotate(34deg);
+  width: 50px;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 36px;
+  left: 213px;
+}
 
-  #tourner {
-    transform: rotate(124deg);
-    width: 50px;
-    height: 2px;
-    background-color: rgb(255 255 255);
-    position: absolute;
-    top: 69px;
-    left: 420px;
-  }
+#tourner {
+  transform: rotate(124deg);
+  width: 50px;
+  height: 2px;
+  background-color: rgb(255 255 255);
+  position: absolute;
+  top: 69px;
+  left: 420px;
+}
 
-  /* ANIMATIONS LIGNE */
+/* ANIMATIONS LIGNE */
 
-  @-webkit-keyframes pointLumineux {
-    0% {
-      left: 0%;
-    }
-    50% {
-      left: 13.9%;
-    }
-    80% {
-      left: 16%;
-      bottom: 10%;
-    }
-    100% {
-      left: 10px;
-    }
+@-webkit-keyframes pointLumineux {
+  0% {
+    left: 0%;
   }
+  50% {
+    left: 13.9%;
+  }
+  80% {
+    left: 16%;
+    bottom: 10%;
+  }
+  100% {
+    left: 10px;
+  }
+}
 
-  #point_lumineux {
-    background-color: rgb(255, 230, 0);
-    position: relative;
-    border-radius: 100%;
-    width: 4px;
-    height: 4px;
-    position: absolute;
-    top: 21px;
-    left: 420px;
-    -webkit-animation-name: pointLumineux;
-    -webkit-animation-duration: 5s;
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-name: pointLumineux;
-    -moz-animation-duration: 5s;
-    -moz-animation-iteration-count: infinite;
-    animation-name: pointLumineux;
-    animation-duration: 8s;
-    animation-iteration-count: infinite;
-  }
+#point_lumineux {
+  background-color: rgb(255, 230, 0);
+  position: relative;
+  border-radius: 100%;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  top: 21px;
+  left: 420px;
+  -webkit-animation-name: pointLumineux;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-name: pointLumineux;
+  -moz-animation-duration: 5s;
+  -moz-animation-iteration-count: infinite;
+  animation-name: pointLumineux;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
 
-  @-webkit-keyframes pointLumineux2 {
-    0% {
-      left: 0%;
-    }
-    50% {
-      left: 13.9%;
-    }
-    80% {
-      left: 16%;
-      bottom: 10%;
-    }
-    100% {
-      left: 10px;
-    }
+@-webkit-keyframes pointLumineux2 {
+  0% {
+    left: 0%;
   }
-  #point_lumineux2 {
-    background-color: rgb(255, 230, 0);
-    position: relative;
-    border-radius: 100%;
-    width: 5px;
-    height: 5px;
-    position: absolute;
-    top: 75px;
-    left: 420px;
-    -webkit-animation-name: pointLumineux2;
-    -webkit-animation-duration: 5s;
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-name: pointLumineux2;
-    -moz-animation-duration: 5s;
-    -moz-animation-iteration-count: infinite;
-    animation-name: pointLumineux2;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
+  50% {
+    left: 13.9%;
   }
+  80% {
+    left: 16%;
+    bottom: 10%;
+  }
+  100% {
+    left: 10px;
+  }
+}
+#point_lumineux2 {
+  background-color: rgb(255, 230, 0);
+  position: relative;
+  border-radius: 100%;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 75px;
+  left: 420px;
+  -webkit-animation-name: pointLumineux2;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-name: pointLumineux2;
+  -moz-animation-duration: 5s;
+  -moz-animation-iteration-count: infinite;
+  animation-name: pointLumineux2;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
 
-  #ligne2 {
-    background-color: black;
-    width: 520px;
-    height: 2px;
-    position: absolute;
-    top: 80px;
-    left: -2px;
-  }
+#ligne2 {
+  background-color: black;
+  width: 520px;
+  height: 2px;
+  position: absolute;
+  top: 80px;
+  left: -2px;
+}
 
 /*  modal connexion/inscriptions */
 
@@ -488,8 +488,9 @@ body {
   background-color: #333;
   transform: rotateY(180deg);
   z-index: 0;
+  overflow-y: auto;
   padding-top: 10px;
-  background-image: url(https://userscontent2.emaze.com/images/f9538183-0ff9-478f-b964-c8ab90421e3b/3d28e192fda5c17250f96a2779c84475.jpg);
+  background-image: url(https://thumbs.gfycat.com/AdeptThornyEgret.webp);
 }
 
 form {
@@ -548,7 +549,6 @@ form input[type="submit"] {
   background-color: #fff;
   color: #122;
 }
-
 
 /* FOOTER */
 

@@ -1,5 +1,89 @@
+
+
 <?php
+require("./inclu/function.php");
+$pdo = new PDO('mysql:host=localhost;dbname=mon_carnet',  "root", "root");
+session_start();
+
+
+
+
+if (!empty($_POST["email"]) && !empty($_POST["password"])) {
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+
+
+    $requestUtilisateur = $pdo->prepare("SELECT * FROM utilisateur WHERE email = '$email' AND password ='$password'");
+    $requestUtilisateur->execute();
+    $users = $requestUtilisateur->fetch();
+
+
+
+    if (!empty($users) && $users['role'] == 'user') {
+        $_SESSION["nom"] = $users["nom"];
+        $_SESSION["prenom"] = $users["prenom"];
+        $_SESSION["date_de_naissance"] = $users["date_de_naissance"];
+        $_SESSION["email"] = $users["email"];
+        $_SESSION["password"] = $users["password"];
+        $_SESSION["id"] = $users["id"];
+        $_SESSION["connected"] = true;
+        header('Location: carnet.php');
+    } else 
+    if (!empty($users) && $users['role'] == 'admin') {
+        $_SESSION["nom"] = $users["nom"];
+        $_SESSION["prenom"] = $users["prenom"];
+        $_SESSION["date_de_naissance"] = $users["date_de_naissance"];
+        $_SESSION["email"] = $users["email"];
+        $_SESSION["password"] = $users["password"];
+        $_SESSION["id"] = $users["id"];
+        $_SESSION["role"] = $users["role"];
+        $_SESSION["connected"] = true;
+        header('Location: pageadmin.php');
+    } else {
+        $message_erreur = true;
+    }
+} else {
+    $message_erreur = false;
+}
 ?>
+
+<!-- php inscription -->
+
+
+<?php
+if (!empty($_POST)) {
+    if (empty($_POST["nom"]) || empty($_POST["prenom"]) || empty($_POST["date"]) || empty($_POST["email"]) || empty($_POST["mdp"])) {
+        echo ("Tous les champs ne sont pas remplis!!!");
+    } else {
+        $nom = $_POST['nom'];
+        $prenom = $_POST['prenom'];
+        $date = $_POST['date'];
+        $email = $_POST['email'];
+        $mdp = $_POST['mdp'];
+        $role = "user";
+        $ver = $pdo->prepare("SELECT * FROM utilisateur WHERE email='$email'");
+        $ver->execute();
+        $users = $ver->fetch();
+        $id = $users['id'];
+        if ($users) {
+            echo ("L'adresse email est déjà utilisée!");
+        } else {
+            $req = $pdo->prepare("INSERT INTO utilisateur (nom, prenom, date_de_naissance, email, password, role) VALUES ('$nom', '$prenom', '$date', '$email', '$mdp', '$role')");
+            $req->execute();
+            $_SESSION['connected'] = true;
+            $_SESSION['nom'] = $nom;
+            $_SESSION['prenom'] = $prenom;
+            $_SESSION['date_de_naissance'] = $date;
+            $_SESSION['email'] = $email;
+            $_SESSION['password'] = $mdp;
+            header('Location: accueil.php');
+        }
+    }
+}
+?>
+
+
+
 
 <!doctype html>
 <html lang="fr">
