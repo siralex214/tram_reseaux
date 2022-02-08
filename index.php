@@ -14,7 +14,7 @@
 <?php include_once "./inclu/header.php" ?>
 
 <main>
-
+<p>test</p>
 </main>
 <?php include_once "./inclu/footer.php" ?>
 
