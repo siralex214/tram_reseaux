@@ -27,10 +27,10 @@
         <strong>Hébergeur</strong>
         <p>Le site <a href="https://www.NovaLink.fr/">NovaLink.fr</a> est hébergé par la société Amazon Web Services LLC</p>
         <p>Adresse: P.O. Box 81226, Seattle, WA 98108-1226</p>
-    </section>
-    <?php
-    include "./inclu/footer.php" ?>
-</body>
 
+</body>
+</section>
+<?php
+include "./inclu/footer.php" ?>
 
 </html>
