@@ -118,6 +118,8 @@ h3,
     margin: 10px auto;
     text-align: center;
   }
+}
+
   /* RESET CSS*/
   body {
     margin: 0%;
@@ -315,7 +317,6 @@ h3,
     top: 80px;
     left: -2px;
   }
-}
 
 /*  modal connexion/inscriptions */
 
@@ -546,4 +547,76 @@ form input[type="submit"] {
 .white-mode:hover {
   background-color: #fff;
   color: #122;
+}
+
+
+/* FOOTER */
+
+footer {
+  background-color: #58b8ae;
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  color: black;
+}
+
+.contact {
+  text-align: center;
+  margin: 20px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.contact img {
+  width: 40px;
+  margin: 5px 25px;
+}
+.contact ul li a {
+  color: black;
+}
+/*---------infos---------*/
+
+.infos {
+  margin-top: 30px;
+  margin-right: 200px;
+  padding: 10px;
+}
+
+.infos li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.infos li a {
+  color: black;
+}
+
+.infos li:hover {
+  background-color: #41bbbb;
+}
+/*-------------responsive--------------*/
+
+@media (max-width: 600px) {
+  footer {
+    flex-direction: column;
+  }
+  .contact {
+    font-size: 13px;
+    margin: 7px;
+    margin: 10px auto;
+  }
+  .contact img {
+    width: 30px;
+  }
+  .infos {
+    margin: 10px auto;
+    text-align: center;
+  }
 }
