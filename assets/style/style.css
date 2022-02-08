@@ -50,8 +50,10 @@ body {
   flex-direction: column;
   text-align: center;
   line-height: 3;
-  background-color: #b8b8b8;
+  background-color: white;
   border: 1px solid #b8b8b8;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .mentionlegaletitre {
@@ -61,7 +63,7 @@ body {
 }
 
 .mentionlegale strong {
-  background-color: #b8b8b8;
+  background-color: white;
   font-size: 20px;
 }
 
@@ -75,4 +77,8 @@ body {
     font-size: 30px;
     line-height: 1.5;
   }
+}
+body {
+  background-color: rgb(146, 210, 253);
+  margin: 0%;
 }
