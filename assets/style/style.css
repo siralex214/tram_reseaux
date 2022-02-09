@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+body{
+    margin: 0%;
+  
+   
+}
+
+/* HEADER */
+
+#nav{
+    width: 100%;
+    height: 100px;
+    background-color: #58b8ae;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    color: white;
+}
+
+#triangle{
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #cbf3f0;
+    position: relative;
+}
+#logo{
+    position: absolute;
+    top: 42px;
+    right: -46px;
+}
+#ligne1{
+    background-color: black;
+    width: 520px;
+    height: 2px;
+    position: absolute;
+    top: 22px;
+    left: -164px;
+}
+#ligne2{
+    background-color: black;
+    width: 520px;
+    height: 2px;
+    position: absolute;
+    top: 80px;
+    left: -2px;
+}
+
+/* QUI SOMMES-NOUS */
+
+.container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        background: #8DA9E0;
+        color: white;
+        border-radius: 20px;
+        margin-bottom: 2rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+img.img_qsn {
+    margin: 0rem 2rem;
+    width: 80%;
+}
+.section_qsn {
+    background: #2689cf;
+    padding: 4rem;
+    font-family: 'Outfit', sans-serif;
+    background: url('/assets/img/vecteezy_set-of-businesspeople-working-in-workspace-statistical_.jpg') ;
+ 
+}
+html { 
+    background: url(images/bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+.text_qsn {
+    margin: 0rem 5rem;
+    font-size: 1.2rem;
+}
+.h1-qsn {
+    width: 30%;
+    display: flex;
+    color: white;
+    font-size: 2.5rem;
+    background: #8DA9E0;
+    margin: 0 auto;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+    border-top: 1rem solid #5775A8;
+     
+}
+section.blue {
+    width: 100%;
+    background: blue;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    padding: 1rem;
+}
+section.blue h1 {
+    text-transform: uppercase;
+}
+.container_card_qsn {
+    display: grid;
+    height: 300px;
+    padding: 2rem;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 0px;
+    color: black;
+    font-weight: bold;
+    
+    }
+    .container_card_qsn div {
+        padding: 0px 15px;
+    }
+    
+    .card_qsn1 { 
+        grid-area: 1 / 2 / 2 / 3; 
+        background: white;
+        width: 200px;
+        height: 200px;
+        border-top: 2rem solid #ad62ca;
+
+    }
+    .card_qsn2 { 
+        grid-area:  1 / 3 / 2 / 4; 
+        background: white;
+        width: 200px;
+        height: 200px;
+        border-top: 2rem solid #1d59d1;
+
+    }
+    .card_qsn3 { 
+        grid-area: 1 / 4 / 2 / 5; 
+        background: white;
+        width: 200px;
+        height: 200px;
+        border-top: 2rem solid #eed04a;
+
+    }
+    .card_qsn4 { 
+        grid-area: 1 / 5 / 2 / 6; 
+        background: white;
+        width: 200px;
+        height: 200px;
+        border-top: 2rem solid #bd0b0b;
+        
+    }
