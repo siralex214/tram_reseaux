@@ -1,3 +1,135 @@
+/*----- mention legale----*/
+.mentionlegale {
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 3;
+    background-color: rgb(192, 191, 191);
+    border: 1px solid #b8b8b8;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.mentionlegaletitre {
+    text-align: center;
+    padding: 30px;
+    font-size: 50px;
+}
+
+.mentionlegale strong {
+    background-color: rgb(192, 191, 191);
+    font-size: 20px;
+}
+
+/*-----resposive mention legale----*/
+
+@media (max-width: 600px) {
+    .mentionlegale {
+        width: 90%;
+    }
+
+    .mentionlegaletitre {
+        font-size: 30px;
+        line-height: 1.5;
+    }
+}
+
+body {
+    background-color: white;
+    margin: 0%;
+}
+
+/*-----footer----*/
+footer {
+    background-color: #58b8ae;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    color: black;
+}
+
+.contact {
+    text-align: center;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+h5,
+.h5 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+h3,
+.h3 {
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+.contact ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.contact img {
+    width: 40px;
+    margin: 5px 25px;
+}
+
+.contact ul li a {
+    color: black;
+}
+
+/*---------infos---------*/
+
+.infos {
+    margin-top: 30px;
+    margin-left: 500px;
+    padding: 10px;
+}
+
+.infos li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+.infos li a {
+    color: black;
+}
+
+.infos li:hover {
+    background-color: #41bbbb;
+}
+
+/*-------------resposive--------------*/
+
+@media (max-width: 500px) {
+    footer {
+        flex-direction: column;
+    }
+
+    .contact {
+        font-size: 13px;
+        margin: 7px;
+        margin: 10px auto;
+    }
+
+    .contact img {
+        width: 30px;
+    }
+
+    .infos {
+        margin: 10px auto;
+        text-align: center;
+    }
+}
+
 /* RESET CSS*/
 body {
     margin: 0%;
@@ -175,7 +307,6 @@ ul {
     }
     100% {
         left: 10px;
-
     }
 }
 
@@ -209,10 +340,10 @@ ul {
     left: -2px;
 }
 
-
 /*  modal connexion/inscriptions */
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -220,7 +351,7 @@ html, body {
 }
 
 .modal {
-    background: black;
+    background: white;
     height: 1px;
     overflow: hidden;
     position: fixed;
@@ -231,7 +362,6 @@ html, body {
     transition: width 0.5s ease 0.5s, height 0.5s ease;
     width: 0;
 }
-
 
 #button_label {
     opacity: 1;
@@ -249,7 +379,6 @@ html, body {
     opacity: 0;
     width: 0;
     display: none;
-
 }
 
 #button:focus {
@@ -265,8 +394,9 @@ html, body {
     width: 40px;
 }
 
-#button:checked::after, #button:checked:before {
-    border-top: 1px solid #FFF;
+#button:checked::after,
+#button:checked:before {
+    border-top: 1px solid #fff;
     content: "";
     display: block;
     position: absolute;
@@ -292,7 +422,7 @@ html, body {
 }
 
 #button:checked ~ .modal .content {
-    color: #FFF;
+    color: #fff;
     transition: color 0.5s ease 0.5s;
 }
 
@@ -439,4 +569,82 @@ form input[type="submit"] {
 .white-mode:hover {
     background-color: #fff;
     color: #122;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #58b8ae;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    color: black;
+}
+
+.contact {
+    text-align: center;
+    margin: 20px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.contact img {
+    width: 40px;
+    margin: 5px 25px;
+}
+
+.contact ul li a {
+    color: black;
+}
+
+/*---------infos---------*/
+
+.infos {
+    margin-top: 30px;
+    margin-right: 200px;
+    padding: 10px;
+}
+
+.infos li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+.infos li a {
+    color: black;
+}
+
+.infos li:hover {
+    background-color: #41bbbb;
+}
+
+/*-------------responsive--------------*/
+
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+    }
+
+    .contact {
+        font-size: 13px;
+        margin: 7px;
+        margin: 10px auto;
+    }
+
+    .contact img {
+        width: 30px;
+    }
+
+    .infos {
+        margin: 10px auto;
+        text-align: center;
+    }
 }
