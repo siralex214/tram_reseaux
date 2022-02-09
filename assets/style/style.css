@@ -534,9 +534,9 @@ footer {
 /* Page accueil user*/
 
 #Allchart {
-    padding-bottom: 2rem;
+    padding: 1rem 1rem 2rem;
     max-width: 100%;
-    width: 1000px;
+    width: 1600px;
     margin: 3rem auto 0;
     display: flex;
     border: 1px solid red;

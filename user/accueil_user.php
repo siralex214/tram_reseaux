@@ -33,6 +33,7 @@ require_once '../inclu/pdo.php';
 
                 </canvas>
             </div>
+            
         </section>
 
     </section>
