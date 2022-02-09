@@ -43,7 +43,7 @@
 
                         <div class="inscription">
                             <h1>Inscription</h1>
-                            <form action="#" method="post">
+                            <form action="" method="post">
                                 <div class="nomprenom">
                                     <div>
                                         <label for="nom">Nom</label><br>
@@ -65,7 +65,7 @@
                                 </div>
                                 <div>
                                     <label for="mdp">Mot de passe</label><br>
-                                    <input type="password" name="mdp"><br><br>
+                                    <input type="password" name="password"><br><br>
                                 </div>
                                 <div class="inscrire-btn">
                                     <input type="submit" value="S'inscrire">

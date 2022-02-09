@@ -48,21 +48,21 @@ if (!empty($_POST)) {
         $email = $_POST['email'];
         $mdp = $_POST['password'];
         $role = "user";
-        $ver = $pdo->prepare("SELECT * FROM utilisateur WHERE email='$email'");
+        $ver = $pdo->prepare("SELECT * FROM users WHERE email='$email'");
         $ver->execute();
         $users = $ver->fetch();
         $id = $users['id'];
         if ($users) {
             echo ("L'adresse email est déjà utilisée!");
         } else {
-            $req = $pdo->prepare("INSERT INTO users (nom, prenom, date_de_naissance, email, password) VALUES ('$nom', '$prenom', '$date', '$email', '$mdp',)");
+            $req = $pdo->prepare("INSERT INTO users (nom, prenom, date_de_naissance, email, password) VALUES ('$nom', '$prenom', '$date', '$email', '$password',)");
             $req->execute();
             $_SESSION['connected'] = true;
             $_SESSION['nom'] = $nom;
             $_SESSION['prenom'] = $prenom;
             $_SESSION['date_de_naissance'] = $date;
             $_SESSION['email'] = $email;
-            $_SESSION['password'] = $mdp;
+            $_SESSION['password'] = $password;
         }
     }
 }
