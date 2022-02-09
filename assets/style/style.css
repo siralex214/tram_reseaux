@@ -37,108 +37,18 @@
     }
 }
 
-body {
-    background-color: white;
-    margin: 0%;
-}
-
-/*-----footer----*/
-footer {
-    background-color: #58b8ae;
-    display: flex;
-    justify-content: space-between;
-    height: auto;
-    color: black;
-}
-
-.contact {
-    text-align: center;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-h5,
-.h5 {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    line-height: 1;
-}
-
-h3,
-.h3 {
-    font-size: 1.5rem;
-    line-height: 1.8;
-}
-
-.contact ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-}
-
-.contact img {
-    width: 40px;
-    margin: 5px 25px;
-}
-
-.contact ul li a {
-    color: black;
-}
-
-/*---------infos---------*/
-
-.infos {
-    margin-top: 30px;
-    margin-left: 500px;
-    padding: 10px;
-}
-
-.infos li {
-    list-style-type: none;
-    padding: 10px;
-}
-
-.infos li a {
-    color: black;
-}
-
-.infos li:hover {
-    background-color: #41bbbb;
-}
-
-/*-------------resposive--------------*/
-
-@media (max-width: 500px) {
-    footer {
-        flex-direction: column;
-    }
-
-    .contact {
-        font-size: 13px;
-        margin: 7px;
-        margin: 10px auto;
-    }
-
-    .contact img {
-        width: 30px;
-    }
-
-    .infos {
-        margin: 10px auto;
-        text-align: center;
-    }
-}
-
 /* RESET CSS*/
-body {
-    margin: 0%;
+html, body {
+    background-color: white;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    font-family: "Montserrat";
+    overflow-x: hidden;
+    width: 100%;
 }
 
-/* HEADER */
-header {
-    font-family: 'Reem Kufi', sans-serif;
-
+body {
+    position: relative
 }
 
 a {
@@ -149,16 +59,18 @@ a {
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-body {
-    overflow-x: hidden;
-}
 
 ul {
     list-style: none;
+}
+
+/* HEADER */
+header {
+    font-family: 'Reem Kufi', sans-serif;
+
 }
 
 #nav {
@@ -342,13 +254,6 @@ ul {
 
 /*  modal connexion/inscriptions */
 
-html,
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
 
 .modal {
     background: white;
@@ -437,20 +342,6 @@ body {
 }
 
 /* système de rotation de la card */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    -webkit-perspective: 1000px;
-    perspective: 1000px;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    font-family: "Montserrat";
-}
 
 .container {
     /*min-width: 700px;*/
@@ -573,12 +464,25 @@ form input[type="submit"] {
 
 
 /* FOOTER */
+html {
+
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 footer {
+    position: absolute;
+    bottom: 0;
     background-color: #58b8ae;
     display: flex;
     justify-content: space-between;
     height: auto;
+    width: 100%;
     color: black;
 }
 
@@ -624,6 +528,22 @@ footer {
 
 .infos li:hover {
     background-color: #41bbbb;
+}
+
+
+/* Page accueil user*/
+
+#Allchart {
+    padding-bottom: 2rem;
+    max-width: 100%;
+    width: 1000px;
+    margin: 3rem auto 0;
+    display: flex;
+    border: 1px solid red;
+}
+
+.one_graph {
+    border: 1px solid black;
 }
 
 /*-------------responsive--------------*/
