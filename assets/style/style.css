@@ -11,22 +11,23 @@ header {
 a {
     text-decoration: none;
 }
-
+/* 
 * {
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+} */
+ul {
+    list-style: none;
 }
 
 body {
     overflow-x: hidden;
 }
 
-ul {
-    list-style: none;
-}
+
 
 #nav {
     width: 100%;
@@ -37,7 +38,7 @@ ul {
     position: relative;
     color: white;
     border: none;
-    
+    position: fixed;
 }
 
 #triangle {
@@ -51,8 +52,8 @@ ul {
 
 #logo {
     position: absolute;
-    top: 55px;
-    right: -46px;
+    top: 39px;
+    right: -34px;
 }
 #ligne1{
     background-color: rgb(255, 255, 255);
@@ -60,7 +61,7 @@ ul {
     height: 2px;
     position: absolute;
     top: 22px;
-    left: -302px;
+    left: -367px;
 }
 #ligne2{
     background-color: rgb(255, 255, 255);
@@ -68,7 +69,7 @@ ul {
     height: 2px;
     position: absolute;
     top: 89px;
-    left: -89px;
+    left: -151px;
 }
 #ligne3{
     background-color: rgb(255 255 255);
@@ -76,12 +77,13 @@ ul {
     height: 2px;
     position: absolute;
     top: 76px;
-    left: -284px;
+    left: -354px;
 }
+
 #accueil{
     position: absolute;
-    top: 6px;
-    left: 258px;
+    top: 24px;
+    left: 192px;
     color: white;
     border: 3px solid white;
     border-radius: 30px;
@@ -89,8 +91,8 @@ ul {
 }
 #quisommesnous{
     position: absolute;
-    top: 6px;
-    left: 457px;
+    top: 23px;
+    left: 396px;
     color: white;
     border: 3px solid white;
     border-radius: 30px;
@@ -98,12 +100,13 @@ ul {
 } 
   #tourne {
     transform: rotate(34deg);
+    border-radius: 20px;
     width: 50px;
     height: 2px;
     background-color: rgb(255, 255, 255);
     position: absolute;
     top: 36px;
-    left: 213px;
+    left: 147px;
   }
   
   #tourner {
@@ -113,8 +116,24 @@ ul {
     background-color: rgb(255 255 255);
     position: absolute;
     top: 69px;
-    left: 420px;
+    left: 358px;
   }
+
+  #rond1{
+      width: 100px;
+      height: 100px;
+  }
+
+  #en_savoir_plus{
+    position: absolute;
+    top: 594px;
+    left: 247px;
+    color: white;
+    border: 3px solid white;
+    border-radius: 30px;
+    padding: 7px 10px 7px 10px;
+    font-family: 'Reem Kufi', sans-serif;
+}
 
   /* ANIMATIONS LIGNE */
 
@@ -123,15 +142,10 @@ ul {
       left: 0%;
     }
     50% {
-      left: 13.9%;
-    }   
-    80% {
-        left:16%;
-        bottom:10%;
+        left: 9.5%;
     }
     100% {
-        left: 10px;
-        
+        left: 0%;
     }
   }
 
@@ -139,8 +153,8 @@ ul {
     background-color: rgb(255, 230, 0);
     position: relative;
     border-radius: 100%;
-    width: 4px;
-    height: 4px;
+    width: 5px;
+    height: 5px;
     position: absolute;
     top: 21px;
     left: 420px;
@@ -157,28 +171,23 @@ ul {
 
   @-webkit-keyframes pointLumineux2 {
     0% {
-      left: 0%;
+        left: 0%;
+      }
+      50% {
+          left:24%;
+      }
+      100% {
+          left: 0%;
+      }
     }
-    50% {
-      left: 13.9%;
-    }   
-    80% {
-        left:16%;
-        bottom:10%;
-    }
-    100% {
-        left: 10px;
-        
-    }
-  }
   #point_lumineux2 {
-    background-color: rgb(255, 230, 0);
+    background-color: rgb(234, 255, 0);
     position: relative;
     border-radius: 100%;
     width: 5px;
     height: 5px;
     position: absolute;
-    top: 75px;
+    top: 88px;
     left: 420px;
     -webkit-animation-name: pointLumineux2;
     -webkit-animation-duration: 5s;
@@ -192,14 +201,6 @@ ul {
   }
   
 
-#ligne2 {
-    background-color: black;
-    width: 520px;
-    height: 2px;
-    position: absolute;
-    top: 80px;
-    left: -2px;
-}
 
 
 /*  modal connexion/inscriptions */
@@ -227,12 +228,17 @@ html, body {
 
 #button_label {
     opacity: 1;
-    color: red;
+    color: white;
     cursor: pointer;
-    font-family: "Consolas", arial, sans-serif;
+    font-family: 'Reem Kufi',cursive;
     font-size: 24px;
-    text-transform: uppercase;
     transition: color 0.5s ease 0.5s, opacity 0.5s ease;
+    border: 3px solid white;
+    border-radius: 30px;
+    position: absolute;
+    top: 22px;
+    right: 50px;
+    padding: 7px 10px 7px 10px;
 }
 
 #button {
@@ -432,3 +438,92 @@ form input[type="submit"] {
     background-color: #fff;
     color: #122;
 }
+
+
+/* BOUTON SE CONNECTER NAVBAR */
+
+.stretch, .button:after, .button:before {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }    
+  .button {
+    background: #279b8f;
+    background-size: 100%;
+    -moz-border-radius: 1.5em;
+    -webkit-border-radius: 1.5em;
+    border-radius: 1.5em;
+    -moz-transition: opacity 300ms;
+    -o-transition: opacity 300ms;
+    -webkit-transition: opacity 300ms;
+    transition: opacity 300ms;
+    border: 2px solid white;
+    padding: 20px;
+    color: #fff200;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    outline: none;
+    overflow: hidden;
+    position: absolute;
+    cursor: pointer;
+    z-index: 99;
+  }
+  .button:after {
+    -moz-box-shadow: rgba(212, 207, 201, 0.75) 0 0 15px 2px;
+    -webkit-box-shadow: rgba(212, 207, 201, 0.75) 0 0 15px 2px;
+    box-shadow: rgba(238, 255, 0, 0.75) 0 0 15px 2px;
+    background: #fff200;
+    content: "";
+    height: 2px;
+    opacity: 0;
+  }
+  .button:before {
+    content: "";
+    opacity: 0;
+  }
+  .button:hover:before {
+    opacity: 1;
+  }
+  .button:hover:after {
+    -webkit-animation: scan 2s infinite;
+    opacity: 1;
+  }
+  
+  @-webkit-keyframes scan {
+    0% {
+      top: 0%;
+    }
+    50% {
+      top: 97%;
+    }
+    100% {
+      top: 0%;
+    }
+  }
+  
+  a:link, a:visited
+  {
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+  }
+
+  /* BOUTON "COMMENCER MAINTENANT" ACCUEIL*/
+
+  /* ANIMATION LETTRE PAR LETTRE*/
+
+.animate-text { 
+    visibility:hidden;
+    font-family: 'Reem Kufi', sans-serif;
+    color: #ffdd19;
+    position: absolute;
+    top: 295px;
+    left: 247px;
+    word-spacing: 6px;
+    letter-spacing: 1px;
+}
+.animate-text { 
+    width:700px;
+  }
+

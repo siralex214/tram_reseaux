@@ -20,10 +20,14 @@
 <body>
     <?php include_once "./inclu/header.php" ?>
     <main>
+        <img src="./assets/img/fond_novalink.png" alt="background" width="100%">
 
-    </main>
-    <?php include_once "./inclu/footer.php" ?>
+        <h1 class="animate-text"> LES SPECIALISTES DE L'ANALYSE RESEAU SUR LE WEB</h1>
 
+        <h2 id="en_savoir_plus" class="button">En savoir plus</h2>
+
+        <?php include_once "./inclu/footer.php" ?>
+        <script src="./assets/script/script.js"></script>
 </body>
 
 </html>
