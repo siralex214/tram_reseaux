@@ -256,6 +256,7 @@ header {
 
 
 .modal {
+    z-index: 9;
     background: white;
     height: 1px;
     overflow: hidden;
@@ -394,10 +395,11 @@ header {
     z-index: 2;
     background-size: 100vh;
     background-size: cover;
-    background-image: url(https://livewallpaperhd.com/wp-content/uploads/2022/01/Indie-HD-Backgrounds.jpg);
+    background-image: url(https://static.cnews.fr/sites/default/files/violences_conjuguales_5e96efe7a6b00.jpg);
 }
 
 .back {
+    overflow-y: auto;
     background-color: #333;
     transform: rotateY(180deg);
     z-index: 0;

@@ -73,4 +73,3 @@ fetch("../../statistiques/stat_protocol.php")
             }
         });
     })
-
