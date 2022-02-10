@@ -1,5 +1,5 @@
 <?php
-
+require('./inclu/function.php');
 
 
 ?>
