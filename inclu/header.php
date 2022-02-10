@@ -1,22 +1,20 @@
-<header>
 
+<header>
     <div id="nav">
 
         <div id="triangle">
-            <img src="./assets/img/logo_novalink.png" id="logo" alt="" width="68px">
+            <img src="./assets/img/logo_novalink.png" id="logo" alt="" width="50px">
         </div>
 
         <div id="ligne1"></div>
         <div id="ligne2"></div>
-        <div id="ligne3"></div>
-        <div id="ligne4"></div>
 
-        <div id="rond1"></div>
-        <div id="cercle1"></div>
+    </div>
+    <input id="button" type='checkbox'>
 
-        <input id="button" type='checkbox'>
-        <label id="button_label">Connexion</label>
-        <div class='modal'>
+    <label for="switch" class="button" id="button_label">Se connecter</label>
+
+    <div class='modal'>
             <div>
                 <i id="fermeture_connexion" class="fas fa-times"></i>
                 <div class="container_modal">
@@ -86,29 +84,30 @@
                     </div>
                 </div>
             </div>
+    </div>
 
+    <a href="">
+        <h2 id="quisommesnous" class="button">Qui sommes-nous ?</h2>
+    </a>
+    <a href="">
+        <h2 id="accueil" class="button">Accueil</h2>
+    </a>
+    <a href="">
+        <h2 id="faq" class="button">FAQ</h2>
+    </a>
 
-        </div>
-
-        <h2 id="quisommesnous">Qui sommes-nous ?</h2>
-        <h2 id="accueil">Accueil</h2>
 
         <div id="tourne"></div>
         <div id="tourner"></div>
 
-        <div id="point_lumineux">
-            <p>&nbsp;</p>
-        </div>
-        <div id="point_lumineux2">
-            <p>&nbsp;</p>
-        </div>
-
+    <div id="point_lumineux">
+        <p>&nbsp;</p>
+    </div>
+    <div id="point_lumineux2">
+        <p>&nbsp;</p>
 
     </div>
-
-
-    </div>
-
-    </div>
+    <div id="rond1"></div>
+    <div id="cercle1"></div>
 
 </header>
