@@ -23,20 +23,27 @@
                     <div class="front side">
                         <div class="content">
                             <div>
-                                <form action="" method="POST">
-                                    <h1>Connexion</h1>
-                                    <br>
-                                    <input type="mail" name="email" placeholder="Adresse Mail" class="connex"> <br>
-                                    <input type="password" name="password" placeholder="Mot de passe"
-                                           class="connex"><br>
-                                    <input type="submit" value="Valider" class="valider"><br>
-                                    <?php
-                                    if ($message_erreur == true) {
-                                        echo "<p class='message_erreur'>Utilisateur ou Mot de passe inconnu</p>";
-                                    } ?>
+                                <form action="" method="POST" >
+                                    <div class="col-3 input-effect">
+                                        <input name="email" class="effect-23" type="text" placeholder="" >
+                                        <label>Votre Email</label>
+                                        <span class="focus-bg"></span>
+                                    </div>
+
+                                    <div class="col-3 input-effect">
+                                        <input name="password" class="effect-23" type="password" placeholder="" >
+                                        <label>Mot de passe</label>
+                                        <span class="focus-bg"></span>
+                                    </div>
+                                    <div class="col-3 submit_div">
+                                        <input class="submit_button" type="submit" value="connexion" name="submitted">
+                                        <span class="error"><?php viewError($errors, "invalid"); ?> &nbsp;</span>
+                                    </div>
                                 </form>
-                                <button class="vers_inscription">Pas encore inscrit, <span style="color: red"> N'hesite plus!</span>
-                                </button>
+                                <div class="col-3 last_button">
+                                    <div class="vers_inscription">Pas encore inscrit, <span style="color: red"> N'hésite plus!</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
