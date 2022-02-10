@@ -23,15 +23,15 @@
                     <div class="front side">
                         <div class="content">
                             <div>
-                                <form action="" method="POST" >
+                                <form action="" method="POST">
                                     <div class="col-3 input-effect">
-                                        <input name="email" class="effect-23" type="text" placeholder="" >
+                                        <input name="email" class="effect-23" type="text" placeholder="">
                                         <label>Votre Email</label>
                                         <span class="focus-bg"></span>
                                     </div>
 
                                     <div class="col-3 input-effect">
-                                        <input name="password" class="effect-23" type="password" placeholder="" >
+                                        <input name="password" class="effect-23" type="password" placeholder="">
                                         <label>Mot de passe</label>
                                         <span class="focus-bg"></span>
                                     </div>
@@ -86,8 +86,6 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
 
         <h2 id="quisommesnous">Qui sommes-nous ?</h2>
