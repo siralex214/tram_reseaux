@@ -256,7 +256,7 @@ header {
 
 
 .modal {
-    background: white;
+    z-index: 9;
     height: 1px;
     overflow: hidden;
     position: fixed;
@@ -358,7 +358,6 @@ header {
     text-align: center;
     width: 100%;
     height: 100%;
-    padding: 20px 50px;
     color: #fff;
     transform-style: preserve-3d;
     backface-visibility: hidden;
@@ -394,10 +393,11 @@ header {
     z-index: 2;
     background-size: 100vh;
     background-size: cover;
-    background-image: url(https://livewallpaperhd.com/wp-content/uploads/2022/01/Indie-HD-Backgrounds.jpg);
+    background-image: url(../img/gifntext-gif.gif);
 }
 
 .back {
+    overflow-y: auto;
     background-color: #333;
     transform: rotateY(180deg);
     z-index: 0;
@@ -411,36 +411,6 @@ form {
 
 .back h1 {
     margin: 0;
-}
-
-form label,
-form input {
-    display: block;
-}
-
-form input,
-form textarea {
-    background: transparent;
-    border: 0;
-    border-bottom: 2px solid #444;
-    padding: 5px;
-    width: 100%;
-    color: #fff;
-}
-
-form label {
-    margin: 15px 0;
-}
-
-form input[type="submit"] {
-    display: block;
-    width: auto;
-    margin: 10px auto;
-    padding: 5px 10px;
-    border: 3px solid #555;
-    border-radius: 4px;
-    color: #fff;
-    cursor: pointer;
 }
 
 /* my button style  */
@@ -568,23 +538,98 @@ footer {
     }
 }
 
+
+/*  FORMULAIRE INSCRIPTIONS ET CONNEXION*/
+/*= Custom CSS
+			============= */
+h2 { text-align: center; }
+.row { float: left; margin-bottom: 2em; }
+.row1 { background: rgba(255, 255, 255, 0.9); }
+.row2 { background: rgba(255, 255, 255, 0.9); }
+.row3 { background: rgba(0, 0, 0, 0.1); }
+.row1 h2, .row2 h2 { color: #004; }
+label { color: #666; }
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: grey;
+    font-style: italic;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: grey;
+    opacity:  1;
+    font-style: italic;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: grey;
+    opacity:  1;
+    font-style: italic;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: grey;
+    font-style: italic;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: grey;
+    font-style: italic;
+}
+/*= Custom CSS End
+================= */
+
+/*= input focus effects css
+=========================== */
+:focus{outline: none;}
+.col-3{text-align: center;float: left; width: 100%; margin: 40px 3%; position: relative;} /* necessary to give position: relative to parent. */
+input[type="text"], input[type="password"], input[type="email"]{font: 15px/24px "Lato", Arial, sans-serif; color: #000; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
+.effect-23{border: 0; padding: 7px 15px; border: 1px solid #ccc; position: relative; background: transparent;}
+.effect-23 ~ .focus-bg:before,
+.effect-23 ~ .focus-bg:after{content: ""; position: absolute; left: 0; top: 0; width: 0; height: 0; background-color: #ededed; transition: 0.3s; z-index: -1;}
+.effect-23:focus ~ .focus-bg:before,
+.has-content.effect-23 ~ .focus-bg:before{transition: 0.3s; width: 50%; height: 100%;}
+.effect-23 ~ .focus-bg:after{left: auto; right: 0; top: auto; bottom: 0;}
+.effect-23:focus ~ .focus-bg:after,
+.has-content.effect-23 ~ .focus-bg:after{transition: 0.3s; width: 50%; height: 100%;}
+.effect-23 ~ label{position: absolute; left: 14px; width: 100%; top: 10px; color: #aaa; transition: 0.3s; z-index: -1; letter-spacing: 0.5px;}
+.effect-23:focus ~ label, .has-content.effect-23 ~ label{top: -25px;    left: 0;    font-size: 20px;    color: #fff;    transition: 0.3s;}
+/*= input focus effects css End
+=============================== */
+/* bouton submit */
+.submit_div {
+    display: flex;
+    flex-direction: column;
+}
+
+.submit_button {
+    margin: auto;
+    cursor: pointer;
+    padding: 1rem 3rem;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 76px;
+}
+
+.error {
+    color: red;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.last_button {
+    margin-top: 0;
+}
 /*----bouton connexion----*/
 .vers_inscription {
-  pointer-events: auto;
-  cursor: pointer;
-  background: #279b8f;
-  border: none;
-  padding: 1.5rem 1.5rem;
-  margin: 0;
-  font-family: inherit;
-  font-size: inherit;
-  position: relative;
-  display: inline-block;
-  font-family: monospace;
-  font-weight: 500;
-  border-radius: 3rem;
-  padding: 1rem 1.5rem;
-  border: 1px solid #000;
-  overflow: hidden;
-  color: #fff;
+    pointer-events: auto;
+    cursor: pointer;
+    background: #279b8f;
+    margin: 0;
+    font-size: 1.2rem;
+    position: relative;
+    display: inline-block;
+    font-family: monospace;
+    font-weight: 500;
+    border-radius: 3rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid #000;
+    overflow: hidden;
+    color: #fff;
+
 }

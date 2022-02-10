@@ -73,4 +73,3 @@ fetch("http://localhost/tram_reseaux/statistiques/stat_protocol.php")
             }
         });
     })
-
