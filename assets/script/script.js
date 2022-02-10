@@ -11,34 +11,34 @@ let options = {
     rootMargin: '0%', // l'animation s'activera au moment ou mon écran sera au centre de ma section
     threshold: 1.0 // la section entière devra être dans le champ de vision pour que l'animation s'active
 }
-let observer = new IntersectionObserver(showItem, options) 
+let observer = new IntersectionObserver(showItem, options)
 // Intersection Observer permet de détecter la visibilité d'un élément, ou la visibilité relative de deux éléments l'un par rapport à l'autre 
 // ex : (parent et enfant) = .tex_qsn et span
 //
-function showItem(entries){
+function showItem(entries) {
     entries.forEach(entry => {
-        if(entry.isIntersecting) { // Si les deux éléments ( parent et enfant) apparaissent, alors j'active la classe 'active'
+        if (entry.isIntersecting) { // Si les deux éléments ( parent et enfant) apparaissent, alors j'active la classe 'active'
             entry.target.children[0].classList.add('active');
         }
     })
 }
 
-qsnText.forEach(item=>{
+qsnText.forEach(item => {
     observer.observe(item);
 })
-qsnTextDeux.forEach(item=>{
+qsnTextDeux.forEach(item => {
     observer.observe(item);
 })                          // La fonction s'active une fois que la détection des deux éléments a été faite avec le parent et l'enfant
-imgText.forEach(item=>{
+imgText.forEach(item => {
     observer.observe(item);
 })
-imgTextDeux.forEach(item=>{
+imgTextDeux.forEach(item => {
     observer.observe(item);
 })
- containerCard.forEach(item=>{
+containerCard.forEach(item => {
     observer.observe(item);
-   
-}) 
+
+})
 
 
 // Système de pop up ouverture et fermeture
@@ -80,7 +80,9 @@ if (vers_inscription != null) {
 // TEXT LETTER BY LETTER
 
 "use strict";
-window.addEventListener("DOMContentLoaded", (event) => { animate_text(); });
+window.addEventListener("DOMContentLoaded", (event) => {
+    animate_text();
+});
 
 function animate_text() {
     let delay = 100,
@@ -105,20 +107,20 @@ function animate_text() {
 // INTERDIR LE COPIER-COLLER
 
 contextMenuCatch = {
-    ie: function(){
-        if( document.all ){
+    ie: function () {
+        if (document.all) {
             return false;
         }
     },
-    netscape: function(e){
-        if( document.layers || (document.getElementById && !document.all) ){
-            if( e.which == 2 || e.which == 3 ){
+    netscape: function (e) {
+        if (document.layers || (document.getElementById && !document.all)) {
+            if (e.which == 2 || e.which == 3) {
                 return false;
             }
         }
     }
 }
- 
+
 if (document.layers) {
     document.captureEvents(Event.mousedown);
     document.onmousedown = contextMenuCatch.netscape;
@@ -165,3 +167,79 @@ fetch("http://localhost/tram_reseaux/statistiques/stat_protocol.php")
             }
         });
     })
+
+
+// Gestion des formulaires
+
+//    Connexion
+
+const email_connexion = document.querySelector("#email_connexion")
+const password_connexion = document.querySelector("#password_connexion")
+const erreur_mail_co = document.querySelector("#erreur_mail_co")
+const erreur_password_co = document.querySelector("#erreur_password_co")
+const submit_connexion = document.querySelector("#submit_connexion")
+const error_connexion = document.querySelector("#error_connexion")
+let erreur = false
+
+function pause(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+if (email_connexion != null && password_connexion != null) {
+    email_connexion.addEventListener("input", async () => {
+        if (!email_connexion.value.match(/[a-z0-9_\-\.]+@[a-z0-9_\-\.]+\.[a-z]+/i)) {
+            erreur_mail_co.innerHTML = email_connexion.value + " n'est pas une adresse valide"
+            email_connexion.style = "outline: red 3px solid"
+            submit_connexion.style = "cursor: no-drop"
+            erreur = true
+        } else {
+            submit_connexion.style = "cursor: pointer"
+            erreur_mail_co.innerHTML = "&nbsp;"
+            email_connexion.style = "outline: green 3px solid"
+            erreur = false
+        }
+    })
+    password_connexion.addEventListener("input", async () => {
+        if (password_connexion.value.length < 4) {
+            erreur_password_co.innerHTML = "mot de passe non réglementaire"
+            password_connexion.style = "outline: red 3px solid"
+            submit_connexion.style = "cursor: no-drop"
+            erreur = true
+        } else {
+            erreur_password_co.innerHTML = "&nbsp;"
+            password_connexion.style = "outline: green 3px solid"
+            submit_connexion.style = "cursor: pointer"
+            erreur = false
+
+
+        }
+    })
+    submit_connexion.addEventListener("click", async (event) => {
+        if (erreur == true) {
+            event.preventDefault()
+            error_connexion.style = "color: red"
+            error_connexion.innerHTML = "Mot de passe ou email incorrect"
+
+        } else {
+            // event.preventDefault()
+            error_connexion.style = "color: orange"
+            error_connexion.innerHTML = "Vérification en cours <span class=\"throbber-loader\">Loading&#8230;</span>\n"
+            await pause(5000)
+            fetch("../../login/login.php")
+                .then(resp => resp.json())
+                .then(async data => {
+                    console.log(data)
+                    error_connexion.style = "color: green"
+                    error_connexion.innerHTML = "connexion autorisé, redirection en cours"
+                    await pause(2000)
+                    button.checked = false
+                    await pause(1000)
+                    window.location.href = './user/accueil_user.php'
+
+
+                })
+
+        }
+    })
+
+}
