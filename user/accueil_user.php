@@ -37,6 +37,18 @@ require_once '../inclu/pdo.php';
         </section>
 
     </section>
+    <section id="chart2">
+        <section class="two_graph">
+            <h2>etat des serveurs</h2>
+            <div style="width: 400px; height: 400px">
+                <canvas id="graph2">
+
+                </canvas>
+            </div>
+            
+        </section>
+
+    </section>
 </main>
 <?php include_once "./inclu/footer.php" ?>
 </body>

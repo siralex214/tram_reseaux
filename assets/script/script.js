@@ -81,7 +81,8 @@ if (vers_inscription != null) {
 
 fetch("http://localhost/tram_reseaux/statistiques/stat_protocol.php")
     .then(response => response.json())
-    .then(data => {
+    .then(data => { 
+        console.log(data);
         const ctx = document.getElementById('graph1').getContext('2d');
         const myChart = new Chart(ctx, {
             type: 'polarArea',
@@ -113,4 +114,33 @@ fetch("http://localhost/tram_reseaux/statistiques/stat_protocol.php")
                 }
             }
         });
+        const ctx2 = document.getElementById('graph2').getContext('2d');
+        const myChart2 = new Chart(ctx2, {
+            type: 'polarArea',
+            data: {
+                labels: ['good', 'disabled'],
+                datasets: [{
+                    data: [data.good, data.disabled],
+                    backgroundColor: [
+                        'orange',
+                        'green',
+                    ],
+                    borderColor: [
+                        'orange',
+                        'green',
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        
     })
+
+

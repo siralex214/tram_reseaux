@@ -23,7 +23,28 @@ foreach ($recherche as $key => $value) {
         $count_TLS++;
     }
 }
+
+
+
+// graph2
+
+$count_disabled = 0;
+$count_good = 0;
+$recherche2 = $pdo->prepare("SELECT protocol_checksum_status as protocol_check FROM trams");
+$recherche2->execute();
+$recherche2 = $recherche2->fetchAll();
+$recherche2 = new ArrayObject($recherche2);
+foreach ($recherche2 as $key => $value) {
+    if ($value["protocol_check"] == "disabled") {
+        $count_disabled++;
+    }
+    if ($value["protocol_check"] == "good") {
+        $count_good++;
+    }
+}
 $resultat = [
+    "disabled" => $count_disabled,
+    "good" => $count_good,
     "IMCP" => $count_ICMP,
     "UDP" => $count_UDP,
     "TCP" => $count_TCP,
