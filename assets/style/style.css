@@ -1,6 +1,8 @@
 /* RESET CSS*/
 body{
     margin: 0%;
+    width: 100%;
+    font-family: 'Reem Kufi', sans-serif;
 }
 
 /* HEADER */
@@ -11,14 +13,11 @@ header {
 a {
     text-decoration: none;
 }
-/* 
+
 * {
     scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-} */
+    font-family: 'Reem Kufi', sans-serif;
+}
 ul {
     list-style: none;
 }
@@ -84,6 +83,15 @@ body {
     position: absolute;
     top: 24px;
     left: 192px;
+    color: white;
+    border: 3px solid white;
+    border-radius: 30px;
+    padding: 7px 10px 7px 10px;
+}
+#faq{
+    position: absolute;
+    top: 21px;
+    right: 249px;
     color: white;
     border: 3px solid white;
     border-radius: 30px;
@@ -527,3 +535,55 @@ form input[type="submit"] {
     width:700px;
   }
 
+/* TEXTE ACCUEIL */
+
+#bloc_accueil_texte{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+   justify-content: center;
+}
+
+
+.accueil_texte{
+    background-color: #8DA9E0;
+    border-radius: 10px;
+    width: 25%;
+    padding: 15px;
+    margin: 20px;
+    color: rgb(0, 0, 0);
+    transition: transform .1s;
+}
+
+.accueil_texte:hover{
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    }
+
+.accueil_texte h3 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-align: center;
+    word-spacing: 6px;
+    letter-spacing: 1px;
+}
+.accueil_texte p {
+    text-align: justify;
+    word-spacing: 0px;
+    letter-spacing: 0px;
+}
+#titre_bloc_accueil_texte{
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    word-spacing: 6px;
+    letter-spacing: 1px;
+
+}
