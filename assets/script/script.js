@@ -102,32 +102,32 @@ function animate_text() {
     });
 }
 
-// INTERDIR LE COPIER-COLLER
+// // INTERDIR LE COPIER-COLLER
 
-contextMenuCatch = {
-    ie: function(){
-        if( document.all ){
-            return false;
-        }
-    },
-    netscape: function(e){
-        if( document.layers || (document.getElementById && !document.all) ){
-            if( e.which == 2 || e.which == 3 ){
-                return false;
-            }
-        }
-    }
-}
+// contextMenuCatch = {
+//     ie: function(){
+//         if( document.all ){
+//             return false;
+//         }
+//     },
+//     netscape: function(e){
+//         if( document.layers || (document.getElementById && !document.all) ){
+//             if( e.which == 2 || e.which == 3 ){
+//                 return false;
+//             }
+//         }
+//     }
+// }
  
-if (document.layers) {
-    document.captureEvents(Event.mousedown);
-    document.onmousedown = contextMenuCatch.netscape;
-} else {
-    document.onmouseup = contextMenuCatch.netscape;
-    document.oncontextmenu = contextMenuCatch.ie;
-}
-document.oncontextmenu = new Function("return false");
-document.onselectstart = new Function("return false");
+// if (document.layers) {
+//     document.captureEvents(Event.mousedown);
+//     document.onmousedown = contextMenuCatch.netscape;
+// } else {
+//     document.onmouseup = contextMenuCatch.netscape;
+//     document.oncontextmenu = contextMenuCatch.ie;
+// }
+// document.oncontextmenu = new Function("return false");
+// document.onselectstart = new Function("return false");
 // GESTION DES GRAPHS
 
 fetch("http://localhost/tram_reseaux/statistiques/stat_protocol.php")
@@ -173,11 +173,65 @@ fetch("http://localhost/tram_reseaux/statistiques/stat_protocol.php")
                 datasets: [{
                     data: [data.good, data.disabled],
                     backgroundColor: [
-                        'orange',
+                        '#af52b7a8',
+                        '#569b2787',
+                    ],
+                    borderColor: [
+                        '#af52b7a8',
+                        '#569b2787',
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        const ctx3 = document.getElementById('graph3').getContext('2d');
+        const myChart3 = new Chart(ctx3, {
+            type: 'line',
+            data: {
+                labels: ['50046', '63440', '51062'],
+                datasets: [{
+                    data: [data.portdepart1, data.portdepart2,data.portdepart3],
+                    backgroundColor: [
+                        '#279b9973',
+                        '#cf4b6073',
+                        '#d5a26773',
+                    ],
+                    borderColor: [
+                        'red',
+                        'green',
+                        'blue',
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        const ctx4 = document.getElementById('graph4').getContext('2d');
+        const myChart4 = new Chart(ctx4, {
+            type: 'doughnut',
+            data: {
+                labels: ['3480', '443'],
+                datasets: [{
+                    data: [data.portarrive1, data.portarrive2],
+                    backgroundColor: [
+                        'red',
                         'green',
                     ],
                     borderColor: [
-                        'orange',
+                        'red',
                         'green',
                     ],
                     borderWidth: 1
@@ -191,7 +245,6 @@ fetch("http://localhost/tram_reseaux/statistiques/stat_protocol.php")
                 }
             }
         });
-        
     })
 
 

@@ -33,9 +33,7 @@ require_once '../inclu/pdo.php';
 
                 </canvas>
             </div>
-            
         </section>
-
     </section>
     <section id="chart2">
         <section class="two_graph">
@@ -45,7 +43,26 @@ require_once '../inclu/pdo.php';
 
                 </canvas>
             </div>
-            
+        </section>
+        </section>
+    <section id="chart3">
+        <section class="trois_graph">
+            <h2>Port de depart</h2>
+            <div style="width: 400px; height: 400px">
+                <canvas id="graph3">
+
+                </canvas>
+            </div>
+        </section>
+        </section>
+    <section id="chart4">
+        <section class="quatre_graph">
+            <h2>Port de arriver</h2>
+            <div style="width: 400px; height: 400px">
+                <canvas id="graph4">
+
+                </canvas>
+            </div>
         </section>
 
     </section>

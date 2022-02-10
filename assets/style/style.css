@@ -1017,7 +1017,7 @@ input[type="text"], input[type="password"], input[type="email"]{font: 15px/24px 
 }
 
 /* graph */
-#chart2 {
+#chart2,#chart3,#chart4 {
     padding: 1rem 1rem 2rem;
     max-width: 100%;
     width: 1600px;
@@ -1025,6 +1025,6 @@ input[type="text"], input[type="password"], input[type="email"]{font: 15px/24px 
     display: flex;
     border: 1px solid red;
 }
-.two_graph {
+.two_graph,.trois_graph,.quatre_graph {
     border: 1px solid black;
 }
