@@ -79,7 +79,7 @@ if (vers_inscription != null) {
 
 // GESTION DES GRAPHS
 
-fetch("http://localhost/tram_reseaux/statistiques/stat_protocol.php")
+fetch("../statistiques/stat_protocol.php")
     .then(response => response.json())
     .then(data => {
         const ctx = document.getElementById('graph1').getContext('2d');

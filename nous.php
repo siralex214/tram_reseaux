@@ -62,7 +62,7 @@ require('./inclu/function.php');
                        
                             <div class="sub_container_text">
                                 <p>2000+</p>
-                                <p>Failles gérés</p>
+                                <p>Patchs</p>
                             </div>
                         </div>
                         <div class="sub_wrap">
@@ -107,124 +107,110 @@ require('./inclu/function.php');
                 <div class="text_qsn2"><span>Nova Link soulage bon nombre des difficultés courantes auxquelles les professionnels de l'informatique sont confrontés dans leurs tâches quotidiennes et lorsqu'ils sont de garde, dans le but d'éviter l'épuisement professionnel et la monotonie.</span></div>
                 <div class="picture2"><span><img class="img_qsn" src="./assets/img/lock_novalink.png" alt=""></span></div>
             </div>
-        </section>
-        <section class="blue">
-            <h2>Valeurs: NOVA</h2>
-            <p>Nos valeurs nous animent tous les jours, nous connectent, inspirent et nous permettent d'aller de l'avant.</p>
-
-            <div class="container_card_qsn">
-                <div class="card_qsn1"><span>
-                        <h3>Novateur</h3>
-                        <p>Nous travaillons ensemble pour élargir et poursuivre l'évolution sur les domaines d'intérêt existants et nouveaux.</p>
-                    </span></div>
-                <div class="card_qsn2"><span>
-                        <h3>Organisé</h3>
-                        <p>Nous sommes conscient que le temps est précieux, l'organisation est la clé de la réussite.</p>
-                    </span></div>
-                <div class="card_qsn3"><span>
-                        <h3>Vigilant</h3>
-                        <p>Nous avons pensé à tout pour nous assurer que la surveillance soit sécurisée et précise.</p>
-                    </span> </div>
-                <div class="card_qsn4"><span>
-                        <h3>Ambitieux</h3>
-                        <p>Nous mettons un point d'honneur à nous dépasser et à toujours faire mieux qu'hier car votre satisfaction est notre objectif.</p>
-                    </span></div>
-            </div>
-
-
-        </section>
-
-        <section class="red">
-            <h2>Les entreprises qui nous font confiance</h2>
-
-
-            <div class="container_card_qsn">
-                <div class="card_red"><span>
-
-                        <p><img src="./assets/img/abestergo.png" alt=""></p>
-                    </span></div>
-                <div class="card_red"><span>
-
-                        <p><img class="fox" src="./assets/img/fox.png" alt=""></p>
-                    </span></div>
-                <div class="card_red"><span>
-
-                        <p><img src="./assets/img/umbrella.png" alt=""></p>
-                    </span> </div>
-                <div class="card_red">
-                    <span>
-                        <p>
-                            <img class="fallout" src="./assets/img/fallout.png" alt="">
-                        </p>
-                    </span>
+            <section class="blue">
+                <h2>NOVA</h2>
+                <p>Nos valeurs nous animent tous les jours, nous connectent, inspirent et nous permettent d'aller de l'avant.</p>
+    
+                <div class="container_card_qsn">
+                    <div class="card_qsn1"><span>
+                            <h3>Novateur</h3>
+                            <p>Nous travaillons ensemble pour élargir et poursuivre l'évolution sur les domaines d'intérêt existants et nouveaux.</p>
+                        </span></div>
+                    <div class="card_qsn2"><span>
+                            <h3>Organisé</h3>
+                            <p>Nous sommes conscient que le temps est précieux, l'organisation est la clé de la réussite.</p>
+                        </span></div>
+                    <div class="card_qsn3"><span>
+                            <h3>Vigilant</h3>
+                            <p>Nous avons pensé à tout pour nous assurer que la surveillance soit sécurisée et précise.</p>
+                        </span> </div>
+                    <div class="card_qsn4"><span>
+                            <h3>Ambitieux</h3>
+                            <p>Nous mettons un point d'honneur à nous dépasser et à toujours faire mieux qu'hier car votre satisfaction est notre objectif.</p>
+                        </span></div>
                 </div>
-
-                <div class="card_red">
-                    <span>
-                        <p>
-                            <img src="./assets/img/shinra.png" alt="">
-                        </p>
-                    </span>
-                </div>
-
-                <div class="card_red">
-                    <span>
-                        <p>
-                            <img src="./assets/img/capsule.png" alt="">
-                        </p>
-                    </span>
-                </div>
+    
+                        <section class="red">
+                            <h2>Les entreprises qui nous font confiance</h2>
                 
-            </div>
-
-
-
-            <!-- section abonnements -->
-        </section>
-
-       <!--  <section class="numbers">
-            <h2>Les entreprises qui nous font confiance</h2>
-
-
-            <div class="container_card_qsn">
-                <div class="card_red"><span>
-
-                        <p><img src="./assets/img/abestergo.png" alt=""></p>
-                    </span></div>
-                <div class="card_red"><span>
-
-                        <p><img class="fox" src="./assets/img/fox.png" alt=""></p>
-                    </span></div>
-                <div class="card_red"><span>
-
-                        <p><img src="./assets/img/umbrella.png" alt=""></p>
-                    </span> </div>
-                <div class="card_red">
-                    <span>
-                        <p>
-                            <img class="fallout" src="./assets/img/fallout.png" alt="">
-                        </p>
-                    </span>
-                </div>
-
-                <div class="card_red">
-                    <span>
-                        <p>
-                            <img src="./assets/img/shinra.png" alt="">
-                        </p>
-                    </span>
-                </div>
-
                 
-            </div> -->
-
-            <!-- section "en chiffre" -->
-
-            <!-- section abonnements -->
+                            <div class="container_card_qsn">
+                                <div class="card_red"><span>
+                
+                                        <p><img src="./assets/img/abestergo.png" alt=""></p>
+                                    </span></div>
+                                <div class="card_red"><span>
+                
+                                        <p><img class="fox" src="./assets/img/fox.png" alt=""></p>
+                                    </span></div>
+                                <div class="card_red"><span>
+                
+                                        <p><img src="./assets/img/umbrella.png" alt=""></p>
+                                    </span> </div>
+                                <div class="card_red">
+                                    <span>
+                                        <p>
+                                            <img class="fallout" src="./assets/img/fallout.png" alt="">
+                                        </p>
+                                    </span>
+                                </div>
+                
+                                <div class="card_red">
+                                    <span>
+                                        <p>
+                                            <img src="./assets/img/shinra.png" alt="">
+                                        </p>
+                                    </span>
+                                </div>
+                
+                                <div class="card_red">
+                                    <span>
+                                        <p>
+                                            <img src="./assets/img/capsule.png" alt="">
+                                        </p>
+                                    </span>
+                                </div>
+                                
+                            </div>
+                
+                
+                
+                            <!-- section abonnements -->
+                        </section>
+                
+                   
+                
+                            <!-- section abonnements -->
+                        </section>
+            </section>
         </section>
     </main>
 
-    <?php include_once "./inclu/footer.php" ?>
+    <footer class="footer_qsn">
+    <div class="contact">
+        <h3>Contact :</h3><br>
+        <ul>
+
+            <li><a href="https://www.facebook.com/profile.php?id=100076995846169" target="_blank"><img
+                            src="./SM_icons/facebook.png" alt="fb"><br> Facebook</a></li>
+            <li><a href="https://www.instagram.com/vaccina_mon_carnet/?hl=fr" target="_blank"><img
+                            src="./SM_icons/instagram.png" alt="in"><br> Instagram</a></li>
+            <li><img src="./SM_icons/linkedin.png" alt="lnk"><br> Linkedin</li>
+            <li><a href="https://twitter.com/VaccinaNfs" target="_blank"><img src="./SM_icons/twitter.png"
+                                                                              alt="tr"><br> Twitter</a></li>
+
+        </ul>
+        <h5><i class="nov"></i> NovaLink © INC.</h5>
+    </div>
+    <div class="infos">
+        <ul>
+            <h3>Informations :</h3><br>
+            <li><a href="mentionlegale.php" target="blank"> Mentions légales</a></li>
+            <li>Service client</li>
+            <li> Blog</a></li>
+        </ul>
+    </div>
+</footer>
 </body>
 
 </html>
