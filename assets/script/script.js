@@ -124,7 +124,7 @@ fetch("http://localhost/tram_reseaux/statistiques/stat_protocol.php")
         labels: keys,
         datasets: [
           {
-            label: value,
+            data: value,
             backgroundColor: [
               "rgba(255, 99, 132, 0.2)",
               "rgba(54, 162, 235, 0.2)",
