@@ -41,6 +41,47 @@ imgTextDeux.forEach(item=>{
 }) 
 
 
+// CARD NOVA START
+
+
+function scrollAppearNova() {
+  
+    let containerCard = document.querySelector('.js_card_qsn');
+    let containerCardPosition = containerCard.getBoundingClientRect().top;
+    //let langagesPosition = langages.getBoundingClientRect().top;
+    let screenPosition = window.innerHeight / 1.2 ;
+
+    if(containerCardPosition < screenPosition) {
+        
+        containerCard.classList.add('intro-appear');
+       
+    } 
+
+    //console.log(aboutPosition);
+
+}
+window.addEventListener('scroll', scrollAppearNova);
+
+
+function scrollAppearLogo() {
+  
+    let containerCard = document.querySelector('.js_logo_qsn');
+    let containerCardPosition = containerCard.getBoundingClientRect().top;
+    //let langagesPosition = langages.getBoundingClientRect().top;
+    let screenPosition = window.innerHeight / 1.2;
+
+    if(containerCardPosition < screenPosition) {
+        
+        containerCard.classList.add('intro-appear');
+       
+    } 
+
+    //console.log(aboutPosition);
+
+}
+window.addEventListener('scroll', scrollAppearLogo);
+// CARD NOVA END
+
 // Système de pop up ouverture et fermeture
 const button = document.querySelector("#button")
 const button_label = document.querySelector("#button_label")
@@ -130,7 +171,7 @@ document.oncontextmenu = new Function("return false");
 document.onselectstart = new Function("return false");
 // GESTION DES GRAPHS
 
-fetch("http://localhost/tram_reseaux/statistiques/stat_protocol.php")
+fetch("../statistiques/stat_protocol.php")
     .then(response => response.json())
     .then(data => {
         const ctx = document.getElementById('graph1').getContext('2d');
