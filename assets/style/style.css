@@ -174,7 +174,7 @@ img.img_qsn {
 }
 .section_qsn {
     background: #2689cf;
-    padding: 4rem;
+    /* padding: 4rem; */
     font-family: 'Outfit', sans-serif;
     background: url('../img/vecteezy_set-of-businesspeople-working-in-workspace-statistical_.jpg');
 }
@@ -214,13 +214,17 @@ img.img_qsn {
     margin-bottom: 2rem;
     justify-content: center;
     border-top: 1rem solid #5775A8;
+ 
+}
+.container_h1_qsn {
+    margin: 4rem;
 }
 .sub_wrap {
     border-radius: 5px;
    background: #5775A8;
    color: black;
    border-radius: 15px;
-   width: 100%;
+   width: 200px;
 }
 .icones_qsn {
    color: white;
@@ -248,6 +252,9 @@ section.blue {
     color: white;
     text-align: center;
 }
+.blue h3 {
+    text-transform: uppercase;
+}
 section.blue h2 {
     text-transform: uppercase;
     padding: 1rem;
@@ -265,11 +272,12 @@ section.blue h2 {
     margin-bottom: 5rem;
     }
     .container_card_qsn div {
-        padding: 0px 15px;
-        display: flex;
-        align-items: flex-start;
-        align-content: center;
-        justify-content: center;
+            padding: 0px 15px;
+            display: flex;
+            align-items: flex-start;
+            align-content: center;
+            justify-content: center;
+            border-radius: 8px 8px 0px 0px;
     }
     .card_qsn1 { 
         background: white;
@@ -288,7 +296,7 @@ section.blue h2 {
         background: white;
         width: 200px;
         height: 200px;
-        border-top: 2rem solid #eed04a;
+        border-top: 2rem solid #ffdd19;
     }
      .card_qsn4 { 
         background: white;
@@ -297,6 +305,18 @@ section.blue h2 {
         border-top: 2rem solid #bd0b0b;
         
     } 
+    .n {
+        color: #ad62ca;
+    }
+    .o {
+        color: #1d59d1;
+    }
+    .v {
+        color: #ffdd19;
+    }
+    .a {
+        color: #bd0b0b;
+    }
     .card_red { 
         width: 200px;
         height: 200px;  
@@ -355,12 +375,12 @@ section.blue h2 {
    }
    .js_card_qsn {
     opacity: 0;
-    transform: translateX(-1200px);
+    transform: translateY(-40px);
     transition: 1.5s all ease-in-out;
 }
 .js_logo_qsn {
     opacity: 0;
-    transform: translateX(1200px);
+    transform: translateY(50px);
     transition: 1.5s all ease-in-out;
 }
 
@@ -369,6 +389,8 @@ section.blue h2 {
     transform: translateX(0px);
 }
 
+
+  
 
    /* MEDIA QUERY SECTION QUI SOMMES-NOUS */
 

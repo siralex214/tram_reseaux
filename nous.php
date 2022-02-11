@@ -21,8 +21,10 @@ require('./inclu/function.php');
 
     <main class="main_qsn">
         <section class="section_qsn">
-
-            <h1 class="h1-qsn">Qui sommes-nous ?</h1>
+    <div class="container_h1_qsn">
+        <h1 class="h1-qsn">Qui sommes-nous ?</h1>
+    </div>
+         
 
 
             <div class="intro_qsn">
@@ -92,12 +94,12 @@ require('./inclu/function.php');
 
                     </ul>
                 </span></div>
-                <div class="picture2"><span><img class="img_qsn" src="./assets/img/settings_novalink.png" alt=""></span></div>
+                <div class="picture2"><span><img class="img_qsn" src="./assets/img/support_novalink.png" alt=""></span></div>
             </div>
 
 
             <div class="container">
-                <div class="picture"><span><img class="img_qsn" src="./assets/img/bitcoin_novalink.png" alt=""></span></div>
+                <div class="picture"><span><img class="img_qsn" src="./assets/img/settings_novalink.png" alt=""></span></div>
                 <div class="text_qsn"><span>Une entreprise d'analyse réseau est précieuse, avec des outils de gestion des incidents natifs, Nova Link permet à vos équipes d'agir immédiatement et d'automatiser le processus de résolution.</span></div>
             </div>
 
@@ -105,27 +107,27 @@ require('./inclu/function.php');
 
             <div class="container">
                 <div class="text_qsn2"><span>Nova Link soulage bon nombre des difficultés courantes auxquelles les professionnels de l'informatique sont confrontés dans leurs tâches quotidiennes et lorsqu'ils sont de garde, dans le but d'éviter l'épuisement professionnel et la monotonie.</span></div>
-                <div class="picture2"><span><img class="img_qsn" src="./assets/img/lock_novalink.png" alt=""></span></div>
+                <div class="picture2"><span><img class="img_qsn" src="./assets/img/financial_novalink.png" alt=""></span></div>
             </div>
             <section class="blue">
-                <h2>NOVA</h2>
+                <h2><span class="effect_blue"> NOVA</span> </h2>
                 <p>Nos valeurs nous animent tous les jours, nous connectent, inspirent et nous permettent d'aller de l'avant.</p>
     
                 <div class="container_card_qsn js_card_qsn">
                     <div class="card_qsn1"><span>
-                            <h3>Novateur</h3>
+                            <h3><span class="n">N</span>ovateur</h3>
                             <p>Nous travaillons ensemble pour élargir et poursuivre l'évolution sur les domaines d'intérêt existants et nouveaux.</p>
                         </span></div>
                     <div class="card_qsn2"><span>
-                            <h3>Organisé</h3>
+                            <h3><span class="o">O</span>rganisé</h3>
                             <p>Nous sommes conscient que le temps est précieux, l'organisation est la clé de la réussite.</p>
                         </span></div>
                     <div class="card_qsn3"><span>
-                            <h3>Vigilant</h3>
+                            <h3><span class="v">V</span>igilant</h3>
                             <p>Nous avons pensé à tout pour nous assurer que la surveillance soit sécurisée et précise.</p>
                         </span> </div>
                     <div class="card_qsn4"><span>
-                            <h3>Ambitieux</h3>
+                            <h3><span class="a">A</span>mbitieux</h3>
                             <p>Nous mettons un point d'honneur à nous dépasser et à toujours faire mieux qu'hier car votre satisfaction est notre objectif.</p>
                         </span></div>
                 </div>
