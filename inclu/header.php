@@ -1,35 +1,26 @@
-
 <header>
     <div id="nav">
+        <!-- MODAL BOUTON CONNECTION -->
+        <input id="button" type='checkbox'>
 
-        <div id="triangle">
-            <img src="./assets/img/logo_novalink.png" id="logo" alt="" width="50px">
-        </div>
+        <label for="switch" class="button" id="button_label">SE CONNECTER</label>
 
-        <div id="ligne1"></div>
-        <div id="ligne2"></div>
-
-    </div>
-    <input id="button" type='checkbox'>
-
-    <label for="switch" class="button" id="button_label">Se connecter</label>
-
-    <div class='modal'>
+        <div class='modal'>
             <div>
                 <i id="fermeture_connexion" class="fas fa-times"></i>
                 <div class="container_modal">
                     <div class="front side">
                         <div class="content">
                             <div>
-                                <form action="" method="POST" >
+                                <form action="" method="POST">
                                     <div class="col-3 input-effect">
-                                        <input name="email" class="effect-23" type="text" placeholder="" >
+                                        <input name="email" class="effect-23" type="text" placeholder="">
                                         <label>Votre Email</label>
                                         <span class="focus-bg"></span>
                                     </div>
 
                                     <div class="col-3 input-effect">
-                                        <input name="password" class="effect-23" type="password" placeholder="" >
+                                        <input name="password" class="effect-23" type="password" placeholder="">
                                         <label>Mot de passe</label>
                                         <span class="focus-bg"></span>
                                     </div>
@@ -45,6 +36,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- INSCRIPTION -->
                     <div class="back side">
                         <div class="content">
 
@@ -84,30 +76,18 @@
                     </div>
                 </div>
             </div>
-    </div>
+        </div>
 
-    <a href="">
-        <h2 id="quisommesnous" class="button">Qui sommes-nous ?</h2>
-    </a>
-    <a href="">
-        <h2 id="accueil" class="button">Accueil</h2>
-    </a>
-    <a href="">
-        <h2 id="faq" class="button">FAQ</h2>
-    </a>
+        <a href="./">
+            <h2 id="quisommesnous">Qui sommes-nous ?</h2>
+        </a>
+        <a href="">
+            <h2 id="accueil" >Accueil</h2>
+        </a>
+        <a href="">
+            <h2 id="faq">FAQ</h2>
+        </a>
 
-
-        <div id="tourne"></div>
-        <div id="tourner"></div>
-
-    <div id="point_lumineux">
-        <p>&nbsp;</p>
-    </div>
-    <div id="point_lumineux2">
-        <p>&nbsp;</p>
 
     </div>
-    <div id="rond1"></div>
-    <div id="cercle1"></div>
-
 </header>
