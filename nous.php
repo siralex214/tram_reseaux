@@ -111,7 +111,7 @@ require('./inclu/function.php');
                 <h2>NOVA</h2>
                 <p>Nos valeurs nous animent tous les jours, nous connectent, inspirent et nous permettent d'aller de l'avant.</p>
     
-                <div class="container_card_qsn">
+                <div class="container_card_qsn js_card_qsn">
                     <div class="card_qsn1"><span>
                             <h3>Novateur</h3>
                             <p>Nous travaillons ensemble pour élargir et poursuivre l'évolution sur les domaines d'intérêt existants et nouveaux.</p>
@@ -134,7 +134,7 @@ require('./inclu/function.php');
                             <h2>Les entreprises qui nous font confiance</h2>
                 
                 
-                            <div class="container_card_qsn">
+                            <div class="container_card_qsn js_logo_qsn">
                                 <div class="card_red"><span>
                 
                                         <p><img src="./assets/img/abestergo.png" alt=""></p>

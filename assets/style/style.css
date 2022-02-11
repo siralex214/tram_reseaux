@@ -465,6 +465,22 @@ section.blue h2 {
    .footer_qsn {
        position: initial;
    }
+   .js_card_qsn {
+    opacity: 0;
+    transform: translateX(-1200px);
+    transition: 1.5s all ease-in-out;
+}
+.js_logo_qsn {
+    opacity: 0;
+    transform: translateX(1200px);
+    transition: 1.5s all ease-in-out;
+}
+
+   .intro-appear {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
 
    /* MEDIA QUERY SECTION QUI SOMMES-NOUS */
 
