@@ -1,4 +1,3 @@
-console.log("ok")
 // TEXT SCROLL
 let qsnText = [...document.querySelectorAll('.text_qsn')];
 let qsnTextDeux = [...document.querySelectorAll('.text_qsn2')];
@@ -200,7 +199,7 @@ if (email_connexion != null && password_connexion != null) {
         }
     })
     password_connexion.addEventListener("input", async () => {
-        if (password_connexion.value.length < 4) {
+        if (password_connexion.value.length < 8) {
             erreur_password_co.innerHTML = "mot de passe non réglementaire"
             password_connexion.style = "outline: red 3px solid"
             submit_connexion.style = "cursor: no-drop"
@@ -221,25 +220,161 @@ if (email_connexion != null && password_connexion != null) {
             error_connexion.innerHTML = "Mot de passe ou email incorrect"
 
         } else {
-            // event.preventDefault()
+            event.preventDefault()
             error_connexion.style = "color: orange"
             error_connexion.innerHTML = "Vérification en cours <span class=\"throbber-loader\">Loading&#8230;</span>\n"
-            await pause(5000)
-            fetch("../../login/login.php")
+            await pause(2000)
+            let formData = new FormData()
+            formData.append("email", email_connexion.value)
+            formData.append("password", password_connexion.value)
+            formData.append("type", submit_connexion.value)
+            fetch("../../login/login.php", {
+                method: "POST",
+                body: formData
+            })
                 .then(resp => resp.json())
                 .then(async data => {
-                    console.log(data)
-                    error_connexion.style = "color: green"
-                    error_connexion.innerHTML = "connexion autorisé, redirection en cours"
-                    await pause(2000)
-                    button.checked = false
-                    await pause(1000)
-                    window.location.href = './user/accueil_user.php'
-
-
+                    if (data == "true") {
+                        error_connexion.style = "color: green"
+                        error_connexion.innerHTML = "connexion autorisé, redirection en cours"
+                        await pause(2000)
+                        button.checked = false
+                        await pause(1000)
+                        window.location.href = './user/accueil_user.php'
+                    } else if (data == "false") {
+                        error_connexion.style = "color: red"
+                        error_connexion.innerHTML = "Mot de passe ou email incorrect"
+                    }
                 })
 
         }
     })
+
+}
+
+const submit_inscription = document.querySelector("#submit_inscription")
+const email_inscription = document.querySelector("#email_inscription")
+const password_inscription = document.querySelector("#password_inscription")
+const cgu_inscription = document.querySelector("#cgu_inscription")
+const label_cgu = document.querySelector("#label_cgu")
+const nom_inscription = document.querySelector("#nom_inscription")
+const prenom_inscription = document.querySelector("#prenom_inscription")
+const erreur_mail_insc = document.querySelector("#erreur_mail_inscription")
+const erreur_nom_insc = document.querySelector("#erreur_nom_inscription")
+const erreur_prenom_insc = document.querySelector("#erreur_prenom_inscription")
+const erreur_password_insc = document.querySelector("#erreur_password_inscription")
+const error_inscription = document.querySelector("#error_inscription")
+const erreur_cgu_insc = document.querySelector("#erreur_cgu_inscription")
+
+let erreur_insc = false
+if (email_inscription != null && password_inscription != null && nom_inscription != null && prenom_inscription != null) {
+    nom_inscription.addEventListener("input", () => {
+        if (nom_inscription.value.length < 1) {
+            erreur_nom_insc.innerHTML = "Veuillez remplir ce champs"
+            nom_inscription.style = "outline: red 3px solid"
+            submit_inscription.style = "cursor: no-drop"
+            erreur_insc = true
+        } else {
+            erreur_nom_insc.innerHTML = "&nbsp;"
+            nom_inscription.style = "outline: green 3px solid"
+            submit_inscription.style = "cursor: pointer"
+            erreur_insc = false
+
+        }
+
+    })
+    prenom_inscription.addEventListener("input", () => {
+        if (prenom_inscription.value.length < 1) {
+            erreur_prenom_insc.innerHTML = "Veuillez remplir ce champs"
+            prenom_inscription.style = "outline: red 3px solid"
+            submit_inscription.style = "cursor: no-drop"
+            erreur_insc = true
+        } else {
+            erreur_prenom_insc.innerHTML = "&nbsp;"
+            prenom_inscription.style = "outline: green 3px solid"
+            submit_inscription.style = "cursor: pointer"
+            erreur_insc = false
+
+        }
+
+    })
+    email_inscription.addEventListener("input", async () => {
+        if (!email_inscription.value.match(/[a-z0-9_\-\.]+@[a-z0-9_\-\.]+\.[a-z]+/i)) {
+            erreur_mail_insc.innerHTML = email_inscription.value + " n'est pas une adresse valide"
+            email_inscription.style = "outline: red 3px solid"
+            submit_inscription.style = "cursor: no-drop"
+            erreur_insc = true
+        } else {
+            submit_inscription.style = "cursor: pointer"
+            erreur_mail_insc.innerHTML = "&nbsp;"
+            email_inscription.style = "outline: green 3px solid"
+            erreur_insc = false
+        }
+    })
+    password_inscription.addEventListener("input", async () => {
+        if (password_inscription.value.length < 8) {
+            erreur_password_insc.innerHTML = "mot de passe non réglementaire"
+            password_inscription.style = "outline: red 3px solid"
+            submit_inscription.style = "cursor: no-drop"
+            erreur_insc = true
+        } else {
+            erreur_password_insc.innerHTML = "&nbsp;"
+            password_inscription.style = "outline: green 3px solid"
+            submit_inscription.style = "cursor: pointer"
+            erreur_insc = false
+            cgu_inscription.addEventListener("change", () => {
+                if (cgu_inscription.checked == true) {
+                    label_cgu.style = "color: green"
+                    erreur_insc = false
+                } else {
+                    label_cgu.style = "color: red"
+                    erreur_insc = true
+                }
+            })
+
+        }
+    })
+    if (submit_inscription != null) {
+        submit_inscription.addEventListener("click", (event) => {
+            event.preventDefault()
+            if (nom_inscription.value == "") {
+                erreur_nom_insc.innerHTML = "Veuillez remplir ce champs"
+                nom_inscription.style = "outline: red 3px solid"
+                submit_inscription.style = "cursor: no-drop"
+                erreur_insc = true
+            }
+            if (prenom_inscription.value == "") {
+                erreur_prenom_insc.innerHTML = "Veuillez remplir ce champs"
+                prenom_inscription.style = "outline: red 3px solid"
+                submit_inscription.style = "cursor: no-drop"
+                erreur_insc = true
+            }
+            if (cgu_inscription.checked == false) {
+                label_cgu.style = "color: red"
+                erreur_insc = true
+            }
+
+            if (erreur_insc == false) {
+                let formData1 = new FormData()
+                formData1.append("nom", nom_inscription.value)
+                formData1.append("prenom", prenom_inscription.value)
+                formData1.append("email", email_inscription.value)
+                formData1.append("password", password_inscription.value)
+                formData1.append("type", submit_inscription.value)
+                formData1.append("cgu", cgu_inscription.checked)
+                fetch("../../login/login.php", {
+                    method: "POST",
+                    body: formData1
+                })
+                    .then(resp => resp.json())
+                    .then(data => {
+                        if (data == "true") {
+                            error_inscription.textContent = "Inscriptions terminé"
+                            error_inscription.style = "color: green"
+                        }
+                    })
+            }
+        })
+    }
 
 }
