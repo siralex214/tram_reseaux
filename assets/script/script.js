@@ -11,70 +11,69 @@ let options = {
     rootMargin: '0%', // l'animation s'activera au moment ou mon écran sera au centre de ma section
     threshold: 1.0 // la section entière devra être dans le champ de vision pour que l'animation s'active
 }
-let observer = new IntersectionObserver(showItem, options) 
+let observer = new IntersectionObserver(showItem, options)
 // Intersection Observer permet de détecter la visibilité d'un élément, ou la visibilité relative de deux éléments l'un par rapport à l'autre 
 // ex : (parent et enfant) = .tex_qsn et span
 //
-function showItem(entries){
+function showItem(entries) {
     entries.forEach(entry => {
-        if(entry.isIntersecting) { // Si les deux éléments ( parent et enfant) apparaissent, alors j'active la classe 'active'
+        if (entry.isIntersecting) { // Si les deux éléments ( parent et enfant) apparaissent, alors j'active la classe 'active'
             entry.target.children[0].classList.add('active');
         }
     })
 }
 
-qsnText.forEach(item=>{
+qsnText.forEach(item => {
     observer.observe(item);
 })
-qsnTextDeux.forEach(item=>{
+qsnTextDeux.forEach(item => {
     observer.observe(item);
 })                          // La fonction s'active une fois que la détection des deux éléments a été faite avec le parent et l'enfant
-imgText.forEach(item=>{
+imgText.forEach(item => {
     observer.observe(item);
 })
-imgTextDeux.forEach(item=>{
+imgTextDeux.forEach(item => {
     observer.observe(item);
 })
- containerCard.forEach(item=>{
+containerCard.forEach(item => {
     observer.observe(item);
-   
-}) 
+
+})
 
 
 // CARD NOVA START
 
 
 function scrollAppearNova() {
-  
+
     let containerCard = document.querySelector('.js_card_qsn');
     let containerCardPosition = containerCard.getBoundingClientRect().top;
     //let langagesPosition = langages.getBoundingClientRect().top;
-    let screenPosition = window.innerHeight / 1.2 ;
+    let screenPosition = window.innerHeight / 1.2;
 
-    if(containerCardPosition < screenPosition) {
-        
+    if (containerCardPosition < screenPosition) {
+
         containerCard.classList.add('intro-appear');
-       
-    } 
 
-    //console.log(aboutPosition);
+    }
+
 
 }
 window.addEventListener('scroll', scrollAppearNova);
 
 
 function scrollAppearLogo() {
-  
+
     let containerCard = document.querySelector('.js_logo_qsn');
     let containerCardPosition = containerCard.getBoundingClientRect().top;
     //let langagesPosition = langages.getBoundingClientRect().top;
     let screenPosition = window.innerHeight / 1.2;
 
-    if(containerCardPosition < screenPosition) {
-        
+    if (containerCardPosition < screenPosition) {
+
         containerCard.classList.add('intro-appear');
-       
-    } 
+
+    }
 
     //console.log(aboutPosition);
 
@@ -142,3 +141,12 @@ function animate_text() {
         delay_start += delay * letters.length;
     });
 }
+
+// CARROUSSEL DE TEMOIGNAGES
+
+function classToggle() {
+    var el = document.querySelector('.icon-cards__content');
+    el.classList.toggle('step-animation');
+}
+
+document.querySelector('#toggle-animation').addEventListener('click', classToggle);

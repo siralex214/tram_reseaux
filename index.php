@@ -41,7 +41,6 @@ if (!empty($_POST['submitted'])) {
 }
 ?>
 
-
 <!doctype html>
 <html lang="fr">
 
@@ -53,13 +52,13 @@ if (!empty($_POST['submitted'])) {
     <link rel="stylesheet" href="test.css">
     <script src="./assets/script/script.js" defer></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> NOVALINK | Page d'accueil |</title>
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png">
+    <title> NovaLinK | Page d'accueil </title>
 </head>
 
 <body>
-    <?php include_once "./inclu/header.php" ?>
 
+    <?php include_once "./inclu/header.php" ?>
     <main style="padding-bottom: 300px;">
         <img src="./assets/img/fond_novalink.png" alt="background" width="100%">
 
@@ -97,7 +96,74 @@ if (!empty($_POST['submitted'])) {
         </div>
 
         <div id="bloc_accueil_texte_deux">
+            <div id="telephone">
+                <img src="./assets/img/iphone.png" alt="iphone6" height="100%">
+            </div>
+            <div id="text_telephone">
+                <h3> <mark> TRAVAILLER OU ON VEUT </mark> </h3>
+                <h3> <mark> D'OU L'ON VEUT </mark></h3>
+                <p>Notre équipe utilise un pool de technos pour répondre au plus près de vos besoins. Le site est adaptée sur MAC, Windows, Smartphones, Tablettes & autres outils numériques pour un confort d'utilisation optimal. Une application dédiée est disponible dès maintenant.</p>
+                <a href="https://download.fr"><img src="./assets/img/google_app.png" alt="google_play_store" width="50%"></a>
+            </div>
+            <div id="ordi">
+                <img src="./assets/img/ordi.jpg" alt="ordinateur" height="100%">
+            </div>
+        </div>
+        <div id="bloc_accueil_texte_trois">
+            <h1>LES AVIS DE NOS UTILISATEURS</h1>
+            <figure class="icon-cards mt-3">
+                <div class="icon-cards__content">
+                    <div class="icon-cards__item d-flex align-items-center justify-content-center"><span class="h1">
+                            <h5>Pauline THOMAS</h5> DESIGN FLUIDES, GRAPHIQUES RAFFINES <br> ⭐⭐⭐⭐ <br> <br> Depuis que j'utilise cet analyseur de reseau, je n'ai plus aucun problemes de gestion de ce dernier. Un grand merci ! Les designs sont vraiment magnifiques & le site est très moderne ça change 😅
+                        </span></div>
+                    <div class="icon-cards__item d-flex align-items-center justify-content-center"><span class="h1">
+                            <h5>Roger FERNANDEZ</h5> UNE FACILITE D'UTILISATION <br> ⭐⭐⭐⭐⭐ <br> <br> Tout est assez clair, moi qui suis pas très futé sur le web. Mon voisin n'a du m'expliquer qu'une seule fois le fonctionnement. Je valide !
+                        </span></div>
+                    <div class="icon-cards__item d-flex align-items-center justify-content-center"><span class="h1">
+                            <h5>Christophe CARON</h5> LE TOP POUR TRAVAILLER A DISTANCE <br> ⭐⭐⭐⭐⭐ <br> <br> Avec le covid, c'était beaucoup trop compliqué pour moi de gérer. heureusement il y a même une interface mobile lié. C'est vraiment génial. 🔌
+                        </span></div>
+                </div>
+            </figure>
+        </div>
 
+        <div id="bloc_accueil_texte_quatre">
+            <div class="accueil_texte_quatre" id="text_left">
+                <h1>Des forfaits <br> pour chaque <br> besoin</h1>
+
+            </div>
+            <div class="accueil_texte_quatre">
+                <div id="header_card_accueil_left">
+                    <h2>BASIQUE</h2>
+                    <h3>GRATUIT</h3>
+                </div>
+                <div id="card_accueil_left">
+                <h5>Inclus:</h5>
+                    <ul>
+                        <li>✅ Affichage des LOGS</li>
+                        <li>✅ Affichage des LOGS</li>
+                        <li>✅ Affichage des LOGS</li>
+                        <li>✅ Affichage des LOGS</li>
+                    </ul>
+                    <a href=""><button>OBTENIR</button></a>
+                </div>
+            </div>
+            <div class="accueil_texte_quatre">
+                <div id="header_card_accueil_right">
+                    <h2>PACK PRO (Bientôt disponible)</h2>
+                    <h3>19.99€</h3>
+                </div>
+                <div id="card_accueil_right">
+                    <h4>Inclus:</h4>
+
+                    <ul>
+                        <li>✅ Affichage des LOGS</li>
+                        <li>✅ Affichage des trames par type de requête</li>
+                        <li>✅ Affichage des LOGS</li>
+                        <li>✅ Affichage des LOGS</li>
+                    </ul>
+                    <a href=""><button>OBTENIR</button></a>
+                </div>
+            </div>
         </div>
 
     </main>

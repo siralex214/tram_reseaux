@@ -1,4 +1,5 @@
 <header>
+
     <div id="nav">
         <!-- MODAL BOUTON CONNECTION -->
         <input id="button" type='checkbox'>
@@ -78,13 +79,13 @@
             </div>
         </div>
 
-        <a href="./">
+        <a href="./nous.php">
             <h2 id="quisommesnous">Qui sommes-nous ?</h2>
         </a>
-        <a href="">
-            <h2 id="accueil" >Accueil</h2>
+        <a href="./index.php">
+            <h2 id="accueil">Accueil</h2>
         </a>
-        <a href="">
+        <a href="./faq.php">
             <h2 id="faq">FAQ</h2>
         </a>
 

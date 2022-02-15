@@ -13,7 +13,8 @@ require('./inclu/function.php');
     <link rel="stylesheet" href="./assets/style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="./assets/script/script.js" defer></script>
-    <title>Nova Link | Qui sommes-nous ? </title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png">
+    <title>NovaLink | Qui sommes-nous ? </title>
 </head>
 
 <body>
