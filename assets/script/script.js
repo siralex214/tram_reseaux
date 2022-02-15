@@ -78,6 +78,7 @@ function scrollAppearLogo() {
 
 }
 window.addEventListener('scroll', scrollAppearLogo);
+
 // CARD NOVA END
   rootMargin: "0%", // l'animation s'activera au moment ou mon écran sera au centre de ma section
   threshold: 1.0, // la section entière devra être dans le champ de vision pour que l'animation s'active
