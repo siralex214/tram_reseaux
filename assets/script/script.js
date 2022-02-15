@@ -1,85 +1,73 @@
-console.log("ok")
+console.log("ok");
 // TEXT SCROLL
-let qsnText = [...document.querySelectorAll('.text_qsn')];
-let qsnTextDeux = [...document.querySelectorAll('.text_qsn2')];
-let imgText = [...document.querySelectorAll('.picture')];
-let imgTextDeux = [...document.querySelectorAll('.picture2')];
-let containerCard = [...document.querySelectorAll('.container_card_qsn')];
-
+let qsnText = [...document.querySelectorAll(".text_qsn")];
+let qsnTextDeux = [...document.querySelectorAll(".text_qsn2")];
+let imgText = [...document.querySelectorAll(".picture")];
+let imgTextDeux = [...document.querySelectorAll(".picture2")];
+let containerCard = [...document.querySelectorAll(".container_card_qsn")];
 
 let options = {
-    rootMargin: '0%', // l'animation s'activera au moment ou mon écran sera au centre de ma section
-    threshold: 1.0 // la section entière devra être dans le champ de vision pour que l'animation s'active
-}
-let observer = new IntersectionObserver(showItem, options) 
-// Intersection Observer permet de détecter la visibilité d'un élément, ou la visibilité relative de deux éléments l'un par rapport à l'autre 
+  rootMargin: "0%", // l'animation s'activera au moment ou mon écran sera au centre de ma section
+  threshold: 1.0, // la section entière devra être dans le champ de vision pour que l'animation s'active
+};
+let observer = new IntersectionObserver(showItem, options);
+// Intersection Observer permet de détecter la visibilité d'un élément, ou la visibilité relative de deux éléments l'un par rapport à l'autre
 // ex : (parent et enfant) = .tex_qsn et span
 //
-function showItem(entries){
-    entries.forEach(entry => {
-        if(entry.isIntersecting) { // Si les deux éléments ( parent et enfant) apparaissent, alors j'active la classe 'active'
-            entry.target.children[0].classList.add('active');
-        }
-    })
+function showItem(entries) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // Si les deux éléments ( parent et enfant) apparaissent, alors j'active la classe 'active'
+      entry.target.children[0].classList.add("active");
+    }
+  });
 }
 
-qsnText.forEach(item=>{
-    observer.observe(item);
-})
-qsnTextDeux.forEach(item=>{
-    observer.observe(item);
-})                          // La fonction s'active une fois que la détection des deux éléments a été faite avec le parent et l'enfant
-imgText.forEach(item=>{
-    observer.observe(item);
-})
-imgTextDeux.forEach(item=>{
-    observer.observe(item);
-})
- containerCard.forEach(item=>{
-    observer.observe(item);
-   
-}) 
-
+qsnText.forEach((item) => {
+  observer.observe(item);
+});
+qsnTextDeux.forEach((item) => {
+  observer.observe(item);
+}); // La fonction s'active une fois que la détection des deux éléments a été faite avec le parent et l'enfant
+imgText.forEach((item) => {
+  observer.observe(item);
+});
+imgTextDeux.forEach((item) => {
+  observer.observe(item);
+});
+containerCard.forEach((item) => {
+  observer.observe(item);
+});
 
 // CARD NOVA START
 
-
 function scrollAppearNova() {
-  
-    let containerCard = document.querySelector('.js_card_qsn');
-    let containerCardPosition = containerCard.getBoundingClientRect().top;
-    //let langagesPosition = langages.getBoundingClientRect().top;
-    let screenPosition = window.innerHeight / 1.2 ;
+  let containerCard = document.querySelector(".js_card_qsn");
+  let containerCardPosition = containerCard.getBoundingClientRect().top;
+  //let langagesPosition = langages.getBoundingClientRect().top;
+  let screenPosition = window.innerHeight / 1.2;
 
-    if(containerCardPosition < screenPosition) {
-        
-        containerCard.classList.add('intro-appear');
-       
-    } 
+  if (containerCardPosition < screenPosition) {
+    containerCard.classList.add("intro-appear");
+  }
 
-    //console.log(aboutPosition);
-
+  //console.log(aboutPosition);
 }
-window.addEventListener('scroll', scrollAppearNova);
-
+window.addEventListener("scroll", scrollAppearNova);
 
 function scrollAppearLogo() {
-  
-    let containerCard = document.querySelector('.js_logo_qsn');
-    let containerCardPosition = containerCard.getBoundingClientRect().top;
-    //let langagesPosition = langages.getBoundingClientRect().top;
-    let screenPosition = window.innerHeight / 1.2;
+  let containerCard = document.querySelector(".js_logo_qsn");
+  let containerCardPosition = containerCard.getBoundingClientRect().top;
+  //let langagesPosition = langages.getBoundingClientRect().top;
+  let screenPosition = window.innerHeight / 1.2;
 
-    if(containerCardPosition < screenPosition) {
-        
-        containerCard.classList.add('intro-appear');
-       
-    } 
+  if (containerCardPosition < screenPosition) {
+    containerCard.classList.add("intro-appear");
+  }
 
-    //console.log(aboutPosition);
-
+  //console.log(aboutPosition);
 }
-window.addEventListener('scroll', scrollAppearLogo);
+window.addEventListener("scroll", scrollAppearLogo);
 // CARD NOVA END
 
 qsnText.forEach((item) => {
@@ -163,11 +151,9 @@ function animate_text() {
 
 // CARROUSSEL DE TEMOIGNAGES
 
-
-
 // GESTION DES GRAPHS
 
-fetch("http://localhost/php/tram_reseaux/statistiques/stat_protocol.php")
+fetch("http://localhost/tram_reseaux/statistiques/stat_protocol.php")
   .then((response) => response.json())
   .then((data) => {
     let keys = [];
@@ -214,7 +200,7 @@ fetch("http://localhost/php/tram_reseaux/statistiques/stat_protocol.php")
     });
   });
 
-fetch("http://localhost/php/tram_reseaux/statistiques/protocol_check.php")
+fetch("http://localhost/tram_reseaux/statistiques/protocol_check.php")
   .then((response) => response.json())
   .then((data) => {
     let keys = [];
@@ -250,7 +236,7 @@ fetch("http://localhost/php/tram_reseaux/statistiques/protocol_check.php")
       },
     });
   });
-fetch("http://localhost/php/tram_reseaux/statistiques/protocol_depart.php")
+fetch("http://localhost/tram_reseaux/statistiques/protocol_depart.php")
   .then((response) => response.json())
   .then((data) => {
     let keys = [];
@@ -286,7 +272,7 @@ fetch("http://localhost/php/tram_reseaux/statistiques/protocol_depart.php")
       },
     });
   });
-fetch("http://localhost/php/tram_reseaux/statistiques/protocol_arriver.php")
+fetch("http://localhost/tram_reseaux/statistiques/protocol_arriver.php")
   .then((response) => response.json())
   .then((data) => {
     let keys = [];
