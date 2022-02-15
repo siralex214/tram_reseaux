@@ -138,7 +138,7 @@ if (!empty($_POST['submitted'])) {
                 </div>
                 <div id="card_accueil_left">
                 <h5>Inclus:</h5>
-                    <ul>
+                    <ul class="forfait">
                         <li>✅ Affichage des LOGS</li>
                         <li>✅ Affichage des LOGS</li>
                         <li>✅ Affichage des LOGS</li>
