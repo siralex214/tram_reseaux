@@ -21,14 +21,25 @@ require_once '../inclu/pdo.php';
 <body>
     <?php include_once "./inclu/header.php"; ?>
     <main>
+
+        <div id="centre_graph">
+            <div id="logo_graph">
+                <a href=""><img src="../assets/img/maison_bouton.png" width="50%" alt="accueil"></a>
+                <a href=""><img src="../assets/img/homme_bouton.png" width="50%" alt="homme"></a>
+                <a href=""><img src="../assets/img/maison_bouton.png" width="50%" alt=""></a>
+                <a href=""><img src="../assets/img/maison_bouton.png" width="50%" alt=""></a>
+                <a href=""><img src="../assets/img/maison_bouton.png" width="50%" alt=""></a>
+            </div>
+            <div id="nom_graph">
+                <div class="bouton_graph"></div>
+                <div class="bouton_graph"></div>
+            </div>
+            <div id="place_graph">
+
+            </div>
+        </div>
+
         <div class="labox">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path fill="#279b8f" fill-opacity="1" d="M0,288L80,261.3C160,235,320,181,480,181.3C640,181,800,235,960,261.3C1120,288,1280,288,1360,288L1440,288L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
-            </svg>
-            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-            <button class="style-1">Trames ⚡</button>
-            <button class="style-2">Reseaux ⚡</button>
-            <button class="style-3">Statistique ⚡</button>
 
             <section id="Allchart">
                 <section class="one_graph">
