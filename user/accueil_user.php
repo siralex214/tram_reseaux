@@ -19,7 +19,7 @@ require_once '../inclu/pdo.php';
 </head>
 
 <body>
-    <?php include_once "./inclu/header.php"; ?>
+    <?php include_once "../inclu/header.php"; ?>
     <main>
         <div class="labox">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
