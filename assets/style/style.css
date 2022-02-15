@@ -1084,10 +1084,9 @@ ul {
 #Allchart {
   padding: 1rem 1rem 2rem;
   max-width: 100%;
-  width: 1600px;
+  width: 1000px;
   margin: 3rem auto 0;
   display: flex;
-  border: 1px solid red;
 }
 .one_graph {
   border: 1px solid black;
@@ -1297,8 +1296,8 @@ input[type="email"] {
 #chart2,
 #chart3,
 #chart4 {
-  max-width: 100%;
-  width: 403px;
+  max-width: 100vh;
+  width: 50vh;
   margin: 3rem auto 0;
   display: flex;
 }
@@ -1324,40 +1323,17 @@ input[type="email"] {
   left: 30%;
   color: rgb(12, 12, 12);
 }
-
+button {
+  font-weight: 600;
+  border: solid 1.5px black;
+  outline: 0;
+  padding: 0.7rem 1.2rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.08rem;
+  background-color: white;
+  border-radius: 0.3rem;
+  position: relative;
+  cursor: pointer;
+  left: 25%;
+}
 /* ANIMATION BOUTON A PROPOS */
-
-/* GRAPHS BOX */
-
-#centre_graph {
-  display: flex;
-  flex-direction: row;
-  background-color: #cab125;
-  width: 100%;
-  height: 500px;
-  margin: 0px;
-}
-#logo_graph {
-  display: flex;
-  flex-direction: column;
-  width: 10%;
-  background-color: #3e3;
-}
-
-#nom_graph {
-  display: flex;
-  flex-direction: column;
-  width: 18%;
-  background-color: rgb(126, 125, 64);
-}
-#place_graph {
-  display: flex;
-  flex-direction: column;
-  width: 75%;
-  background-color: rgb(124, 124, 124);
-}
-.bouton_graph {
-  background-color: #2689cf;
-  width: 100%;
-  height: 20px;
-}
