@@ -173,6 +173,8 @@ fetch("http://localhost/tram_reseaux/statistiques/stat_protocol.php")
 //    Connexion
 
 const email_connexion = document.querySelector("#email_connexion")
+const focus_connexion_email = document.querySelector("#focus_connexion_email")
+const focus_connexion_password = document.querySelector("#focus_connexion_password")
 const password_connexion = document.querySelector("#password_connexion")
 const erreur_mail_co = document.querySelector("#erreur_mail_co")
 const erreur_password_co = document.querySelector("#erreur_password_co")
@@ -187,26 +189,26 @@ function pause(ms) {
 if (email_connexion != null && password_connexion != null) {
     email_connexion.addEventListener("input", async () => {
         if (!email_connexion.value.match(/[a-z0-9_\-\.]+@[a-z0-9_\-\.]+\.[a-z]+/i)) {
-            erreur_mail_co.innerHTML = email_connexion.value + " n'est pas une adresse valide"
-            email_connexion.style = "outline: red 3px solid"
+            erreur_mail_co.innerHTML = "l'email n'est pas une adresse valide"
+            focus_connexion_email.style= "background-color: red"
             submit_connexion.style = "cursor: no-drop"
             erreur = true
         } else {
             submit_connexion.style = "cursor: pointer"
             erreur_mail_co.innerHTML = "&nbsp;"
-            email_connexion.style = "outline: green 3px solid"
+            focus_connexion_email.style= "background-color: green"
             erreur = false
         }
     })
     password_connexion.addEventListener("input", async () => {
         if (password_connexion.value.length < 8) {
             erreur_password_co.innerHTML = "mot de passe non réglementaire"
-            password_connexion.style = "outline: red 3px solid"
+            focus_connexion_password.style= "background-color: red"
             submit_connexion.style = "cursor: no-drop"
             erreur = true
         } else {
+            focus_connexion_password.style= "background-color: green"
             erreur_password_co.innerHTML = "&nbsp;"
-            password_connexion.style = "outline: green 3px solid"
             submit_connexion.style = "cursor: pointer"
             erreur = false
 

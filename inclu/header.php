@@ -29,33 +29,34 @@ $errors = [];
                         <div id="content_connexion">
                             <img id="img_connexion" src="../assets/img/lock_novalink.png" alt="img_connexion">
 
-                            <form action="" method="POST">
+                            <form class="form_connexion" action="" method="POST">
+
                                 <div class="col-3">
-                                    <input id="email_connexion" class="effect-2" type="text" placeholder="Placeholder Text">
-                                    <span class="focus-border"></span>
+                                    <input id="email_connexion" class="effect-2" type="text" placeholder="E-mail">
+                                    <span class="focus-border" id="focus_connexion_email"></span>
                                 </div>
 
-                                <p class="error" id="erreur_mail_co"></p>
+                                <p class="error" id="erreur_mail_co">&nbsp;</p>
 
-                                <div class="col-3 input-effect">
-                                    <input id="password_connexion" name="password" class="effect-2" type="password"
-                                           placeholder="">
-                                    <label>Mot de passe</label>
-                                    <span class="focus-bg"></span>
+                                <div class="col-3">
+                                    <input id="password_connexion" class="effect-2" type="text"
+                                           placeholder="Mot de passe">
+                                    <span class="focus-border" id="focus_connexion_password"></span>
                                 </div>
-                                <p class="error" id="erreur_password_co"></p>
+                                <p class="error" id="erreur_password_co">&nbsp;</p>
                                 <div class="col-3 submit_div">
                                     <input id="submit_connexion" class="submit_button" type="submit" value="connexion"
                                            name="submitted">
                                     <span id="error_connexion" class="error"><?php viewError($errors, "invalid"); ?> &nbsp;</span>
                                 </div>
+                                <div class="col-3 last_button">
+                                    <div class="vers_inscription">Pas encore inscrit, <span
+                                                style="color: black; text-decoration: underline;}"> N'hésite plus!</span>
+                                    </div>
+                                </div>
                             </form>
                         </div>
-                        <div class="col-3 last_button">
-                            <div class="vers_inscription">Pas encore inscrit, <span
-                                        style="color: red"> N'hésite plus!</span>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
                 <div class="back side">
@@ -64,49 +65,35 @@ $errors = [];
                         <div class="inscription">
                             <h1>Inscription</h1>
                             <form action="" method="post">
-                                <div class="col-3 input-effect">
-                                    <input id="nom_inscription" name="nom" class="effect-2" type="text">
-                                    <label>Votre Nom</label>
-                                    <span class="focus-bg"></span>
+                                <div style="display: flex; flex-direction: column">
+                                    <div style="display: flex; justify-content: space-evenly">
+                                        <div style="display: flex;flex-direction: column">
+                                            <div class="col-3">
+                                                <input id="prenom_inscription" class="effect-2" type="text"
+                                                       placeholder="Prénom">
+                                                <span class="focus-border" id="focus_prenom_inscription"></span>
+                                            </div>
+                                            <span class="error" id="erreur_prenom_inscription">erreur</span>
+                                        </div>
+                                        <div style="display: flex;flex-direction: column">
+                                            <div class="col-3">
+                                                <input id="nom_inscription" class="effect-2" type="text"
+                                                       placeholder="Nom">
+                                                <span class="focus-border" id="focus_nom_inscription"></span>
+                                            </div>
+                                            <span class="error" id="erreur_nom_inscription">erreur</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <p class="error" id="erreur_nom_inscription">&nbsp;</p>
-                                <div class="col-3">
-                                    <input class="effect-2" type="text" placeholder="Placeholder Text">
-                                    <span class="focus-border"></span>
-                                </div>
-                                <div class="col-3 input-effect">
-                                    <input id="prenom_inscription" name="prenom" class="effect-2" type="text">
-                                    <label>Votre Prénom</label>
-                                    <span class="focus-bg"></span>
-                                </div>
-                                <p class="error" id="erreur_prenom_inscription"></p>
-
-                                <div class="col-3 input-effect">
-                                    <input id="email_inscription" name="email" class="effect-2" type="text">
-                                    <label>Votre Email</label>
-                                    <span class="focus-bg"></span>
-                                </div>
-                                <p class="error" id="erreur_mail_inscription"></p>
-                                <div class="col-3 input-effect">
-                                    <input id="password_inscription" name="password" class="effect-2" type="password">
-                                    <label>Votre mot de passe</label>
-                                    <span class="focus-bg"></span>
-                                </div>
-                                <p class="error" id="erreur_password_inscription"></p>
-
-                                <div class="col-3 input-effect">
-                                    <input id="cgu_inscription" name="cgu" class="" type="checkbox">
-                                    <label id="label_cgu" for="cgu_inscription">Veuillez accepter les conditions général
-                                        d'utilisations</label>
-                                    <span class="focus-bg"></span>
-                                </div>
-                                <p class="error" id="erreur_cgu_inscription"></p>
-
-                                <div class="col-3 submit_div">
-                                    <input id="submit_inscription" class="submit_button" type="submit"
-                                           value="inscription"
-                                           name="submitted">
-                                    <span id="error_inscription" class="error">&nbsp;</span>
+                                <div style="display: flex; flex-direction: column">
+                                        <div style="display: flex;flex-direction: column">
+                                            <div class="col-3" style="width: 500px; margin: 24px auto 0;">
+                                                <input id="email_inscription" class="effect-2" type="text"
+                                                       placeholder="Email">
+                                                <span class="focus-border" id="focus_email_inscription"></span>
+                                            </div>
+                                            <span class="error" id="erreur_email_inscription">erreur</span>
+                                        </div>
                                 </div>
                             </form>
                             <br>
@@ -114,7 +101,6 @@ $errors = [];
                                         style="color: red">Connecte toi!</span>
                             </button>
                         </div>
-
                     </div>
                 </div>
             </div>
