@@ -22,7 +22,7 @@ require('./inclu/function.php');
     <main class="main_qsn">
         <section class="section_qsn">
     <div class="container_h1_qsn">
-        <h1 class="h1-qsn">Qui sommes-nous ?</h1>
+        <h1 class="h1-qsn">Qui sommes-nous test ?</h1>
     </div>
          
 

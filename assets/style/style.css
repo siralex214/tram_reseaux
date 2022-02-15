@@ -333,35 +333,43 @@ section.blue h2 {
 
    .picture span {
         display: block;
-        transform: translateX(-200%);
+        transform: translateX(-80px);
+        opacity: 0;
     }
     .picture span.active {
         transform: translateX(0%);
-        transition: 1s ease-out;
+        transition: 0.8s ease-out;
+        opacity: 1;
     }
     .picture2 span {
         display: block;
-        transform: translateX(200%);
+        transform: translateX(80px);
+        opacity: 0;
     }
     .picture2 span.active {
         transform: translateX(0%);
-        transition: 1s ease-out;
+        transition: 0.8s ease-out;
+        opacity: 1;
     }
     .text_qsn span {
         display: block;
-        transform: translateX(200%);
+        transform: translateX(80px);
+        opacity: 0;
     }
     .text_qsn span.active {
         transform: translateX(0%);
-        transition: 1s ease-out;
+        transition: 0.8s ease-out;
+        opacity: 1;
     }
     .text_qsn2 span {
         display: block;
-        transform: translateX(-200%);
+        transform: translateX(-80px);
+        opacity: 0;
     }
     .text_qsn2 span.active {
         transform: translateX(0%);
-        transition: 1s ease-out;
+        transition: 0.8s ease-out;
+        opacity: 1;
     }
 
     .red img {
@@ -376,12 +384,12 @@ section.blue h2 {
    .js_card_qsn {
     opacity: 0;
     transform: translateY(-40px);
-    transition: 1.5s all ease-in-out;
+    transition: 0.8s all ease-in-out;
 }
 .js_logo_qsn {
     opacity: 0;
     transform: translateY(50px);
-    transition: 1.5s all ease-in-out;
+    transition: 0.8s all ease-in-out;
 }
 
    .intro-appear {
@@ -439,7 +447,7 @@ section.blue, section.red {
 
 }
 
-@media (max-width: 280px) { /*GALAXY FOLD*/
+@media (max-width: 325px) { /*GALAXY FOLD*/
     .sub_wrap {
         width: initial;
     }
