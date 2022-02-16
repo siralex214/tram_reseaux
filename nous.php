@@ -48,7 +48,6 @@ $errors = [];
                         <div class="sub_container">
                             <div class="sub_wrap">
                                 <div class="icones_qsn"> <i class="fa-solid fa-user"></i></div>
-
                                 <div class="sub_container_text">
                                     <p>2,400+</p>
                                     <p>Utilisateurs</p>
@@ -56,18 +55,15 @@ $errors = [];
                             </div>
                             <div class="sub_wrap">
                                 <div class="icones_qsn"> <i class="fa-solid fa-users"></i></div>
-
                                 <div class="sub_container_text">
                                     <p>1200+</p>
                                     <p>Employés</p>
                                 </div>
                             </div>
                         </div>
-
                         <div class="sub_container">
                             <div class="sub_wrap">
                                 <div class="icones_qsn"> <i class="fa-solid fa-shield"></i></div>
-
                                 <div class="sub_container_text">
                                     <p>2000+</p>
                                     <p>Patchs</p>
@@ -75,14 +71,11 @@ $errors = [];
                             </div>
                             <div class="sub_wrap">
                                 <div class="icones_qsn"> <i class="fa-solid fa-globe"></i></div>
-
                                 <div class="sub_container_text">
                                     <p>7<sup>e</sup></p>
                                     <p>Mondial</p>
                                 </div>
                             </div>
-
-
                         </div>
                     </span>
             </div>
@@ -120,6 +113,53 @@ $errors = [];
             </div>
         </div>
         <section class="blue">
+            <!-- CAROUSEL START -->
+
+            <div class="img-slider_qsn">
+                <div class="slide_qsn active">
+                    <img src="./assets/img/sunflowers.jpg" alt="">
+                    <div class="info_qsn">
+
+
+                    </div>
+                </div>
+                <div class="slide_qsn">
+                    <img src="./assets/img/natur.jpg" alt="">
+                    <div class="info_qsn">
+
+
+                    </div>
+                </div>
+                <div class="slide_qsn">
+                    <img src="./assets/img/christmas.jpg" alt="">
+                    <div class="info_qsn">
+
+
+                    </div>
+                </div>
+                <div class="slide_qsn">
+                    <img src="./assets/img/mountains.jpg" alt="">
+                    <div class="info_qsn">
+
+
+                    </div>
+                </div>
+
+                <div class="slide_qsn">
+                    <img src="./assets/img/tree.jpg" alt="">
+                    <div class="info_qsn">
+                    </div>
+                </div>
+                <div class="navigation_qsn">
+                    <div class="btn_qsn active"></div>
+                    <div class="btn_qsn"></div>
+                    <div class="btn_qsn"></div>
+                    <div class="btn_qsn"></div>
+                    <div class="btn_qsn"></div>
+                </div>
+            </div>
+
+            <!-- CAROUSEL END -->
             <h2><span class="effect_blue"> NOVA</span></h2>
             <p>Nos valeurs nous animent tous les jours, nous connectent, inspirent et nous permettent d'aller de
                 l'avant.</p>

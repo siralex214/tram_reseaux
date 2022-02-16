@@ -1,18 +1,19 @@
 const animText = document.querySelector(".animate-text")
-// TEXT SCROLL
-let qsnText = [...document.querySelectorAll('.text_qsn')];
-let qsnTextDeux = [...document.querySelectorAll('.text_qsn2')];
-let imgText = [...document.querySelectorAll('.picture')];
-let imgTextDeux = [...document.querySelectorAll('.picture2')];
-let containerCard = [...document.querySelectorAll('.container_card_qsn')];
+// **** JAVASCRIPT PAGE QUI SOMMES-NOUS START **** //
 
+// TEXT SCROLL
+let qsnText = [...document.querySelectorAll(".text_qsn")];
+let qsnTextDeux = [...document.querySelectorAll(".text_qsn2")];
+let imgText = [...document.querySelectorAll(".picture")];
+let imgTextDeux = [...document.querySelectorAll(".picture2")];
+let containerCard = [...document.querySelectorAll(".container_card_qsn")];
 
 let options = {
     rootMargin: '0%', // l'animation s'activera au moment ou mon écran sera au centre de ma section
     threshold: 1.0 // la section entière devra être dans le champ de vision pour que l'animation s'active
 }
 let observer = new IntersectionObserver(showItem, options)
-// Intersection Observer permet de détecter la visibilité d'un élément, ou la visibilité relative de deux éléments l'un par rapport à l'autre 
+// Intersection Observer permet de détecter la visibilité d'un élément, ou la visibilité relative de deux éléments l'un par rapport à l'autre
 // ex : (parent et enfant) = .tex_qsn et span
 //
 function showItem(entries) {
@@ -43,7 +44,6 @@ containerCard.forEach(item => {
 
 // CARD NOVA START
 
-
 function scrollAppearNova() {
 
     let containerCard = document.querySelector('.js_card_qsn');
@@ -59,10 +59,9 @@ function scrollAppearNova() {
 
     //console.log(aboutPosition);
 
+    //console.log(aboutPosition);
 }
-
-window.addEventListener('scroll', scrollAppearNova);
-
+window.addEventListener("scroll", scrollAppearNova);
 
 function scrollAppearLogo() {
 
@@ -79,9 +78,9 @@ function scrollAppearLogo() {
 
     //console.log(aboutPosition);
 
+    //console.log(aboutPosition);
 }
-
-window.addEventListener('scroll', scrollAppearLogo);
+window.addEventListener("scroll", scrollAppearLogo);
 // CARD NOVA END
 
 qsnText.forEach((item) => {
@@ -100,6 +99,69 @@ containerCard.forEach((item) => {
     observer.observe(item);
 });
 
+// JAVASCRIPT CAROUSEL PAGE QUI SOMMES-NOUS START
+let slides = document.querySelectorAll('.slide_qsn');
+let btns = document.querySelectorAll('.btn_qsn');
+let currentSlide = 1;
+
+// Javascript for image slider MANUAL navigation START
+
+let manualNav = function(manual) {
+    slides.forEach((slide) => {
+        slide.classList.remove('active');
+
+        btns.forEach((btn) => {
+            btn.classList.remove('active');
+        });
+    });
+    slides[manual].classList.add('active');
+    btns[manual].classList.add('active');
+}
+
+btns.forEach((btn, i) => {
+    btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i;
+    });
+});
+
+// Javascript for image slider manual navigation END
+
+//// Javascript carousel END START
+
+let repeat = function(activeClass) {
+    let active = document.getElementsByClassName('active');
+    let i = 1;
+
+    let repeater = () => {
+        setTimeout(function() {
+
+            [...active].forEach((activeSlide) => {
+                activeSlide.classList.remove('active');
+            });
+            slides[i].classList.add('active');
+            btns[i].classList.add('active');
+            i++;
+
+            if(slides.length == i) {
+                i = 0;
+            }
+            if(i >= slides.length) {
+                return;
+            }
+            repeater();
+        }, 6000);
+    }
+    repeater();
+}
+repeat();
+
+// Javascript for image slider AUTO navigation END.
+
+
+// Javascript carousel END
+
+// **** JAVASCRIPT PAGE QUI SOMMES-NOUS END **** //
 // Système de pop up ouverture et fermeture
 const button = document.querySelector("#button");
 const button_label = document.querySelector("#button_label");
@@ -179,7 +241,7 @@ function classToggle() {
 
 // GESTION DES GRAPHS
 
-fetch("http://localhost/php/tram_reseaux/statistiques/stat_protocol.php")
+fetch("http://localhost/htdocs/tram_reseaux/statistiques/stat_protocol.php")
     .then((response) => response.json())
     .then((data) => {
         let keys = [];
