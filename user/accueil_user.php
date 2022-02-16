@@ -1,6 +1,6 @@
 <?php
 require_once '../inclu/function.php';
-require_once '../inclu/pdo.php';
+// require_once '../inclu/pdo.php';
 ?>
 
 
