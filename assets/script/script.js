@@ -153,7 +153,7 @@ function animate_text() {
 
 // GESTION DES GRAPHS
 
-fetch("http://localhost/tram_reseaux/statistiques/stat_protocol.php")
+fetch("http://localhost/php/tram_reseaux/statistiques/stat_protocol.php")
   .then((response) => response.json())
   .then((data) => {
     let keys = [];
@@ -200,7 +200,7 @@ fetch("http://localhost/tram_reseaux/statistiques/stat_protocol.php")
     });
   });
 
-fetch("http://localhost/tram_reseaux/statistiques/protocol_check.php")
+fetch("http://localhost/php/tram_reseaux/statistiques/protocol_check.php")
   .then((response) => response.json())
   .then((data) => {
     let keys = [];
@@ -236,7 +236,7 @@ fetch("http://localhost/tram_reseaux/statistiques/protocol_check.php")
       },
     });
   });
-fetch("http://localhost/tram_reseaux/statistiques/protocol_depart.php")
+fetch("http://localhost/php/tram_reseaux/statistiques/protocol_depart.php")
   .then((response) => response.json())
   .then((data) => {
     let keys = [];
@@ -272,7 +272,7 @@ fetch("http://localhost/tram_reseaux/statistiques/protocol_depart.php")
       },
     });
   });
-fetch("http://localhost/tram_reseaux/statistiques/protocol_arriver.php")
+fetch("http://localhost/php/tram_reseaux/statistiques/protocol_arriver.php")
   .then((response) => response.json())
   .then((data) => {
     let keys = [];

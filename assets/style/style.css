@@ -1298,9 +1298,15 @@ input[type="email"] {
 #chart3,
 #chart4 {
   max-width: 100%;
-  width: 403px;
-  margin: 3rem auto 0;
   display: flex;
+  background-color: rgba(231, 231, 231, 0.658);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 30px;
+  border: none;
+  width: 40%;
+  padding: 20px;
+  justify-content: center;
+  margin: 30px;
 }
 .one_graph,
 .two_graph,
@@ -1327,37 +1333,65 @@ input[type="email"] {
 
 /* ANIMATION BOUTON A PROPOS */
 
-/* GRAPHS BOX */
+/* DASHBORD */
+
+#dashbord {
+    background-image: url("../img/back_dashbord.png");
+}
 
 #centre_graph {
   display: flex;
   flex-direction: row;
-  background-color: #cab125;
-  width: 100%;
-  height: 500px;
-  margin: 0px;
-}
-#logo_graph {
-  display: flex;
-  flex-direction: column;
-  width: 10%;
-  background-color: #3e3;
+  background-color: #f6f7f7;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 90%;
+  height: 680px;
+  border-radius: 25px;
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto
+  
 }
 
 #nom_graph {
   display: flex;
   flex-direction: column;
-  width: 18%;
-  background-color: rgb(126, 125, 64);
+  width: 7%;
+  background-color: #279b8f;
+  margin: 20px;
+  border-radius: 20px;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 20px;
 }
 #place_graph {
   display: flex;
   flex-direction: column;
-  width: 75%;
-  background-color: rgb(124, 124, 124);
+  width: 90%;
+  padding: 20px;
+  overflow: scroll;
 }
-.bouton_graph {
-  background-color: #2689cf;
-  width: 100%;
-  height: 20px;
+
+#place_graph::-webkit-scrollbar {
+    display: none;
+  }
+
+.graphique_dash{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
 }
+
+#fond_dashbord{
+    position: fixed;
+}
+.fa-chart-pie:before, .fa-pie-chart:before {
+    content: "\f200";
+    font-size: 40px;
+}
+.fa-id-card-alt:before, .fa-id-card-clip:before {
+    content: "\f47f";
+    font-size: 40px;
+}
+

@@ -139,10 +139,10 @@ if (!empty($_POST['submitted'])) {
                 <div id="card_accueil_left">
                 <h5>Inclus:</h5>
                     <ul>
-                        <li>✅ Affichage des LOGS</li>
-                        <li>✅ Affichage des LOGS</li>
-                        <li>✅ Affichage des LOGS</li>
-                        <li>✅ Affichage des LOGS</li>
+                        <li> ✅ Affichage des LOGS </li>
+                        <li> ✅ Affichage des LOGS </li>
+                        <li> ✅ Affichage des LOGS </li>
+                        <li> ✅ Affichage des LOGS </li>
                     </ul>
                     <a href=""><button>OBTENIR</button></a>
                 </div>
@@ -156,10 +156,10 @@ if (!empty($_POST['submitted'])) {
                     <h4>Inclus:</h4>
 
                     <ul>
-                        <li>✅ Affichage des LOGS</li>
-                        <li>✅ Affichage des trames par type de requête</li>
-                        <li>✅ Affichage des LOGS</li>
-                        <li>✅ Affichage des LOGS</li>
+                        <li> ✅ Affichage des LOGS </li>
+                        <li> ✅ Affichage des trames par type de requête </li>
+                        <li> ✅ Affichage des LOGS </li>
+                        <li> ✅ Affichage des LOGS </li>
                     </ul>
                     <a href=""><button>OBTENIR</button></a>
                 </div>
