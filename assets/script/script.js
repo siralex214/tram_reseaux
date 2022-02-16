@@ -442,7 +442,7 @@ const label_cgu = document.querySelector("#label_cgu")
 
 
 let erreur_insc = true
-let verifPrenomInsc      = () => {
+let verifPrenomInsc = () => {
     if (prenom_inscription.value == "") {
         erreur_prenom_insc.innerHTML = "Veuillez remplir ce champ"
         focus_prenom_inscription.style = "background-color: red"
@@ -453,8 +453,9 @@ let verifPrenomInsc      = () => {
         focus_prenom_inscription.style = "background-color: green"
         erreur_insc = false
     }
+    return erreur_insc
 }
-let verifNomInsc         = () => {
+let verifNomInsc = () => {
     if (nom_inscription.value == "") {
         erreur_nom_insc.innerHTML = "Veuillez remplir ce champ"
         focus_nom_inscription.style = "background-color: red"
@@ -466,11 +467,11 @@ let verifNomInsc         = () => {
         focus_nom_inscription.style = "background-color: green"
         erreur_insc = false
         submit_inscription.style = "cursor: pointer"
-
     }
+    return erreur_insc
 
 }
-let verifEmailInsc       = () => {
+let verifEmailInsc = () => {
     if (!email_inscription.value.match(/[a-z0-9_\-\.]+@[a-z0-9_\-\.]+\.[a-z]+/i)) {
         erreur_mail_insc.innerHTML = "l'email n'est pas une adresse valide"
         focus_email_inscription.style = "background-color: red"
@@ -481,10 +482,10 @@ let verifEmailInsc       = () => {
         focus_email_inscription.style = "background-color: green"
         erreur_insc = false
         submit_inscription.style = "cursor: pointer"
-
     }
+    return erreur_insc
 }
-let verifPasswordInsc    = () => {
+let verifPasswordInsc = () => {
     if (password_inscription.value.length < 8) {
         erreur_password_insc.innerHTML = "Mot de passe non réglementaire"
         focus_password_inscription.style = "background-color: red"
@@ -495,8 +496,10 @@ let verifPasswordInsc    = () => {
         submit_inscription.style = "cursor: pointer"
         erreur_insc = false
     }
+    return erreur_insc
+
 }
-let verifCgu             = () => {
+let verifCgu = () => {
     if (cgu_inscription.checked == true) {
         label_cgu.style = "color: green"
         erreur_insc = false
@@ -504,6 +507,7 @@ let verifCgu             = () => {
         label_cgu.style = "color: red"
         erreur_insc = true
     }
+    return erreur_insc
 }
 if (submit_inscription != null) {
     prenom_inscription.addEventListener("input", verifPrenomInsc)
@@ -517,6 +521,11 @@ if (submit_inscription != null) {
         verifEmailInsc()
         verifPasswordInsc()
         verifCgu()
+        if (verifPrenomInsc() == true || verifNomInsc() == true || verifEmailInsc() == true || verifPasswordInsc() == true || verifCgu() == true) {
+            erreur_insc = true
+        } else {
+            erreur_insc = false
+        }
 
         event.preventDefault()
         if (erreur_insc == false) {
@@ -537,10 +546,15 @@ if (submit_inscription != null) {
                     if (data == "true") {
                         error_inscription.textContent = "Inscriptions terminé"
                         error_inscription.style = "color: green"
+                        container.style = "transform: rotateY(0deg);";
+                        etatReturnCard = false;
+                    }
+                    if (data.email != null) {
+                        erreur_mail_insc.innerHTML = data.email
                     }
                 })
         } else {
-                        error_inscription.style = "color: red"
+            error_inscription.style = "color: red"
             error_inscription.innerHTML = " veuillez remplir correctement le formulaire"
         }
     })
