@@ -9,6 +9,7 @@ let imgText = [...document.querySelectorAll(".picture")];
 let imgTextDeux = [...document.querySelectorAll(".picture2")];
 let containerCard = [...document.querySelectorAll(".container_card_qsn")];
 
+
 let options = {
   rootMargin: '0%', // l'animation s'activera au moment ou mon écran sera au centre de ma section
   threshold: 1.0 // la section entière devra être dans le champ de vision pour que l'animation s'active
@@ -201,6 +202,8 @@ if (vers_inscription != null) {
 }
 
 // TEXT LETTER BY LETTER
+
+const animText = document.querySelector(".animate-text");
 
 ("use strict");
 
