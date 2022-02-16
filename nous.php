@@ -110,7 +110,58 @@ require('./inclu/function.php');
                 <div class="text_qsn2"><span>Nova Link soulage bon nombre des difficultés courantes auxquelles les professionnels de l'informatique sont confrontés dans leurs tâches quotidiennes et lorsqu'ils sont de garde, dans le but d'éviter l'épuisement professionnel et la monotonie.</span></div>
                 <div class="picture2"><span><img class="img_qsn" src="./assets/img/financial_novalink.png" alt=""></span></div>
             </div>
+         
+
+
             <section class="blue">
+                  <!-- CAROUSEL START --> 
+
+           <div class="img-slider_qsn">
+      <div class="slide_qsn active">
+          <img src="./assets/img/sunflowers.jpg" alt="">
+          <div class="info_qsn">
+              
+              
+          </div>
+      </div>
+      <div class="slide_qsn">
+        <img src="./assets/img/ciel.jpg" alt="">
+        <div class="info_qsn">
+           
+            
+        </div>
+    </div>
+    <div class="slide_qsn">
+        <img src="./assets/img/oui.jpg" alt="">
+        <div class="info_qsn">
+           
+           
+        </div>
+    </div>
+    <div class="slide_qsn">
+        <img src="./assets/img/paysage.png" alt="">
+        <div class="info_qsn">
+           
+           
+        </div>
+    </div>
+    <div class="slide_qsn">
+        <img src="./assets/img/uh.jpg" alt="">
+        <div class="info_qsn">
+           
+           
+        </div>
+    </div>
+    <div class="navigation_qsn">
+        <div class="btn_qsn active"></div>
+        <div class="btn_qsn"></div>
+        <div class="btn_qsn"></div>
+        <div class="btn_qsn"></div>
+        <div class="btn_qsn"></div>
+    </div>
+  </div>
+
+            <!-- CAROUSEL END --> 
                 <h2><span class="effect_blue"> NOVA</span> </h2>
                 <p>Nos valeurs nous animent tous les jours, nous connectent, inspirent et nous permettent d'aller de l'avant.</p>
 
