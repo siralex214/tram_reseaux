@@ -100,12 +100,12 @@ $errors = [];
                     <h3>GRATUIT</h3>
                 </div>
                 <div id="card_accueil_left">
-                    <h5>Inclus:</h5>
-                    <ul class="forfait">
-                        <li>✅ Affichage des LOGS</li>
-                        <li>✅ Affichage des LOGS</li>
-                        <li>✅ Affichage des LOGS</li>
-                        <li>✅ Affichage des LOGS</li>
+                <h5>Inclus:</h5>
+                    <ul>
+                        <li> ✅ Affichage des LOGS </li>
+                        <li> ✅ Affichage des LOGS </li>
+                        <li> ✅ Affichage des LOGS </li>
+                        <li> ✅ Affichage des LOGS </li>
                     </ul>
                     <a href=""><button>OBTENIR</button></a>
                 </div>
@@ -119,10 +119,10 @@ $errors = [];
                     <h4>Inclus:</h4>
 
                     <ul>
-                        <li>✅ Affichage des LOGS</li>
-                        <li>✅ Affichage des trames par type de requête</li>
-                        <li>✅ Affichage des LOGS</li>
-                        <li>✅ Affichage des LOGS</li>
+                        <li> ✅ Affichage des LOGS </li>
+                        <li> ✅ Affichage des trames par type de requête </li>
+                        <li> ✅ Affichage des LOGS </li>
+                        <li> ✅ Affichage des LOGS </li>
                     </ul>
                     <a href=""><button>OBTENIR</button></a>
                 </div>
