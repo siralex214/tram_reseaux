@@ -36,6 +36,7 @@ $errors = [];
                 d'informations, la prise de décision, l'optimisation de revenus, l'innovation, l'inclusion, la confiance
                 et l'énergie.</p>
         </div>
+        
 
 
         <div class="container">
@@ -116,7 +117,7 @@ $errors = [];
             <!-- CAROUSEL START -->
 
             <div class="img-slider_qsn">
-                <div class="slide_qsn active">
+                <div class="slide_qsn test">
                     <img src="./assets/img/sunflowers.jpg" alt="">
                     <div class="info_qsn">
 
@@ -151,7 +152,7 @@ $errors = [];
                     </div>
                 </div>
                 <div class="navigation_qsn">
-                    <div class="btn_qsn active"></div>
+                    <div class="btn_qsn test"></div>
                     <div class="btn_qsn"></div>
                     <div class="btn_qsn"></div>
                     <div class="btn_qsn"></div>

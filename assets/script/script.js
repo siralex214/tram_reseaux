@@ -108,14 +108,14 @@ let currentSlide = 1;
 
 let manualNav = function(manual) {
     slides.forEach((slide) => {
-        slide.classList.remove('active');
+        slide.classList.remove('test');
 
         btns.forEach((btn) => {
-            btn.classList.remove('active');
+            btn.classList.remove('test');
         });
     });
-    slides[manual].classList.add('active');
-    btns[manual].classList.add('active');
+    slides[manual].classList.add('test');
+    btns[manual].classList.add('test');
 }
 
 btns.forEach((btn, i) => {
@@ -130,17 +130,17 @@ btns.forEach((btn, i) => {
 //// Javascript carousel END START
 
 let repeat = function(activeClass) {
-    let active = document.getElementsByClassName('active');
+    let active = document.getElementsByClassName('test');
     let i = 1;
 
     let repeater = () => {
         setTimeout(function() {
 
             [...active].forEach((activeSlide) => {
-                activeSlide.classList.remove('active');
+                activeSlide.classList.remove('test');
             });
-            slides[i].classList.add('active');
-            btns[i].classList.add('active');
+            slides[i].classList.add('test');
+            btns[i].classList.add('test');
             i++;
 
             if(slides.length == i) {
