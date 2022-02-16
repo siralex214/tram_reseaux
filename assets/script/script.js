@@ -1,4 +1,4 @@
-console.log("ok")
+const animText = document.querySelector(".animate-text")
 // TEXT SCROLL
 let qsnText = [...document.querySelectorAll('.text_qsn')];
 let qsnTextDeux = [...document.querySelectorAll('.text_qsn2')];
@@ -8,75 +8,75 @@ let containerCard = [...document.querySelectorAll('.container_card_qsn')];
 
 
 let options = {
-    rootMargin: '0%', // l'animation s'activera au moment ou mon écran sera au centre de ma section
-    threshold: 1.0 // la section entière devra être dans le champ de vision pour que l'animation s'active
+  rootMargin: '0%', // l'animation s'activera au moment ou mon écran sera au centre de ma section
+  threshold: 1.0 // la section entière devra être dans le champ de vision pour que l'animation s'active
 }
-let observer = new IntersectionObserver(showItem, options) 
+let observer = new IntersectionObserver(showItem, options)
 // Intersection Observer permet de détecter la visibilité d'un élément, ou la visibilité relative de deux éléments l'un par rapport à l'autre 
 // ex : (parent et enfant) = .tex_qsn et span
 //
-function showItem(entries){
-    entries.forEach(entry => {
-        if(entry.isIntersecting) { // Si les deux éléments ( parent et enfant) apparaissent, alors j'active la classe 'active'
-            entry.target.children[0].classList.add('active');
-        }
-    })
+function showItem(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { // Si les deux éléments ( parent et enfant) apparaissent, alors j'active la classe 'active'
+      entry.target.children[0].classList.add('active');
+    }
+  })
 }
 
-qsnText.forEach(item=>{
-    observer.observe(item);
+qsnText.forEach(item => {
+  observer.observe(item);
 })
-qsnTextDeux.forEach(item=>{
-    observer.observe(item);
+qsnTextDeux.forEach(item => {
+  observer.observe(item);
 })                          // La fonction s'active une fois que la détection des deux éléments a été faite avec le parent et l'enfant
-imgText.forEach(item=>{
-    observer.observe(item);
+imgText.forEach(item => {
+  observer.observe(item);
 })
-imgTextDeux.forEach(item=>{
-    observer.observe(item);
+imgTextDeux.forEach(item => {
+  observer.observe(item);
 })
- containerCard.forEach(item=>{
-    observer.observe(item);
-   
-}) 
+containerCard.forEach(item => {
+  observer.observe(item);
+
+})
 
 
 // CARD NOVA START
 
 
 function scrollAppearNova() {
-  
-    let containerCard = document.querySelector('.js_card_qsn');
-    let containerCardPosition = containerCard.getBoundingClientRect().top;
-    //let langagesPosition = langages.getBoundingClientRect().top;
-    let screenPosition = window.innerHeight / 1.2 ;
 
-    if(containerCardPosition < screenPosition) {
-        
-        containerCard.classList.add('intro-appear');
-       
-    } 
+  let containerCard = document.querySelector('.js_card_qsn');
+  let containerCardPosition = containerCard.getBoundingClientRect().top;
+  //let langagesPosition = langages.getBoundingClientRect().top;
+  let screenPosition = window.innerHeight / 1.2;
 
-    //console.log(aboutPosition);
+  if (containerCardPosition < screenPosition) {
+
+    containerCard.classList.add('intro-appear');
+
+  }
+
+  //console.log(aboutPosition);
 
 }
 window.addEventListener('scroll', scrollAppearNova);
 
 
 function scrollAppearLogo() {
-  
-    let containerCard = document.querySelector('.js_logo_qsn');
-    let containerCardPosition = containerCard.getBoundingClientRect().top;
-    //let langagesPosition = langages.getBoundingClientRect().top;
-    let screenPosition = window.innerHeight / 1.2;
 
-    if(containerCardPosition < screenPosition) {
-        
-        containerCard.classList.add('intro-appear');
-       
-    } 
+  let containerCard = document.querySelector('.js_logo_qsn');
+  let containerCardPosition = containerCard.getBoundingClientRect().top;
+  //let langagesPosition = langages.getBoundingClientRect().top;
+  let screenPosition = window.innerHeight / 1.2;
 
-    //console.log(aboutPosition);
+  if (containerCardPosition < screenPosition) {
+
+    containerCard.classList.add('intro-appear');
+
+  }
+
+  //console.log(aboutPosition);
 
 }
 window.addEventListener('scroll', scrollAppearLogo);
@@ -137,32 +137,40 @@ if (vers_inscription != null) {
 // TEXT LETTER BY LETTER
 
 ("use strict");
-window.addEventListener("DOMContentLoaded", (event) => {
+
+if (animText != null) {
   animate_text();
-});
+}
 
 function animate_text() {
   let delay = 100,
     delay_start = 0,
     contents,
     letters;
-  document.querySelectorAll(".animate-text").forEach(function (elem) {
-    contents = elem.textContent.trim();
-    elem.textContent = "";
-    letters = contents.split("");
-    elem.style.visibility = "visible";
 
-    letters.forEach(function (letter, index_1) {
-      setTimeout(function () {
-        elem.textContent += letter;
-      }, delay_start + delay * index_1);
-    });
-    delay_start += delay * letters.length;
+  contents = animText.textContent.trim();
+  animText.textContent = "";
+  letters = contents.split("");
+
+  letters.forEach(function (letter, index_1) {
+    setTimeout(function () {
+      animText.textContent += letter;
+    }, delay_start + delay * index_1);
   });
+  delay_start += delay * letters.length;
+
 }
 
 // CARROUSSEL DE TEMOIGNAGES
 
+var el = document.querySelector('.icon-cards__content');
+if (el != null) {
+  document.querySelector('#toggle-animation').addEventListener('click', classToggle);
+}
+
+function classToggle() {
+  el.classList.toggle('step-animation');
+}
 
 
 // GESTION DES GRAPHS
@@ -322,3 +330,215 @@ fetch("http://localhost/php/tram_reseaux/statistiques/protocol_arriver.php")
       },
     });
   });
+// Gestion des formulaires
+
+//    Connexion
+
+const email_connexion = document.querySelector("#email_connexion")
+const focus_connexion_email = document.querySelector("#focus_connexion_email")
+const focus_connexion_password = document.querySelector("#focus_connexion_password")
+const password_connexion = document.querySelector("#password_connexion")
+const erreur_mail_co = document.querySelector("#erreur_mail_co")
+const erreur_password_co = document.querySelector("#erreur_password_co")
+const submit_connexion = document.querySelector("#submit_connexion")
+const error_connexion = document.querySelector("#error_connexion")
+let erreur = false
+
+function pause(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+if (email_connexion != null && password_connexion != null) {
+  email_connexion.addEventListener("input", async () => {
+    if (!email_connexion.value.match(/[a-z0-9_\-\.]+@[a-z0-9_\-\.]+\.[a-z]+/i)) {
+      erreur_mail_co.innerHTML = "l'email n'est pas une adresse valide"
+      focus_connexion_email.style = "background-color: red"
+      submit_connexion.style = "cursor: no-drop"
+      erreur = true
+    } else {
+      submit_connexion.style = "cursor: pointer"
+      erreur_mail_co.innerHTML = "&nbsp;"
+      focus_connexion_email.style = "background-color: green"
+      erreur = false
+    }
+  })
+  password_connexion.addEventListener("input", async () => {
+    if (password_connexion.value.length < 8) {
+      erreur_password_co.innerHTML = "mot de passe non réglementaire"
+      focus_connexion_password.style = "background-color: red"
+      submit_connexion.style = "cursor: no-drop"
+      erreur = true
+    } else {
+      focus_connexion_password.style = "background-color: green"
+      erreur_password_co.innerHTML = "&nbsp;"
+      submit_connexion.style = "cursor: pointer"
+      erreur = false
+
+
+    }
+  })
+  submit_connexion.addEventListener("click", async (event) => {
+    if (erreur == true) {
+      event.preventDefault()
+      error_connexion.style = "color: red"
+      error_connexion.innerHTML = "Mot de passe ou email incorrect"
+
+    } else {
+      event.preventDefault()
+      error_connexion.style = "color: orange"
+      error_connexion.innerHTML = "Vérification en cours <span class=\"throbber-loader\">Loading&#8230;</span>\n"
+      await pause(2000)
+      let formData = new FormData()
+      formData.append("email", email_connexion.value)
+      formData.append("password", password_connexion.value)
+      formData.append("type", submit_connexion.value)
+      fetch("../../login/login.php", {
+        method: "POST",
+        body: formData
+      })
+        .then(resp => resp.json())
+        .then(async data => {
+          if (data == "true") {
+            error_connexion.style = "color: green"
+            error_connexion.innerHTML = "connexion autorisé, redirection en cours"
+            await pause(2000)
+            button.checked = false
+            await pause(1000)
+            window.location.href = './user/accueil_user.php'
+          } else if (data == "false") {
+            error_connexion.style = "color: red"
+            error_connexion.innerHTML = "Mot de passe ou email incorrect"
+          }
+        })
+
+    }
+  })
+
+}
+
+const submit_inscription = document.querySelector("#submit_inscription")
+const email_inscription = document.querySelector("#email_inscription")
+const password_inscription = document.querySelector("#password_inscription")
+const cgu_inscription = document.querySelector("#cgu_inscription")
+const label_cgu = document.querySelector("#label_cgu")
+const nom_inscription = document.querySelector("#nom_inscription")
+const prenom_inscription = document.querySelector("#prenom_inscription")
+const erreur_mail_insc = document.querySelector("#erreur_mail_inscription")
+const erreur_nom_insc = document.querySelector("#erreur_nom_inscription")
+const erreur_prenom_insc = document.querySelector("#erreur_prenom_inscription")
+const erreur_password_insc = document.querySelector("#erreur_password_inscription")
+const error_inscription = document.querySelector("#error_inscription")
+const erreur_cgu_insc = document.querySelector("#erreur_cgu_inscription")
+
+let erreur_insc = false
+if (email_inscription != null && password_inscription != null && nom_inscription != null && prenom_inscription != null) {
+  nom_inscription.addEventListener("input", () => {
+    if (nom_inscription.value.length < 1) {
+      erreur_nom_insc.innerHTML = "Veuillez remplir ce champs"
+      nom_inscription.style = "outline: red 3px solid"
+      submit_inscription.style = "cursor: no-drop"
+      erreur_insc = true
+    } else {
+      erreur_nom_insc.innerHTML = "&nbsp;"
+      nom_inscription.style = "outline: green 3px solid"
+      submit_inscription.style = "cursor: pointer"
+      erreur_insc = false
+
+    }
+
+  })
+  prenom_inscription.addEventListener("input", () => {
+    if (prenom_inscription.value.length < 1) {
+      erreur_prenom_insc.innerHTML = "Veuillez remplir ce champs"
+      prenom_inscription.style = "outline: red 3px solid"
+      submit_inscription.style = "cursor: no-drop"
+      erreur_insc = true
+    } else {
+      erreur_prenom_insc.innerHTML = "&nbsp;"
+      prenom_inscription.style = "outline: green 3px solid"
+      submit_inscription.style = "cursor: pointer"
+      erreur_insc = false
+
+    }
+
+  })
+  email_inscription.addEventListener("input", async () => {
+    if (!email_inscription.value.match(/[a-z0-9_\-\.]+@[a-z0-9_\-\.]+\.[a-z]+/i)) {
+      erreur_mail_insc.innerHTML = email_inscription.value + " n'est pas une adresse valide"
+      email_inscription.style = "outline: red 3px solid"
+      submit_inscription.style = "cursor: no-drop"
+      erreur_insc = true
+    } else {
+      submit_inscription.style = "cursor: pointer"
+      erreur_mail_insc.innerHTML = "&nbsp;"
+      email_inscription.style = "outline: green 3px solid"
+      erreur_insc = false
+    }
+  })
+  password_inscription.addEventListener("input", async () => {
+    if (password_inscription.value.length < 8) {
+      erreur_password_insc.innerHTML = "mot de passe non réglementaire"
+      password_inscription.style = "outline: red 3px solid"
+      submit_inscription.style = "cursor: no-drop"
+      erreur_insc = true
+    } else {
+      erreur_password_insc.innerHTML = "&nbsp;"
+      password_inscription.style = "outline: green 3px solid"
+      submit_inscription.style = "cursor: pointer"
+      erreur_insc = false
+      cgu_inscription.addEventListener("change", () => {
+        if (cgu_inscription.checked == true) {
+          label_cgu.style = "color: green"
+          erreur_insc = false
+        } else {
+          label_cgu.style = "color: red"
+          erreur_insc = true
+        }
+      })
+
+    }
+  })
+  if (submit_inscription != null) {
+    submit_inscription.addEventListener("click", (event) => {
+      event.preventDefault()
+      if (nom_inscription.value == "") {
+        erreur_nom_insc.innerHTML = "Veuillez remplir ce champs"
+        nom_inscription.style = "outline: red 3px solid"
+        submit_inscription.style = "cursor: no-drop"
+        erreur_insc = true
+      }
+      if (prenom_inscription.value == "") {
+        erreur_prenom_insc.innerHTML = "Veuillez remplir ce champs"
+        prenom_inscription.style = "outline: red 3px solid"
+        submit_inscription.style = "cursor: no-drop"
+        erreur_insc = true
+      }
+      if (cgu_inscription.checked == false) {
+        label_cgu.style = "color: red"
+        erreur_insc = true
+      }
+
+      if (erreur_insc == false) {
+        let formData1 = new FormData()
+        formData1.append("nom", nom_inscription.value)
+        formData1.append("prenom", prenom_inscription.value)
+        formData1.append("email", email_inscription.value)
+        formData1.append("password", password_inscription.value)
+        formData1.append("type", submit_inscription.value)
+        formData1.append("cgu", cgu_inscription.checked)
+        fetch("../../login/login.php", {
+          method: "POST",
+          body: formData1
+        })
+          .then(resp => resp.json())
+          .then(data => {
+            if (data == "true") {
+              error_inscription.textContent = "Inscriptions terminé"
+              error_inscription.style = "color: green"
+            }
+          })
+      }
+    })
+  }
+
+}

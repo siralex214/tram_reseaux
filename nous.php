@@ -1,6 +1,6 @@
 <?php
-require('./inclu/function.php');
-
+require_once "./inclu/function.php";
+$errors = [];
 
 ?>
 <!DOCTYPE html>
@@ -26,7 +26,6 @@ require('./inclu/function.php');
         <h1 class="h1-qsn">Qui sommes-nous ?</h1>
     </div>
          
-
 
             <div class="intro_qsn">
                 <p>Nova Link est une entreprise d'analyse de réseau organisationnel, nous mesurons et traçons les modèles de collaboration en examinant la force, la fréquence et la nature des interactions entre les personnes dans les réseaux. Nova Link fournit des informations détaillées sur différents facteurs, tels que le flux d'informations, la prise de décision, l'optimisation de revenus, l'innovation, l'inclusion, la confiance et l'énergie.</p>

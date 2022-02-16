@@ -1,44 +1,7 @@
 <?php
 require("./inclu/function.php");
 require("./inclu/pdo.php");
-
-
 $errors = [];
-
-if (!empty($_POST['submitted'])) {
-
-    if ($_POST['submitted'] == "connexion") {
-
-        foreach ($_POST as $key => $value) {
-            $_POST[$key] = xss($value);
-        }
-        $errors = validEmail($errors, $_POST['email'], "email");
-        $errors = validText($errors, $_POST['password'], 'password', 4, 20);
-
-        $query = $pdo->prepare("SELECT * FROM users WHERE email = :email");
-        $query->bindValue(':email', $_POST['email'], PDO::PARAM_STR);
-        $query->execute();
-        $result = $query->fetch();
-        //condition pour verifier si le mail et le mot de passe sont dans la base de données
-        if ($result) {
-            $user = $result;
-            if (!password_verify($_POST['password'], $user['password'])) {
-                $errors['invalid'] = "Votre email ou votre pwd sont incorrects!";
-            }
-        } else {
-            $errors['invalid'] = "Votre email ou votre pwd sont incorrects!";
-        }
-        if (count($errors) === 0) {
-            // tout c'est bien passé
-            $_SESSION['id'] = $user['id'];
-            $_SESSION['email'] = $user['email'];
-            $_SESSION['nom'] = $user['nom'];
-            $_SESSION['prenom'] = $user['prenom'];
-            $_SESSION['connecter'] = 'oui';
-            //condition qui n'autorise la connexion qu'au personne avec un role défini
-        }
-    }
-}
 ?>
 
 <!doctype html>
@@ -137,7 +100,7 @@ if (!empty($_POST['submitted'])) {
                     <h3>GRATUIT</h3>
                 </div>
                 <div id="card_accueil_left">
-                <h5>Inclus:</h5>
+                    <h5>Inclus:</h5>
                     <ul class="forfait">
                         <li>✅ Affichage des LOGS</li>
                         <li>✅ Affichage des LOGS</li>
@@ -165,14 +128,6 @@ if (!empty($_POST['submitted'])) {
                 </div>
             </div>
         </div>
-<script>
-    function classToggle() {
-    var el = document.querySelector('.icon-cards__content');
-    el.classList.toggle('step-animation');
-}
-
-document.querySelector('#toggle-animation').addEventListener('click', classToggle);
-</script>
     </main>
 
     <?php include_once "./inclu/footer.php" ?>
