@@ -3,12 +3,11 @@ console.log("ok")
 // **** JAVASCRIPT PAGE QUI SOMMES-NOUS START **** //
 
 // TEXT SCROLL
-let qsnText = [...document.querySelectorAll('.text_qsn')];
-let qsnTextDeux = [...document.querySelectorAll('.text_qsn2')];
-let imgText = [...document.querySelectorAll('.picture')];
-let imgTextDeux = [...document.querySelectorAll('.picture2')];
-let containerCard = [...document.querySelectorAll('.container_card_qsn')];
-
+let qsnText = [...document.querySelectorAll(".text_qsn")];
+let qsnTextDeux = [...document.querySelectorAll(".text_qsn2")];
+let imgText = [...document.querySelectorAll(".picture")];
+let imgTextDeux = [...document.querySelectorAll(".picture2")];
+let containerCard = [...document.querySelectorAll(".container_card_qsn")];
 
 let options = {
   rootMargin: '0%', // l'animation s'activera au moment ou mon écran sera au centre de ma section
@@ -46,7 +45,6 @@ containerCard.forEach(item => {
 
 // CARD NOVA START
 
-
 function scrollAppearNova() {
 
   let containerCard = document.querySelector('.js_card_qsn');
@@ -62,9 +60,9 @@ function scrollAppearNova() {
 
   //console.log(aboutPosition);
 
+  //console.log(aboutPosition);
 }
-window.addEventListener('scroll', scrollAppearNova);
-
+window.addEventListener("scroll", scrollAppearNova);
 
 function scrollAppearLogo() {
 
@@ -81,8 +79,9 @@ function scrollAppearLogo() {
 
   //console.log(aboutPosition);
 
+  //console.log(aboutPosition);
 }
-window.addEventListener('scroll', scrollAppearLogo);
+window.addEventListener("scroll", scrollAppearLogo);
 // CARD NOVA END
 
 qsnText.forEach((item) => {
@@ -242,7 +241,7 @@ function classToggle() {
 
 // GESTION DES GRAPHS
 
-fetch("http://localhost/php/tram_reseaux/statistiques/stat_protocol.php")
+fetch("http://localhost/tram_reseaux/statistiques/stat_protocol.php")
   .then((response) => response.json())
   .then((data) => {
     let keys = [];
@@ -289,7 +288,7 @@ fetch("http://localhost/php/tram_reseaux/statistiques/stat_protocol.php")
     });
   });
 
-fetch("http://localhost/php/tram_reseaux/statistiques/protocol_check.php")
+fetch("http://localhost/tram_reseaux/statistiques/protocol_check.php")
   .then((response) => response.json())
   .then((data) => {
     let keys = [];
@@ -325,7 +324,7 @@ fetch("http://localhost/php/tram_reseaux/statistiques/protocol_check.php")
       },
     });
   });
-fetch("http://localhost/php/tram_reseaux/statistiques/protocol_depart.php")
+fetch("http://localhost/tram_reseaux/statistiques/protocol_depart.php")
   .then((response) => response.json())
   .then((data) => {
     let keys = [];
@@ -361,7 +360,7 @@ fetch("http://localhost/php/tram_reseaux/statistiques/protocol_depart.php")
       },
     });
   });
-fetch("http://localhost/php/tram_reseaux/statistiques/protocol_arriver.php")
+fetch("http://localhost/tram_reseaux/statistiques/protocol_arriver.php")
   .then((response) => response.json())
   .then((data) => {
     let keys = [];
