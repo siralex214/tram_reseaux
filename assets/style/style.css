@@ -91,7 +91,9 @@ header {
 header ul{
     display: flex;
     justify-content: space-between;
-    width: 33%;
+    align-items: center;
+    width: 100%;
+
 }
 header li{
     margin-left: 20%;
@@ -899,6 +901,7 @@ section.red {
 
 
 #button_label {
+    margin-top: -20px;
     opacity: 1;
     color: white;
     cursor: pointer;
