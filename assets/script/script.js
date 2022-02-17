@@ -161,6 +161,16 @@ repeat();
 
 // Javascript carousel END
 
+// DARK MODE START
+
+const darkMode = document.getElementById('dark-mode');
+
+darkMode.addEventListener('change', () => {
+    document.body.classList.toggle('dark');
+})
+
+// DARK MODE END
+
 // **** JAVASCRIPT PAGE QUI SOMMES-NOUS END **** //
 // Système de pop up ouverture et fermeture
 const button = document.querySelector("#button");
