@@ -1,4 +1,6 @@
-console.log("ok");
+const animText = document.querySelector(".animate-text");
+// **** JAVASCRIPT PAGE QUI SOMMES-NOUS START **** //
+
 // TEXT SCROLL
 let qsnText = [...document.querySelectorAll(".text_qsn")];
 let qsnTextDeux = [...document.querySelectorAll(".text_qsn2")];
@@ -52,6 +54,8 @@ function scrollAppearNova() {
   }
 
   //console.log(aboutPosition);
+
+  //console.log(aboutPosition);
 }
 window.addEventListener("scroll", scrollAppearNova);
 
@@ -64,6 +68,8 @@ function scrollAppearLogo() {
   if (containerCardPosition < screenPosition) {
     containerCard.classList.add("intro-appear");
   }
+
+  //console.log(aboutPosition);
 
   //console.log(aboutPosition);
 }
@@ -86,6 +92,67 @@ containerCard.forEach((item) => {
   observer.observe(item);
 });
 
+// JAVASCRIPT CAROUSEL PAGE QUI SOMMES-NOUS START
+let slides = document.querySelectorAll(".slide_qsn");
+let btns = document.querySelectorAll(".btn_qsn");
+let currentSlide = 1;
+
+// Javascript for image slider MANUAL navigation START
+
+let manualNav = function (manual) {
+  slides.forEach((slide) => {
+    slide.classList.remove("test");
+
+    btns.forEach((btn) => {
+      btn.classList.remove("test");
+    });
+  });
+  slides[manual].classList.add("test");
+  btns[manual].classList.add("test");
+};
+
+btns.forEach((btn, i) => {
+  btn.addEventListener("click", () => {
+    manualNav(i);
+    currentSlide = i;
+  });
+});
+
+// Javascript for image slider manual navigation END
+
+//// Javascript carousel END START
+
+let repeat = function (activeClass) {
+  let active = document.getElementsByClassName("test");
+  let i = 1;
+
+  let repeater = () => {
+    setTimeout(function () {
+      [...active].forEach((activeSlide) => {
+        activeSlide.classList.remove("test");
+      });
+      slides[i].classList.add("test");
+      btns[i].classList.add("test");
+      i++;
+
+      if (slides.length == i) {
+        i = 0;
+      }
+      if (i >= slides.length) {
+        return;
+      }
+      repeater();
+    }, 6000);
+  };
+  repeater();
+};
+repeat();
+
+// Javascript for image slider AUTO navigation END.
+
+// Javascript carousel END
+
+// **** JAVASCRIPT PAGE QUI SOMMES-NOUS END **** //
 // Système de pop up ouverture et fermeture
 const button = document.querySelector("#button");
 const button_label = document.querySelector("#button_label");
@@ -94,11 +161,13 @@ const fermeture_connexion = document.querySelector("#fermeture_connexion");
 if (button_label != null) {
   button_label.addEventListener("click", () => {
     button.checked = true;
+    animText.style = "transition: all 0.5s; display: none";
   });
 }
 
 if (fermeture_connexion != null) {
   fermeture_connexion.addEventListener("click", () => {
+    animText.style = "transition: all 0.5s; display: block";
     button.checked = false;
   });
 }
@@ -125,35 +194,43 @@ if (vers_inscription != null) {
 // TEXT LETTER BY LETTER
 
 ("use strict");
-window.addEventListener("DOMContentLoaded", (event) => {
+
+if (animText != null) {
   animate_text();
-});
+}
 
 function animate_text() {
   let delay = 100,
     delay_start = 0,
     contents,
     letters;
-  document.querySelectorAll(".animate-text").forEach(function (elem) {
-    contents = elem.textContent.trim();
-    elem.textContent = "";
-    letters = contents.split("");
-    elem.style.visibility = "visible";
 
-    letters.forEach(function (letter, index_1) {
-      setTimeout(function () {
-        elem.textContent += letter;
-      }, delay_start + delay * index_1);
-    });
-    delay_start += delay * letters.length;
+  contents = animText.textContent.trim();
+  animText.textContent = "";
+  letters = contents.split("");
+
+  letters.forEach(function (letter, index_1) {
+    setTimeout(function () {
+      animText.textContent += letter;
+    }, delay_start + delay * index_1);
   });
+  delay_start += delay * letters.length;
 }
 
 // CARROUSSEL DE TEMOIGNAGES
 
+var el = document.querySelector(".icon-cards__content");
+if (el != null) {
+  // document.querySelector('#toggle-animation').addEventListener('click', classToggle); a voir avec tout le monde beug!!!!!!!!!!!
+}
+
+function classToggle() {
+  el.classList.toggle("step-animation");
+}
+
 // GESTION DES GRAPHS
 
-fetch("http://localhost/tram_reseaux/statistiques/stat_protocol.php")
+fetch("http://localhost/htdocs/tram_reseaux/statistiques/stat_protocol.php")
   .then((response) => response.json())
   .then((data) => {
     let keys = [];
@@ -200,7 +277,7 @@ fetch("http://localhost/tram_reseaux/statistiques/stat_protocol.php")
     });
   });
 
-fetch("http://localhost/tram_reseaux/statistiques/protocol_check.php")
+fetch("http://localhost/php/tram_reseaux/statistiques/protocol_check.php")
   .then((response) => response.json())
   .then((data) => {
     let keys = [];
@@ -236,7 +313,7 @@ fetch("http://localhost/tram_reseaux/statistiques/protocol_check.php")
       },
     });
   });
-fetch("http://localhost/tram_reseaux/statistiques/protocol_depart.php")
+fetch("http://localhost/php/tram_reseaux/statistiques/protocol_depart.php")
   .then((response) => response.json())
   .then((data) => {
     let keys = [];
@@ -272,7 +349,7 @@ fetch("http://localhost/tram_reseaux/statistiques/protocol_depart.php")
       },
     });
   });
-fetch("http://localhost/tram_reseaux/statistiques/protocol_arriver.php")
+fetch("http://localhost/php/tram_reseaux/statistiques/protocol_arriver.php")
   .then((response) => response.json())
   .then((data) => {
     let keys = [];
@@ -293,8 +370,8 @@ fetch("http://localhost/tram_reseaux/statistiques/protocol_arriver.php")
         datasets: [
           {
             data: value,
-            backgroundColor: ["#AAB7B8", "#C39BD3", "#1ABC9C", "#F4D03F"],
-            borderColor: ["#AAB7B8", "#C39BD3", "#1ABC9C", "#F4D03F"],
+            backgroundColor: ["red", "green"],
+            borderColor: ["red", "green"],
             borderWidth: 1,
           },
         ],
@@ -308,3 +385,265 @@ fetch("http://localhost/tram_reseaux/statistiques/protocol_arriver.php")
       },
     });
   });
+// Gestion des formulaires
+
+//    Connexion
+
+const email_connexion = document.querySelector("#email_connexion");
+const focus_connexion_email = document.querySelector("#focus_connexion_email");
+const focus_connexion_password = document.querySelector(
+  "#focus_connexion_password"
+);
+const password_connexion = document.querySelector("#password_connexion");
+const erreur_mail_co = document.querySelector("#erreur_mail_co");
+const erreur_password_co = document.querySelector("#erreur_password_co");
+const submit_connexion = document.querySelector("#submit_connexion");
+const error_connexion = document.querySelector("#error_connexion");
+let erreur = true;
+
+function pause(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+if (email_connexion != null && password_connexion != null) {
+  email_connexion.addEventListener("input", async () => {
+    if (
+      !email_connexion.value.match(/[a-z0-9_\-\.]+@[a-z0-9_\-\.]+\.[a-z]+/i)
+    ) {
+      erreur_mail_co.innerHTML = "l'email n'est pas une adresse valide";
+      focus_connexion_email.style = "background-color: red";
+      erreur = true;
+    } else {
+      submit_connexion.style = "cursor: pointer";
+      erreur_mail_co.innerHTML = "&nbsp;";
+      focus_connexion_email.style = "background-color: green";
+      erreur = false;
+    }
+  });
+  password_connexion.addEventListener("input", async () => {
+    if (password_connexion.value.length < 8) {
+      erreur_password_co.innerHTML = "mot de passe non réglementaire";
+      focus_connexion_password.style = "background-color: red";
+      erreur = true;
+    } else {
+      focus_connexion_password.style = "background-color: green";
+      erreur_password_co.innerHTML = "&nbsp;";
+      submit_connexion.style = "cursor: pointer";
+      erreur = false;
+    }
+  });
+  submit_connexion.addEventListener("click", async (event) => {
+    if (erreur == true) {
+      event.preventDefault();
+      error_connexion.style = "color: red";
+      error_connexion.innerHTML = "Mot de passe ou email incorrect";
+    } else {
+      event.preventDefault();
+      error_connexion.style = "color: orange";
+      error_connexion.innerHTML =
+        'Vérification en cours <span class="throbber-loader">Loading&#8230;</span>\n';
+      await pause(2000);
+      let formData = new FormData();
+      formData.append("email", email_connexion.value);
+      formData.append("password", password_connexion.value);
+      formData.append("type", submit_connexion.value);
+      fetch("../../login/login.php", {
+        method: "POST",
+        body: formData,
+      })
+        .then((resp) => resp.json())
+        .then(async (data) => {
+          if (data == "true") {
+            error_connexion.style = "color: green";
+            error_connexion.innerHTML =
+              "connexion autorisé, redirection en cours";
+            await pause(2000);
+            button.checked = false;
+            await pause(1000);
+            window.location.href = "./user/accueil_user.php";
+          } else if (data == "false") {
+            error_connexion.style = "color: red";
+            error_connexion.innerHTML = "Mot de passe ou email incorrect";
+          }
+        });
+    }
+  });
+}
+
+const prenom_inscription = document.querySelector("#prenom_inscription");
+const focus_prenom_inscription = document.querySelector(
+  "#focus_prenom_inscription"
+);
+const erreur_prenom_insc = document.querySelector("#erreur_prenom_inscription");
+
+const submit_inscription = document.querySelector("#submit_inscription");
+const error_inscription = document.querySelector("#error_inscription");
+
+const email_inscription = document.querySelector("#email_inscription");
+const focus_email_inscription = document.querySelector(
+  "#focus_email_inscription"
+);
+const erreur_mail_insc = document.querySelector("#erreur_mail_inscription");
+
+const password_inscription = document.querySelector("#password_inscription");
+const erreur_password_insc = document.querySelector(
+  "#erreur_password_inscription"
+);
+const focus_password_inscription = document.querySelector(
+  "#focus_password_inscription"
+);
+
+const nom_inscription = document.querySelector("#nom_inscription");
+const erreur_nom_insc = document.querySelector("#erreur_nom_inscription");
+const focus_nom_inscription = document.querySelector("#focus_nom_inscription");
+
+const cgu_inscription = document.querySelector("#cgu_inscription");
+const label_cgu = document.querySelector("#label_cgu");
+
+let erreur_insc = true;
+let verifPrenomInsc = () => {
+  if (prenom_inscription.value == "") {
+    erreur_prenom_insc.innerHTML = "Veuillez remplir ce champ";
+    focus_prenom_inscription.style = "background-color: red";
+    erreur_insc = true;
+  } else {
+    prenom_inscription.style = "outline: none";
+    erreur_prenom_insc.innerHTML = "&nbsp;";
+    focus_prenom_inscription.style = "background-color: green";
+    erreur_insc = false;
+  }
+  return erreur_insc;
+};
+let verifNomInsc = () => {
+  if (nom_inscription.value == "") {
+    erreur_nom_insc.innerHTML = "Veuillez remplir ce champ";
+    focus_nom_inscription.style = "background-color: red";
+    erreur_insc = true;
+  } else {
+    erreur_nom_insc.innerHTML = "&nbsp; ";
+    nom_inscription.style = "outline: none";
+    focus_nom_inscription.style = "background-color: green";
+    erreur_insc = false;
+    submit_inscription.style = "cursor: pointer";
+  }
+  return erreur_insc;
+};
+let verifEmailInsc = () => {
+  if (
+    !email_inscription.value.match(/[a-z0-9_\-\.]+@[a-z0-9_\-\.]+\.[a-z]+/i)
+  ) {
+    erreur_mail_insc.innerHTML = "l'email n'est pas une adresse valide";
+    focus_email_inscription.style = "background-color: red";
+    erreur_insc = true;
+  } else {
+    erreur_mail_insc.innerHTML = "&nbsp;";
+    email_inscription.style = "outline: none";
+    focus_email_inscription.style = "background-color: green";
+    erreur_insc = false;
+    submit_inscription.style = "cursor: pointer";
+  }
+  return erreur_insc;
+};
+let verifPasswordInsc = () => {
+  if (password_inscription.value.length < 8) {
+    erreur_password_insc.innerHTML = "Mot de passe non réglementaire";
+    focus_password_inscription.style = "background-color: red";
+    erreur_insc = true;
+  } else {
+    focus_password_inscription.style = "background-color: green";
+    erreur_password_insc.innerHTML = "&nbsp;";
+    submit_inscription.style = "cursor: pointer";
+    erreur_insc = false;
+  }
+  const ctx4 = document.getElementById("graph4").getContext("2d");
+  const myChart4 = new Chart(ctx4, {
+    type: "doughnut",
+    data: {
+      labels: keys,
+      datasets: [
+        {
+          data: value,
+          backgroundColor: ["#AAB7B8", "#C39BD3", "#1ABC9C", "#F4D03F"],
+          borderColor: ["#AAB7B8", "#C39BD3", "#1ABC9C", "#F4D03F"],
+          borderWidth: 1,
+        },
+      ],
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
+      },
+    },
+  });
+};
+return erreur_insc;
+
+let verifCgu = () => {
+  if (cgu_inscription.checked == true) {
+    label_cgu.style = "color: green";
+    erreur_insc = false;
+  } else {
+    label_cgu.style = "color: red";
+    erreur_insc = true;
+  }
+  return erreur_insc;
+};
+if (submit_inscription != null) {
+  prenom_inscription.addEventListener("input", verifPrenomInsc);
+  nom_inscription.addEventListener("input", verifNomInsc);
+  email_inscription.addEventListener("input", verifEmailInsc);
+  password_inscription.addEventListener("input", verifPasswordInsc);
+  cgu_inscription.addEventListener("change", verifCgu);
+  submit_inscription.addEventListener("click", (event) => {
+    verifPrenomInsc();
+    verifNomInsc();
+    verifEmailInsc();
+    verifPasswordInsc();
+    verifCgu();
+    if (
+      verifPrenomInsc() == true ||
+      verifNomInsc() == true ||
+      verifEmailInsc() == true ||
+      verifPasswordInsc() == true ||
+      verifCgu() == true
+    ) {
+      erreur_insc = true;
+    } else {
+      erreur_insc = false;
+    }
+
+    event.preventDefault();
+    if (erreur_insc == false) {
+      error_inscription.innerHTML = " ";
+      let formData1 = new FormData();
+      formData1.append("nom", nom_inscription.value);
+      formData1.append("prenom", prenom_inscription.value);
+      formData1.append("email", email_inscription.value);
+      formData1.append("password", password_inscription.value);
+      formData1.append("type", submit_inscription.value);
+      formData1.append("cgu", cgu_inscription.checked);
+      fetch("../../login/login.php", {
+        method: "POST",
+        body: formData1,
+      })
+        .then((resp) => resp.json())
+        .then((data) => {
+          if (data == "true") {
+            error_inscription.textContent = "Inscriptions terminé";
+            error_inscription.style = "color: green";
+            container.style = "transform: rotateY(0deg);";
+            etatReturnCard = false;
+          }
+          if (data.email != null) {
+            erreur_mail_insc.innerHTML = data.email;
+          }
+        });
+    } else {
+      error_inscription.style = "color: red";
+      error_inscription.innerHTML =
+        " veuillez remplir correctement le formulaire";
+    }
+  });
+}
