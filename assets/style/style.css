@@ -698,6 +698,85 @@ img.fallout, img.fox {
     transform: translateX(0px);
 }
 
+/* DARK MODE START */
+.toggle_qsn {
+    position: absolute;
+    right: 2rem;
+    top: 6rem;
+}
+
+.checkbox_qsn {
+    display: none;
+}
+.label_qsn {
+    height: 26px;
+    width: 50px;
+    background: #5E7EEA;
+    padding: 5px 8px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    transform: scale(1.2);
+    box-shadow: 2px 1px 1px #333;
+}
+.label_qsn .ball_qsn {
+    background: #eee;
+    border-radius: 50%;
+    height: 26px;
+    width: 26px;
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    transform: translateX(0px);
+    transition: transform 0.4s cubic-bezier(.45, -1.12, .35 ,.1.78);
+}
+.checkbox_qsn:checked + .label_qsn .ball_qsn {
+    transform: translateX(29px);
+}
+.fa-moon {
+    color: #333;
+}
+
+/* DARK MODE CONFIG */
+
+.dark #nav, .dark footer {
+    background: #030F28;
+}
+.dark #text_reseaux_sociaux {
+    color: #A7B1C0;
+    background-color: initial;
+}
+
+.dark .section_qsn{
+    background: url('../img/Dark-Background.jpeg') ;
+}
+.dark .container, .dark .intro_qsn , .dark .h1-qsn , .dark .blue,  .dark .red {
+    background: #121519
+}
+.dark h1, .dark h2 {
+    color: #667EEA;
+}
+.dark li, .dark span, .dark p, .dark a, .dark a:link, .dark a:visited {
+    color: #A7B1C0;
+}
+.dark .card_qsn1, .dark .card_qsn2, .dark .card_qsn3, .dark .card_qsn4 {
+    border-top: 2rem solid #27199f;
+    background: #030f28;
+}
+.dark .sub_container_text {
+    background: #030f28 ;
+}
+.dark .label {
+    border-top: 2px 1px 1px #09FBBa;
+    background: #888;
+}
+.dark .ball {
+    background: #09ffba;
+}
+/* DARK MODE END */
 
 /* CSS CAROUSEL START */
 
@@ -823,6 +902,13 @@ section.blue, section.red {
 	font-size: 14px;
 
 }
+.label_qsn {
+    transform: scale(0.6);
+    }
+    .toggle_qsn {
+        right: 0rem;
+        
+    }
 
 }
 
@@ -856,6 +942,11 @@ section.blue, section.red {
     .container_card_qsn {
     padding : initial;
     }
+    
+.toggle_qsn {
+    right: 0rem;
+    top: 9rem;
+}
 }
 
 @media (min-width: 760px) and (max-width: 850px) { /* TABLETTE */
@@ -863,6 +954,9 @@ section.blue, section.red {
         display: flex;
         flex-direction: column;
     }
+    .label_qsn {
+        transform: scale(1);
+        }
 }
 
 /* MEDIA QUERY END PAGE QUI SOMMES NOUS */
