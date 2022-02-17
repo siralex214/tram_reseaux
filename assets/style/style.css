@@ -1301,6 +1301,7 @@ a:visited {
 
 #bloc_accueil_texte {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
     height: auto;
@@ -1316,6 +1317,7 @@ a:visited {
     margin: 20px;
     color: rgb(0, 0, 0);
     transition: transform 0.1s;
+    min-width: 300px;
 }
 
 .accueil_texte:hover {
