@@ -22,12 +22,14 @@ require_once '../inclu/function.php';
     <main>
 
         <div id="centre_graph">
+
             <div id="nom_graph">
-                <a href="./profil_user.php"><i class="fas fa-id-card-alt"></i></a>
-                <a href="./accueil_user.php"><i class="fas fa-chart-pie"></i></a>
-                <a href=""><i class="fa-solid fa-moon"></i></a>
-                <a href="../login/logout.php"><i class="fa-solid fa-power-off"></i></a>
+                <a href="./profil_user.php"><img src="../assets/img/home_logo.png" class="dash_logo" width="100%" style="border-radius: 10px 10px 10px 10px;" alt=""></a>
+                <a href="./accueil_user.php"><img src="../assets/img/graphiques_logo.png" class="dash_logo" style="border-radius: 10px 10px 10px 10px; background-color: #58B8AE; width: 90%;" width="100%" alt=""></a>
+                <a href=""><img src="../assets/img/darkmode_logo.png" width="100%" class="dash_logo" style="border-radius: 10px 10px 10px 10px" alt=""></a>
+                <a href="../login/logout.php"><img src="../assets/img/deco_logo.png" class="dash_logo" style="border-radius: 10px 10px 10px 10px" width="100%" alt=""></a>
             </div>
+
             <div id="place_graph">
 
                 <h1>DASHBORD | GRAPHIQUES</h1>
@@ -44,7 +46,7 @@ require_once '../inclu/function.php';
 
                     <section id="chart4">
                         <section class="quatre_graph">
-                            <h2>PERTE DE PAQUET</h2>
+                            <h2>PERTE DE PAQUETS</h2>
                             <div style="width: auto;">
                                 <canvas id="graph4">
 

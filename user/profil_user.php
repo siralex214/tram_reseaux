@@ -1,6 +1,13 @@
 <?php
 require_once '../inclu/function.php';
-// require_once '../inclu/pdo.php';
+require_once '../inclu/pdo.php';
+
+if (isset($_GET['id']) and $_GET['id'] > 0) {
+    $getid = intval(($_GET['id']));
+    $requser = $pdo->prepare('SELECT * FROM users WHERE id=?');
+    $requser->execute(array($getid));
+    $user = $requser->fetch();
+}
 ?>
 
 <!doctype html>
@@ -23,17 +30,19 @@ require_once '../inclu/function.php';
 
         <div id="centre_graph">
             <div id="nom_graph">
-                <a href="./profil_user.php"><i class="fas fa-id-card-alt"></i></a>
-                <a href="./accueil_user.php"><i class="fas fa-chart-pie"></i></a>
-                <a href=""><i class="fa-solid fa-moon"></i></a>
-                <a href="../login/logout.php"><i class="fa-solid fa-power-off"></i></a>
+                <a href="./profil_user.php"><img src="../assets/img/home_logo.png" class="dash_logo" width="100%" style="border-radius: 10px 10px 10px 10px; background-color: #58B8AE;
+    width: 90%;" alt=""></a>
+                <a href="./accueil_user.php"><img src="../assets/img/graphiques_logo.png" class="dash_logo" style="border-radius: 10px 10px 10px 10px" width="100%" alt=""></a>
+                <a href=""><img src="../assets/img/darkmode_logo.png" width="100%" class="dash_logo" style="border-radius: 10px 10px 10px 10px" alt=""></a>
+                <a href="../login/logout.php"><img src="../assets/img/deco_logo.png" class="dash_logo" style="border-radius: 10px 10px 10px 10px" width="100%" alt=""></a>
             </div>
+
             <div id="place_graph">
 
                 <h1> DASHBORD | PROFIL</h1>
 
                 <div id="informations_profil">
-                    
+                    <h5>Profil de <?php echo $user['nom']; ?></h5>
                 </div>
             </div>
         </div>
