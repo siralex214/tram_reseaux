@@ -101,7 +101,7 @@ let currentSlide = 1;
 
 let manualNav = function (manual) {
   slides.forEach((slide) => {
-    slide.classList.remove("test");
+    slide.classList.remove("active");
 
     btns.forEach((btn) => {
       btn.classList.remove("test");
@@ -154,11 +154,11 @@ repeat();
 
 // DARK MODE START
 
-const darkMode = document.getElementById('dark-mode');
+const darkMode = document.getElementById("dark-mode");
 
-darkMode.addEventListener('change', () => {
-    document.body.classList.toggle('dark');
-})
+darkMode.addEventListener("change", () => {
+  document.body.classList.toggle("dark");
+});
 
 // DARK MODE END
 
@@ -240,7 +240,7 @@ function classToggle() {
 
 // GESTION DES GRAPHS
 
-fetch("http://localhost/htdocs/tram_reseaux/statistiques/stat_protocol.php")
+fetch("http://localhost/php/tram_reseaux/statistiques/stat_protocol.php")
   .then((response) => response.json())
   .then((data) => {
     let keys = [];
@@ -262,17 +262,12 @@ fetch("http://localhost/htdocs/tram_reseaux/statistiques/stat_protocol.php")
           {
             data: value,
             backgroundColor: [
-              "rgba(255, 99, 132, 0.2)",
-              "rgba(54, 162, 235, 0.2)",
-              "rgba(255, 206, 86, 0.2)",
-              "rgba(75, 192, 192, 0.2)",
+              " #8FC0A9  ",
+              " #C8D5B9 ",
+              " #F2E0A6 ",
+              " #68B0AB ",
             ],
-            borderColor: [
-              "rgba(255, 99, 132, 1)",
-              "rgba(54, 162, 235, 1)",
-              "rgba(255, 206, 86, 1)",
-              "rgba(75, 192, 192, 1)",
-            ],
+            borderColor: [" #8FC0A9 ", " #C8D5B9 ", " #F2E0A6 ", " #68B0AB "],
             borderWidth: 1,
           },
         ],
@@ -302,18 +297,19 @@ fetch("http://localhost/php/tram_reseaux/statistiques/protocol_check.php")
     }
     const ctx2 = document.getElementById("graph2").getContext("2d");
     const myChart2 = new Chart(ctx2, {
-      type: "polarArea",
+      type: "bar",
       data: {
         labels: keys,
         datasets: [
           {
             data: value,
-            backgroundColor: ["#af52b7a8", "#569b2787"],
-            borderColor: ["#af52b7a8", "#569b2787"],
+            backgroundColor: ["#DAD2BC", "#A99985"],
+            borderColor: ["#DAD2BC", "#A99985"],
             borderWidth: 1,
           },
         ],
       },
+
       options: {
         scales: {
           y: {
@@ -323,6 +319,7 @@ fetch("http://localhost/php/tram_reseaux/statistiques/protocol_check.php")
       },
     });
   });
+
 fetch("http://localhost/php/tram_reseaux/statistiques/protocol_depart.php")
   .then((response) => response.json())
   .then((data) => {
@@ -380,8 +377,8 @@ fetch("http://localhost/php/tram_reseaux/statistiques/protocol_arriver.php")
         datasets: [
           {
             data: value,
-            backgroundColor: ["red", "green"],
-            borderColor: ["red", "green"],
+            backgroundColor: ["#AAB7B8", "#C39BD3", "#F4D03F", "#1ABC9C"],
+            borderColor: ["#AAB7B8", "#C39BD3", "#F4D03F", "#1ABC9C"],
             borderWidth: 1,
           },
         ],
@@ -395,6 +392,7 @@ fetch("http://localhost/php/tram_reseaux/statistiques/protocol_arriver.php")
       },
     });
   });
+
 // Gestion des formulaires
 
 //    Connexion
