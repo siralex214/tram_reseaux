@@ -293,8 +293,8 @@ fetch("http://localhost/tram_reseaux/statistiques/protocol_arriver.php")
         datasets: [
           {
             data: value,
-            backgroundColor: ["red", "green"],
-            borderColor: ["red", "green"],
+            backgroundColor: ["#AAB7B8", "#C39BD3", "#1ABC9C", "#F4D03F"],
+            borderColor: ["#AAB7B8", "#C39BD3", "#1ABC9C", "#F4D03F"],
             borderWidth: 1,
           },
         ],
