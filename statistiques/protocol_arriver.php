@@ -36,15 +36,15 @@ require_once "../inclu/function.php";
 // }
 // echo json_encode($value);
 
-$recherche4 = "SELECT COUNT(protocol_ports_dest) as number,protocol_ports_dest
+$recherche4 = "SELECT COUNT(ttl) as number,ttl
 FROM trams
-GROUP BY protocol_ports_dest";
+GROUP BY ttl";
 
 $recherche4 = $pdo->query($recherche4);
 $recherche4 = $recherche4->fetchAll();
 $value = [];
 $i = 0;
 foreach ($recherche4 as $recherche4) {
-    $value[$recherche4["protocol_ports_dest"]] = $recherche4["number"];
+    $value[$recherche4["ttl"]] = $recherche4["number"];
 }
 echo json_encode($value);

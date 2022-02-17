@@ -98,7 +98,7 @@ header li{
     width: 33%;
     list-style: none;
     display: flex;
-    
+
 }
 
 /* DEUXIEME BLOC ACCUEIL TELEPHONE ET ORDI */
@@ -1722,4 +1722,13 @@ input[type="text"] {
 .fa-id-card-alt:before, .fa-id-card-clip:before {
     content: "\f47f";
     font-size: 40px;
+}
+
+/* DASHBORD PROFIL */
+
+#informations_profil{
+    background-color: #d4d4d481;
+    width: 50%;
+    height: 50px;
+    border-radius: 20px;
 }
