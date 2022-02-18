@@ -78,7 +78,10 @@ $errors = [];
         </div>
         <div id="text_telephone">
             <h3>
-                <mark> TRAVAILLER OU ON VEUT</mark>
+                <mark> TRAVAILLER OU</mark>
+            </h3>
+            <h3>
+                <mark> ON VEUT</mark>
             </h3>
             <h3>
                 <mark> D'OU L'ON VEUT</mark>
@@ -90,7 +93,7 @@ $errors = [];
                                                width="50%"></a>
         </div>
         <div id="ordi">
-            <img id="img_ordinateur" src="./assets/img/ordi.jpg" alt="ordinateur" height="100%">
+            <img id="img_ordinateur" src="./assets/img/ordi.png" alt="ordinateur" height="100%">
         </div>
     </div>
     <div id="bloc_accueil_texte_trois">
@@ -124,12 +127,12 @@ $errors = [];
                 <h5>Inclus:</h5>
                 <ul class="forfait">
                     <li>✅ Affichage des LOGS</li>
-                    <li>✅ Affichage des LOGS</li>
-                    <li>✅ Affichage des LOGS</li>
-                    <li>✅ Affichage des LOGS</li>
+                    <li>✅ Graphiques comparatifs</li>
+                    <li>✅ Darkmode pour travailler partout</li>
+                    <li>✅ Template de base</li>
                 </ul>
                 <a href="">
-                    <button>OBTENIR</button>
+                    <button id="bouton_obtenir">OBTENIR</button>
                 </a>
             </div>
         </div>
@@ -143,12 +146,12 @@ $errors = [];
 
                 <ul>
                     <li>✅ Affichage des LOGS</li>
-                    <li>✅ Affichage des trames par type de requête</li>
-                    <li>✅ Affichage des LOGS</li>
-                    <li>✅ Affichage des LOGS</li>
+                    <li>✅ Affichage des trames </li>
+                    <li>✅ Tableaux personnalisables</li>
+                    <li>✅ Nouveaux Templates deverouillés </li>
                 </ul>
                 <a href="">
-                    <button>OBTENIR</button>
+                    <button id="bouton_obtenir">OBTENIR</button>
                 </a>
             </div>
         </div>

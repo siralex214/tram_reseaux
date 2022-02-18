@@ -75,7 +75,7 @@ ul {
 
 /* HEADER */
 #ul_deux{
-    margin-right: 20px;
+    
     width: 50%;
     display: flex;
     justify-content: flex-start;
@@ -131,7 +131,6 @@ header li{
     width: 30%;
     list-style: none;
     /* display: flex; */
-    
 
 }
 
@@ -173,6 +172,7 @@ header li{
 mark {
     color: #ffffff;
     background-color: #14827a;
+    margin-right: 0px;
 }
 
 /* TROISIEME BLOC ACCUEIL TEMOIGNAGES*/
@@ -317,10 +317,13 @@ mark {
 
 #bloc_accueil_texte_quatre h2 {
     float: left;
+    margin-left: 20px;
 }
 
 #bloc_accueil_texte_quatre h3 {
     float: right;
+    margin-right: 20px;
+    
 }
 
 .accueil_texte_quatre {
@@ -352,7 +355,7 @@ mark {
     background-color: #58b8ae;
     border-radius: 0px 0px 20px 20px;
     width: 100%;
-    height: 75%;
+    height: 50%;
     color: white;
     text-align: center;
     font-size: larger;
@@ -373,7 +376,7 @@ mark {
     background-color: rgb(255, 255, 255);
     border-radius: 0px 0px 20px 20px;
     width: 100%;
-    height: 75%;
+    height: 50%;
     border-bottom: 3px solid rgb(0, 0, 0);
     border-right: 3px solid rgb(0, 0, 0);
     border-left: 3px solid rgb(0, 0, 0);
@@ -1173,8 +1176,8 @@ a:visited {
     font-family: "Reem Kufi", sans-serif;
     color: #ffdd19;
     position: absolute;
-    top: 289px;
-    left: 321px;
+    top: 216px;
+    left: 257px;
     word-spacing: 6px;
     letter-spacing: 1px;
 }
@@ -1276,6 +1279,14 @@ footer {
     font-size: 20px;
     color: rgb(250, 217, 31);
     justify-content: center;
+}
+
+#bouton_obtenir {
+    border: none;
+    border-radius: 7px;
+    background-color: green;
+    color: white;
+    margin-top: 30px;
 }
 
 ul.forfait {
@@ -1872,4 +1883,14 @@ input[type="text"] {
     #bloc_accueil_texte_trois {
         display: none;
     }
+}
+}
+
+/* RESPONSIVE NAVBAR */
+@media (max-width: 786px) {
+    
+}
+
+@media (max-width: 786px) {
+    /* MENU BURGER */
 }

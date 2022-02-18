@@ -24,7 +24,7 @@ require_once '../inclu/function.php';
         <div id="centre_graph">
 
             <div id="nom_graph">
-                <a href="./profil_user.php"><img src="../assets/img/home_logo.png" class="dash_logo" width="100%" style="border-radius: 10px 10px 10px 10px;" alt=""></a>
+                <img src="../assets/img/logo_novalink.png" width="50%" style="margin-left: auto; margin-right:auto; margin-bottom:50px" alt="">
                 <a href="./accueil_user.php"><img src="../assets/img/graphiques_logo.png" class="dash_logo" style="border-radius: 10px 10px 10px 10px; background-color: #58B8AE; width: 90%;" width="100%" alt=""></a>
                 <a href=""><img src="../assets/img/darkmode_logo.png" width="100%" class="dash_logo" style="border-radius: 10px 10px 10px 10px" alt=""></a>
                 <a href="../login/logout.php"><img src="../assets/img/deco_logo.png" class="dash_logo" style="border-radius: 10px 10px 10px 10px" width="100%" alt=""></a>
