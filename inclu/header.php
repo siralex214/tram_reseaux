@@ -1,5 +1,5 @@
 <header>
-    
+
     <ul id="ul_deux">
         <li class="bouton_li_header"><a href="./index.php">Accueil</a></li>
         <li class="bouton_li_header"><a href="./nous.php">Qui sommes-nous ?</a></li>
@@ -113,7 +113,8 @@
         </div>
 
     </ul>
-    <i id="burger_menu" class="fas fa-bars"></i>
+    <<<<<<< HEAD=======>>>>>>> develop_houda
+        <i id="burger_menu" class="fas fa-bars"></i>
 
 
 </header>

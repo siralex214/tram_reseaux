@@ -1978,7 +1978,7 @@ input[type="text"],input[type="password"] {
         justify-content: center;
     }
 
-    #content_connexion input[type="text"] {
+    #content_connexion input[type="text"], #content_connexion input[type="password"] {
         text-align: center;
     }
 
@@ -2048,6 +2048,8 @@ input[type="text"],input[type="password"] {
 @media screen and (max-width: 700px) {
     footer {
         text-align: center;
+        align-items: center;
+        width: auto;
     }
 
     #pages {
@@ -2058,6 +2060,7 @@ input[type="text"],input[type="password"] {
         display: none;
     }
 }
+
 /* RESPONSIVE NAVBAR */
 
 #burger_menu{
@@ -2102,24 +2105,31 @@ input[type="text"],input[type="password"] {
     }
 }
 
-/* RESPONSIVE NAVBAR */
-@media (max-width: 786px) {
-    
-}
+/* RESPONSIVE DASHBORD */
 
-@media (max-width: 786px) {
-    /* MENU BURGER */
+@media (max-width:906px) {
+    #place_graph h1{
+        display: flex;
+        justify-content: center;
+    }
+    .graphique_dash {
+        display: flex;
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+        width: 100%;
+        height: auto;
+        /* margin-bottom: 90px; */
+        justify-content: center;
 }
-
-
-.background_accueil {
-    background: url('../img/fond_novalink.png') center/cover no-repeat;
-    height: 100vh;
+#Allchart, #chart2, #chart3, #chart4 {
+    max-width: 100%;
+    display: flex;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    border-radius: 30px;
+    border: none;
+    width: 40%;
+    padding: 20px;
+    justify-content: center;
+    margin: 30px;
 }
-.dark .background_accueil {
-    background: url('../img/test_dark_nova_clipped_rev_1.jpeg') center/cover;
-}
-
-.graph_qsn {
-    height: 50vh;
 }
