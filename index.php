@@ -28,6 +28,20 @@ $errors = [];
 <main style="padding-bottom: 300px;">
     <img class="img_head" src="./assets/img/fond_novalink.png" alt="background" width="100%">
     <h1 class="animate-text"> LES SPECIALISTES DE L'ANALYSE RESEAU SUR LE WEB</h1>
+    <!-- DARK MODE START -->
+    <div class="toggle_qsn">
+        <input type="checkbox" name="" id="dark-mode" class="checkbox_qsn">
+        <label for="dark-mode" class="label_qsn">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <div class="ball_qsn"></div>
+        </label>
+    </div>
+<!-- DARK MODE END -->
+
+    <?php include_once "./inclu/header.php" ?>
+    <main style="padding-bottom: 300px;">
+        <img src="./assets/img/fond_novalink.png" alt="background" width="100%">
 
 
     <!-- <a href="#bloc_accueil_texte">

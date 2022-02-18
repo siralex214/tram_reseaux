@@ -22,7 +22,19 @@ $errors = [];
 <body>
 <?php include_once "./inclu/header.php" ?>
 
+
+
 <main class="main_qsn">
+    <!-- DARK MODE START -->
+<div class="toggle_qsn">
+        <input type="checkbox" name="" id="dark-mode" class="checkbox_qsn">
+        <label for="dark-mode" class="label_qsn">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <div class="ball_qsn"></div>
+        </label>
+    </div>
+<!-- DARK MODE END -->
     <section class="section_qsn">
         <div class="container_h1_qsn">
             <h1 class="h1-qsn">Qui sommes-nous ?</h1>
@@ -118,7 +130,7 @@ $errors = [];
 
             <div class="img-slider_qsn">
                 <div class="slide_qsn test">
-                    <img src="./assets/img/sunflowers.jpg" alt="">
+                    <img src="./assets/img/graphiques.png" alt="">
                     <div class="info_qsn">
 
 
