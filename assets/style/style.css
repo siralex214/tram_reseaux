@@ -816,12 +816,24 @@ img.fallout, img.fox {
     background: black;
 }
 .dark #centre_graph {
-    border-radius: 25px;
-}
-.dark main {
+    border-radius:initial;
     background: black;
 }
 
+.dark .animate-text  {
+    color:#ffdd19 !important;
+}
+.dark #en_savoir_plus {
+    color: #667EEA;
+    background: black;
+    border: 2px solid #667EEA;
+}
+.dark #dashbord {
+    background: black;
+}
+.dark .main_accueil {
+    background: black;
+}
 /* DARK MODE END */
 
 /* CSS CAROUSEL START */
@@ -1010,6 +1022,9 @@ section.blue, section.red {
     .label_qsn {
         transform: scale(1);
         }
+        .graph_qsn {
+            height: 40vh;
+        }
 }
 
 /* MEDIA QUERY END PAGE QUI SOMMES NOUS */
@@ -1031,6 +1046,9 @@ section.blue, section.red {
         height: 10px;
         margin: 8px;
     }
+    .graph_qsn {
+        height: 34vh !important;
+    }
 }
 
 @media (max-width: 620px) {
@@ -1050,6 +1068,7 @@ section.blue, section.red {
     }
    
 }
+    
 
 @media (max-width: 420px) {
     .img-slider_qsn {
@@ -1408,12 +1427,13 @@ a:visited {
 footer {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     background-color: #279b8f;
     width: 100%;
     height: auto;
     color: white;
     line-height: 30px;
+    padding: 2rem 0rem;
 }
 
 #pages {
@@ -1855,7 +1875,7 @@ input[type="text"] {
 /* DASHBORD */
 
 #dashbord {
-    background-image: url("../img/back_dashbord.png");
+    background:  #2ec091;;
 }
 
 #centre_graph {
@@ -1913,4 +1933,18 @@ input[type="text"] {
 .fa-id-card-alt:before, .fa-id-card-clip:before {
     content: "\f47f";
     font-size: 40px;
+}
+
+
+
+.background_accueil {
+    background: url('../img/fond_novalink.png') center/cover;
+    height: 100vh;
+}
+.dark .background_accueil {
+    background: url('../img/test_dark_nova_clipped_rev_1.jpeg') center/cover;
+}
+
+.graph_qsn {
+    height: 50vh;
 }
