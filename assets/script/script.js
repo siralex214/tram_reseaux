@@ -106,7 +106,7 @@ let currentSlide = 1;
 
 // Javascript for image slider MANUAL navigation START
 
-let manualNav = function(manual) {
+let manualNav = function (manual) {
     slides.forEach((slide) => {
         slide.classList.remove('test');
 
@@ -134,7 +134,7 @@ let repeat = function(activeClass) {
     let i = 1;
 
     let repeater = () => {
-        setTimeout(function() {
+        setTimeout(function () {
 
             [...active].forEach((activeSlide) => {
                 activeSlide.classList.remove('test');
@@ -143,10 +143,10 @@ let repeat = function(activeClass) {
             btns[i].classList.add('test');
             i++;
 
-            if(slides.length == i) {
+            if (slides.length == i) {
                 i = 0;
             }
-            if(i >= slides.length) {
+            if (i >= slides.length) {
                 return;
             }
             repeater();
@@ -241,7 +241,7 @@ function classToggle() {
 
 // GESTION DES GRAPHS
 
-fetch("http://localhost/htdocs/tram_reseaux/statistiques/stat_protocol.php")
+fetch("../statistiques/stat_protocol.php")
     .then((response) => response.json())
     .then((data) => {
         let keys = [];
@@ -263,16 +263,16 @@ fetch("http://localhost/htdocs/tram_reseaux/statistiques/stat_protocol.php")
                     {
                         data: value,
                         backgroundColor: [
-                            "rgba(255, 99, 132, 0.2)",
-                            "rgba(54, 162, 235, 0.2)",
-                            "rgba(255, 206, 86, 0.2)",
-                            "rgba(75, 192, 192, 0.2)",
+                            " #8FC0A9  ",
+                            " #C8D5B9 ",
+                            " #F2E0A6 ",
+                            " #68B0AB ",
                         ],
                         borderColor: [
-                            "rgba(255, 99, 132, 1)",
-                            "rgba(54, 162, 235, 1)",
-                            "rgba(255, 206, 86, 1)",
-                            "rgba(75, 192, 192, 1)",
+                            " #8FC0A9 ",
+                            " #C8D5B9 ",
+                            " #F2E0A6 ",
+                            " #68B0AB ",
                         ],
                         borderWidth: 1,
                     },
@@ -288,7 +288,7 @@ fetch("http://localhost/htdocs/tram_reseaux/statistiques/stat_protocol.php")
         });
     });
 
-fetch("http://localhost/php/tram_reseaux/statistiques/protocol_check.php")
+fetch("../statistiques/protocol_check.php")
     .then((response) => response.json())
     .then((data) => {
         let keys = [];
@@ -303,18 +303,19 @@ fetch("http://localhost/php/tram_reseaux/statistiques/protocol_check.php")
         }
         const ctx2 = document.getElementById("graph2").getContext("2d");
         const myChart2 = new Chart(ctx2, {
-            type: "polarArea",
+            type: 'bar',
             data: {
                 labels: keys,
                 datasets: [
                     {
                         data: value,
-                        backgroundColor: ["#af52b7a8", "#569b2787"],
-                        borderColor: ["#af52b7a8", "#569b2787"],
+                        backgroundColor: ["#DAD2BC", "#A99985"],
+                        borderColor: ["#DAD2BC", "#A99985"],
                         borderWidth: 1,
                     },
                 ],
             },
+
             options: {
                 scales: {
                     y: {
@@ -324,7 +325,7 @@ fetch("http://localhost/php/tram_reseaux/statistiques/protocol_check.php")
             },
         });
     });
-fetch("http://localhost/php/tram_reseaux/statistiques/protocol_depart.php")
+fetch("../statistiques/protocol_depart.php")
     .then((response) => response.json())
     .then((data) => {
         let keys = [];
@@ -360,7 +361,7 @@ fetch("http://localhost/php/tram_reseaux/statistiques/protocol_depart.php")
             },
         });
     });
-fetch("http://localhost/php/tram_reseaux/statistiques/protocol_arriver.php")
+fetch("../statistiques/protocol_arriver.php")
     .then((response) => response.json())
     .then((data) => {
         let keys = [];
@@ -381,8 +382,8 @@ fetch("http://localhost/php/tram_reseaux/statistiques/protocol_arriver.php")
                 datasets: [
                     {
                         data: value,
-                        backgroundColor: ["red", "green"],
-                        borderColor: ["red", "green"],
+                        backgroundColor: ["#AAB7B8", "#C39BD3", "#F4D03F", "#1ABC9C"],
+                        borderColor: ["#AAB7B8", "#C39BD3", "#F4D03F", "#1ABC9C"],
                         borderWidth: 1,
                     },
                 ],
@@ -468,7 +469,7 @@ if (email_connexion != null && password_connexion != null) {
                         await pause(2000)
                         button.checked = false
                         await pause(1000)
-                        window.location.href = './user/accueil_user.php'
+                        window.location.href = './user/profil_user.php'
                     } else if (data == "false") {
                         error_connexion.style = "color: red"
                         error_connexion.innerHTML = "Mot de passe ou email incorrect"

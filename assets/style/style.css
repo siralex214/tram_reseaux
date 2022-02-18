@@ -74,97 +74,64 @@ ul {
 }
 
 /* HEADER */
-
-#nav {
+#ul_deux{
+    
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 2%;
+    
+}
+header img {
+    margin-left: 20px;
+    padding: 3px;
+}
+header {
     width: 100%;
     height: 70px;
     background-color: #279b8f;
     display: flex;
-    justify-content: center;
-    position: relative;
+    flex-direction: row;
     color: white;
     border: none;
     position: fixed;
+    
 }
-
-#logo {
-    position: absolute;
-    top: 39px;
-    right: -34px;
-}
-
-#accueil {
-    position: absolute;
-    top: -8px;
-    left: 45px;
+.bouton_li_header a {
+    
     color: white;
+    cursor: pointer;
+    font-family: 'Reem Kufi', cursive;
     border: 3px solid white;
     border-radius: 30px;
     padding: 7px 10px 7px 10px;
+    text-decoration: none;
 }
 
-#accueil:hover {
-    position: absolute;
-    top: -8px;
-    left: 45px;
+.bouton_li_header a :hover{
+    
     color: #279b8f;
+    cursor: pointer;
+    font-family: 'Reem Kufi', cursive;
     border: 3px solid #279b8f;
     border-radius: 30px;
     padding: 7px 10px 7px 10px;
+    text-decoration: none;
     background-color: white;
 }
 
-#quisommesnous {
-    position: absolute;
-    top: -7px;
-    left: 181px;
-    color: white;
-    border: 3px solid white;
-    border-radius: 30px;
-    padding: 7px 10px 7px 10px;
+header ul{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: flex-end;
 }
 
-#quisommesnous:hover {
-    position: absolute;
-    top: -7px;
-    left: 181px;
-    color: #279b8f;
-    border: 3px solid #279b8f;
-    border-radius: 30px;
-    padding: 7px 10px 7px 10px;
-    background-color: white;
-}
+header li{
+    width: 30%;
+    list-style: none;
+    /* display: flex; */
 
-#faq {
-    position: absolute;
-    top: -8px;
-    right: 255px;
-    color: white;
-    border: 3px solid white;
-    border-radius: 30px;
-    padding: 7px 10px 7px 10px;
-}
-
-#faq:hover {
-    position: absolute;
-    top: -8px;
-    right: 255px;
-    color: #279b8f;
-    border: 3px solid #279b8f;
-    border-radius: 30px;
-    padding: 7px 10px 7px 10px;
-    background-color: white;
-}
-
-#en_savoir_plus {
-    position: absolute;
-    top: 594px;
-    left: 247px;
-    color: #279b8f;
-    border: 3px solid #279b8f;
-    border-radius: 30px;
-    padding: 7px 10px 7px 10px;
-    font-family: "Reem Kufi", sans-serif;
 }
 
 /* DEUXIEME BLOC ACCUEIL TELEPHONE ET ORDI */
@@ -205,6 +172,7 @@ ul {
 mark {
     color: #ffffff;
     background-color: #14827a;
+    margin-right: 0px;
 }
 
 /* TROISIEME BLOC ACCUEIL TEMOIGNAGES*/
@@ -349,10 +317,13 @@ mark {
 
 #bloc_accueil_texte_quatre h2 {
     float: left;
+    margin-left: 20px;
 }
 
 #bloc_accueil_texte_quatre h3 {
     float: right;
+    margin-right: 20px;
+    
 }
 
 .accueil_texte_quatre {
@@ -384,7 +355,7 @@ mark {
     background-color: #58b8ae;
     border-radius: 0px 0px 20px 20px;
     width: 100%;
-    height: 75%;
+    height: 50%;
     color: white;
     text-align: center;
     font-size: larger;
@@ -405,7 +376,7 @@ mark {
     background-color: rgb(255, 255, 255);
     border-radius: 0px 0px 20px 20px;
     width: 100%;
-    height: 75%;
+    height: 50%;
     border-bottom: 3px solid rgb(0, 0, 0);
     border-right: 3px solid rgb(0, 0, 0);
     border-left: 3px solid rgb(0, 0, 0);
@@ -947,18 +918,17 @@ section.blue, section.red {
 
 
 #button_label {
+    margin-top: -20px;
     opacity: 1;
     color: white;
     cursor: pointer;
     font-family: 'Reem Kufi', cursive;
-    font-size: 24px;
     transition: color 0.5s ease 0.5s, opacity 0.5s ease;
     border: 3px solid white;
     border-radius: 30px;
-    position: absolute;
-    top: 22px;
-    right: 50px;
     padding: 7px 10px 7px 10px;
+    margin-right: 2px;
+    text-decoration: none;
 }
 
 #button {
@@ -1057,6 +1027,7 @@ section.blue, section.red {
 .content h1 {
     margin: 0;
     position: relative;
+    color: black;
 }
 
 /*.content p {*/
@@ -1067,16 +1038,14 @@ section.blue, section.red {
 
 .front {
     z-index: 2;
-    background: #279b8f;
-    background: linear-gradient(223deg, #279b8f 0%, #279b8f 10%, rgba(255, 255, 255, 1) 100%);
+    background: #ffffff;
 }
 
 .back {
     transform: rotateY(180deg);
     z-index: 0;
     padding-top: 10px;
-    background: #279b8f;
-    background: linear-gradient(138deg, #279b8f 0%, #279b8f 10%, rgba(255, 255, 255, 1) 100%);
+    background: #ffffff;
 }
 
 form {
@@ -1189,8 +1158,8 @@ a:visited {
     font-family: "Reem Kufi", sans-serif;
     color: #ffdd19;
     position: absolute;
-    top: 295px;
-    left: 247px;
+    top: 216px;
+    left: 257px;
     word-spacing: 6px;
     letter-spacing: 1px;
 }
@@ -1207,6 +1176,7 @@ a:visited {
 
 #bloc_accueil_texte {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
     height: auto;
@@ -1222,6 +1192,7 @@ a:visited {
     margin: 20px;
     color: rgb(0, 0, 0);
     transition: transform 0.1s;
+    min-width: 300px;
 }
 
 .accueil_texte:hover {
@@ -1266,6 +1237,11 @@ footer {
     height: auto;
     color: white;
     line-height: 30px;
+    padding: 20px;
+}
+
+.footer_case{
+    width: 33%;
 }
 
 #pages {
@@ -1284,10 +1260,19 @@ footer {
     text-align: center;
     font-size: 20px;
     color: rgb(250, 217, 31);
+    justify-content: center;
+}
+
+#bouton_obtenir {
+    border: none;
+    border-radius: 7px;
+    background-color: green;
+    color: white;
+    margin-top: 30px;
 }
 
 ul.forfait {
-    padding: 55px;
+    /* padding: 55px; */
 }
 
 .titre_footer {
@@ -1298,7 +1283,8 @@ ul.forfait {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 25px;
 }
 
@@ -1517,6 +1503,7 @@ input[type="text"] {
     display: flex;
     width: 400px;
     flex-direction: column;
+    margin-top: 25px;
 }
 
 .submit_button {
@@ -1529,7 +1516,10 @@ input[type="text"] {
     font-size: 1.2rem;
     border-radius: 76px;
 }
-
+.fa-close:before, .fa-multiply:before, .fa-remove:before, .fa-times:before, .fa-xmark:before {
+    content: "\f00d";
+    color: #48C9B0;
+}
 .error {
     text-align: center;
     color: red;
@@ -1538,7 +1528,7 @@ input[type="text"] {
 }
 
 .last_button {
-    margin-top: 0;
+    margin-top: 50px;
     width: 100%;
 }
 
@@ -1555,7 +1545,7 @@ input[type="text"] {
     border-radius: 3rem;
     padding: 1rem 1.5rem;
     overflow: hidden;
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 
 
@@ -1647,6 +1637,7 @@ input[type="text"] {
 #content_connexion {
     align-items: center;
     display: flex;
+    margin-top: 50px;
 }
 
 .form_connexion {
@@ -1732,6 +1723,7 @@ input[type="text"] {
     font-size: 50px;
     text-align: center;
     margin-top: 20px;
+    padding-top: 20px;
 }
 
 #place_graph {
@@ -1765,4 +1757,122 @@ input[type="text"] {
 .fa-id-card-alt:before, .fa-id-card-clip:before {
     content: "\f47f";
     font-size: 40px;
+}
+
+/* DASHBORD PROFIL */
+
+#informations_profil{
+    background-color: #d4d4d481;
+    width: 50%;
+    height: 50px;
+    border-radius: 20px;
+}
+
+.dash_logo:hover{
+    background-color: #58B8AE;
+    width: 90%;
+
+/* RESPONSIVE MODAL */
+
+@media screen and (max-width: 1300px) {
+    .accueil_texte:hover {
+        transform: scale(1);
+    }
+
+    #img_connexion {
+        display: none;
+    }
+
+    #content_connexion {
+        justify-content: center;
+    }
+
+    #content_connexion input[type="text"] {
+        text-align: center;
+    }
+
+    .form_connexion {
+        margin-top: 32px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #button:checked ~ .modal {
+        width: 100%;
+    }
+
+    .accueil_texte {
+        min-width: 278px;
+    }
+
+    #bloc_accueil_texte_trois h1 {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #en_savoir_plus {
+        display: none;
+    }
+
+    .animate-text {
+        display: none;
+    }
+
+    .img_head {
+        display: none;
+    }
+
+    #ordi {
+        display: none;
+    }
+
+    #bloc_accueil_texte_deux {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    #telephone {
+        display: none;
+    }
+
+    #bloc_accueil_texte_deux {
+        text-align: center
+    }
+
+    #text_telephone {
+        min-width: 22%;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #bloc_accueil_texte_quatre {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    footer {
+        text-align: center;
+    }
+
+    #pages {
+        padding-left: 0;
+    }
+
+    #bloc_accueil_texte_trois {
+        display: none;
+    }
+}
+}
+
+/* RESPONSIVE NAVBAR */
+@media (max-width: 786px) {
+    
+}
+
+@media (max-width: 786px) {
+    /* MENU BURGER */
 }
