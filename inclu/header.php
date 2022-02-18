@@ -29,7 +29,7 @@
                                     <p class="error" id="erreur_mail_co">&nbsp;</p>
 
                                     <div class="col-3">
-                                        <input id="password_connexion" class="effect-2" type="text" placeholder="Mot de passe">
+                                        <input id="password_connexion" class="effect-2" type="password" placeholder="Mot de passe">
                                         <span class="focus-border" id="focus_connexion_password"></span>
                                     </div>
                                     <p class="error" id="erreur_password_co">&nbsp;</p>
@@ -84,7 +84,7 @@
                                         </div>
                                         <div style="display: flex;flex-direction: column">
                                             <div class="col-3" style="width: 500px; margin: 24px auto 0;">
-                                                <input id="password_inscription" class="effect-2" type="text" placeholder="Mot de passe">
+                                                <input id="password_inscription" class="effect-2" type="password" placeholder="Mot de passe">
                                                 <span class="focus-border" id="focus_password_inscription"></span>
                                             </div>
                                             <span class="error" id="erreur_password_inscription">&nbsp;</span>

@@ -1479,7 +1479,7 @@ label {
 }
 
 /* necessary to give position: relative to parent. */
-input[type="text"] {
+input[type="text"],input[type="password"] {
     font: 25px/24px "Lato", Arial, sans-serif;
     background-color: transparent;
     color: #000;
@@ -1789,7 +1789,7 @@ input[type="text"] {
 .dash_logo:hover{
     background-color: #58B8AE;
     width: 90%;
-
+}
 /* RESPONSIVE MODAL */
 
 @media screen and (max-width: 1300px) {
@@ -1805,7 +1805,7 @@ input[type="text"] {
         justify-content: center;
     }
 
-    #content_connexion input[type="text"] {
+    #content_connexion input[type="text"], #content_connexion input[type="password"] {
         text-align: center;
     }
 
@@ -1884,7 +1884,6 @@ input[type="text"] {
         display: none;
     }
 }
-}
 
 /* RESPONSIVE NAVBAR */
 @media (max-width: 786px) {
@@ -1893,4 +1892,33 @@ input[type="text"] {
 
 @media (max-width: 786px) {
     /* MENU BURGER */
+}
+
+/* RESPONSIVE DASHBORD */
+
+@media (max-width:906px) {
+    #place_graph h1{
+        display: flex;
+        justify-content: center;
+    }
+    .graphique_dash {
+        display: flex;
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+        width: 100%;
+        height: auto;
+        /* margin-bottom: 90px; */
+        justify-content: center;
+}
+#Allchart, #chart2, #chart3, #chart4 {
+    max-width: 100%;
+    display: flex;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    border-radius: 30px;
+    border: none;
+    width: 40%;
+    padding: 20px;
+    justify-content: center;
+    margin: 30px;
+}
 }
