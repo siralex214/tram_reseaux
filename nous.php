@@ -130,7 +130,7 @@ $errors = [];
 
             <div class="img-slider_qsn">
                 <div class="slide_qsn test">
-                    <img src="./assets/img/sunflowers.jpg" alt="">
+                    <img src="./assets/img/graphiques.png" alt="">
                     <div class="info_qsn">
 
 

@@ -21,6 +21,17 @@ $errors = [];
 
 <body>
 
+    <!-- DARK MODE START -->
+    <div class="toggle_qsn">
+        <input type="checkbox" name="" id="dark-mode" class="checkbox_qsn">
+        <label for="dark-mode" class="label_qsn">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <div class="ball_qsn"></div>
+        </label>
+    </div>
+<!-- DARK MODE END -->
+
     <?php include_once "./inclu/header.php" ?>
     <main style="padding-bottom: 300px;">
         <img src="./assets/img/fond_novalink.png" alt="background" width="100%">
@@ -69,7 +80,7 @@ $errors = [];
                 <a href="https://download.fr"><img src="./assets/img/google_app.png" alt="google_play_store" width="50%"></a>
             </div>
             <div id="ordi">
-                <img src="./assets/img/ordi.jpg" alt="ordinateur" height="100%">
+                <img src="./assets/img/ordi.png" alt="ordinateur" height="100%">
             </div>
         </div>
         <div id="bloc_accueil_texte_trois">

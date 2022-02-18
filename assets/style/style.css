@@ -776,6 +776,48 @@ img.fallout, img.fox {
 .dark .ball {
     background: #09ffba;
 }
+.dark .front {
+    background: #030f28 ;
+}
+ .dark .front ::placeholder {
+    color: #A7B1C0;
+}
+.dark .front .submit_button {
+    background: #667EEA ;
+}
+.dark .vers_inscription span {
+    color:  #667EEA !important;
+}
+.dark .dark_home {
+    background: url('../img/fond_novalink_dark.jpeg');
+}
+.dark .accueil_texte, .dark .accueil_texte p {
+    background: #121519;
+    color: #A7B1C0;
+}
+.dark .icon-cards__item {
+    background: #030f28;
+}
+.dark #en_savoir_plus {
+   
+    color:#667EEA ;
+    background: black;
+    border: none;
+}
+
+.dark #Allchart, .dark #chart2, .dark #chart3, .dark #chart4 {
+    background: #030f28 ;
+}
+.dark #place_graph, .dark #centre_graph, .dark #nom_graph {
+    background: black;
+}
+.dark #centre_graph {
+    border-radius: 25px;
+}
+.dark main {
+    background: black;
+}
+
 /* DARK MODE END */
 
 /* CSS CAROUSEL START */

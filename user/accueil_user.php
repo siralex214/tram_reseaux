@@ -25,6 +25,17 @@ require_once '../inclu/function.php';
 
 <body id="dashbord">
 
+   <!-- DARK MODE START -->
+   <div class="toggle_qsn">
+        <input type="checkbox" name="" id="dark-mode" class="checkbox_qsn">
+        <label for="dark-mode" class="label_qsn">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <div class="ball_qsn"></div>
+        </label>
+    </div>
+<!-- DARK MODE END -->
+
 <main>
 
 
