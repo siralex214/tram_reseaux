@@ -42,7 +42,7 @@
                             </div>
 
                             <div class="col-3 last_button">
-                                <div class="vers_inscription">Pas encore inscrit, <span style="color: black; text-decoration: underline;"> N'hésite plus!</span>
+                                <div class="vers_inscription">Pas encore de compte ? <span style="color: #FBA43B; text-decoration: underline;"> Inscrivez-vous</span>
                                 </div>
                             </div>
                             </form>
@@ -102,7 +102,7 @@
                                     </div>
                                 </form>
                                 <br>
-                                <div class="vers_inscription">Ta déjà un compte? <span style="color: red">Connecte toi!</span>
+                                <div class="vers_inscription">Vous avez déjà un compte? <span style="color: #FBA43B; text-decoration: underline;">Connectez-vous</span>
                                 </div>
                             </div>
                         </div>

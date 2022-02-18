@@ -1510,6 +1510,7 @@ input[type="text"] {
     display: flex;
     width: 400px;
     flex-direction: column;
+    margin-top: 25px;
 }
 
 .submit_button {
@@ -1522,7 +1523,10 @@ input[type="text"] {
     font-size: 1.2rem;
     border-radius: 76px;
 }
-
+.fa-close:before, .fa-multiply:before, .fa-remove:before, .fa-times:before, .fa-xmark:before {
+    content: "\f00d";
+    color: #48C9B0;
+}
 .error {
     text-align: center;
     color: red;

@@ -30,9 +30,9 @@ $errors = [];
     <h1 class="animate-text"> LES SPECIALISTES DE L'ANALYSE RESEAU SUR LE WEB</h1>
 
 
-    <a href="#bloc_accueil_texte">
+    <!-- <a href="#bloc_accueil_texte">
         <h2 id="en_savoir_plus" class="button">En savoir plus</h2>
-    </a>
+    </a> -->
 
     <h1 id="titre_bloc_accueil_texte"> POURQUOI UTILISER NOVALINK ?</h1>
     <div id="bloc_accueil_texte">
