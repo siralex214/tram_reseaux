@@ -241,7 +241,7 @@ function classToggle() {
 
 // GESTION DES GRAPHS
 
-fetch("http://localhost/php/tram_reseaux/statistiques/stat_protocol.php")
+fetch("../statistiques/stat_protocol.php")
     .then((response) => response.json())
     .then((data) => {
         let keys = [];
@@ -288,7 +288,7 @@ fetch("http://localhost/php/tram_reseaux/statistiques/stat_protocol.php")
         });
     });
 
-fetch("http://localhost/php/tram_reseaux/statistiques/protocol_check.php")
+fetch("../statistiques/protocol_check.php")
     .then((response) => response.json())
     .then((data) => {
         let keys = [];
@@ -325,7 +325,7 @@ fetch("http://localhost/php/tram_reseaux/statistiques/protocol_check.php")
             },
         });
     });
-fetch("http://localhost/php/tram_reseaux/statistiques/protocol_depart.php")
+fetch("../statistiques/protocol_depart.php")
     .then((response) => response.json())
     .then((data) => {
         let keys = [];
@@ -361,7 +361,7 @@ fetch("http://localhost/php/tram_reseaux/statistiques/protocol_depart.php")
             },
         });
     });
-fetch("http://localhost/php/tram_reseaux/statistiques/protocol_arriver.php")
+fetch("../statistiques/protocol_arriver.php")
     .then((response) => response.json())
     .then((data) => {
         let keys = [];
@@ -457,7 +457,7 @@ if (email_connexion != null && password_connexion != null) {
             formData.append("email", email_connexion.value)
             formData.append("password", password_connexion.value)
             formData.append("type", submit_connexion.value)
-            fetch("http://localhost/php/tram_reseaux/login/login.php", {
+            fetch("../../login/login.php", {
                 method: "POST",
                 body: formData
             })
@@ -469,7 +469,7 @@ if (email_connexion != null && password_connexion != null) {
                         await pause(2000)
                         button.checked = false
                         await pause(1000)
-                        window.location.href = './user/accueil_user.php'
+                        window.location.href = './user/profil_user.php'
                     } else if (data == "false") {
                         error_connexion.style = "color: red"
                         error_connexion.innerHTML = "Mot de passe ou email incorrect"
@@ -600,7 +600,7 @@ if (submit_inscription != null) {
             formData1.append("password", password_inscription.value)
             formData1.append("type", submit_inscription.value)
             formData1.append("cgu", cgu_inscription.checked)
-            fetch("http://localhost/php/tram_reseaux/login/login.php", {
+            fetch("../../login/login.php", {
                 method: "POST",
                 body: formData1
             })

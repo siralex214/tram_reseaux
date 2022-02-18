@@ -2,9 +2,8 @@
 require_once '../inclu/function.php';
 require_once '../inclu/pdo.php';
 require_once '../inclu/pdo.php';
-
-if (isset($_GET['id']) and $_GET['id'] > 0) {
-    $getid = intval(($_GET['id']));
+if (isset($_SESSION['id'])) {
+    $getid = ($_SESSION['id']);
     $requser = $pdo->prepare('SELECT * FROM users WHERE id=?');
     $requser->execute(array($getid));
     $user = $requser->fetch();
