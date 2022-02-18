@@ -112,7 +112,7 @@
         </div>
 
     </ul>
-
+    <i id="burger_menu" class="fas fa-bars"></i>
 
 
 </header>

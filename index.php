@@ -40,7 +40,6 @@ $errors = [];
     <?php include_once "./inclu/header.php" ?>
     <main class="main_accueil">
     <div class="background_accueil"></div>
-        
 
 
     <!-- <a href="#bloc_accueil_texte">
