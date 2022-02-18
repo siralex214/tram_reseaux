@@ -25,8 +25,6 @@ $errors = [];
 <body>
 
 <?php include_once "./inclu/header.php" ?>
-<main style="padding-bottom: 300px;">
-    <img class="img_head" src="./assets/img/fond_novalink.png" alt="background" width="100%">
     <h1 class="animate-text"> LES SPECIALISTES DE L'ANALYSE RESEAU SUR LE WEB</h1>
     <!-- DARK MODE START -->
     <div class="toggle_qsn">
@@ -40,8 +38,9 @@ $errors = [];
 <!-- DARK MODE END -->
 
     <?php include_once "./inclu/header.php" ?>
-    <main style="padding-bottom: 300px;">
-        <img src="./assets/img/fond_novalink.png" alt="background" width="100%">
+    <main class="main_accueil">
+    <div class="background_accueil"></div>
+        
 
 
     <!-- <a href="#bloc_accueil_texte">
@@ -84,30 +83,19 @@ $errors = [];
 
         </div>
 
-    </div>
-
-    <div id="bloc_accueil_texte_deux">
-        <div id="telephone">
-            <img src="./assets/img/iphone.png" alt="iphone6" height="100%">
-        </div>
-        <div id="text_telephone">
-            <h3>
-                <mark> TRAVAILLER OU</mark>
-            </h3>
-            <h3>
-                <mark> ON VEUT</mark>
-            </h3>
-            <h3>
-                <mark> D'OU L'ON VEUT</mark>
-            </h3>
-            <p>Notre équipe utilise un pool de technos pour répondre au plus près de vos besoins. Le site est adaptée
-                sur MAC, Windows, Smartphones, Tablettes & autres outils numériques pour un confort d'utilisation
-                optimal. Une application dédiée est disponible dès maintenant.</p>
-            <a href="https://download.fr"><img src="./assets/img/google_app.png" alt="google_play_store"
-                                               width="50%"></a>
-        </div>
-        <div id="ordi">
-            <img id="img_ordinateur" src="./assets/img/ordi.png" alt="ordinateur" height="100%">
+        <div id="bloc_accueil_texte_deux">
+            <div id="telephone">
+                <img src="./assets/img/iphone_png.png" alt="iphone6" height="100%">
+            </div>
+            <div id="text_telephone">
+                <h3> <mark> TRAVAILLER OU ON VEUT </mark> </h3>
+                <h3> <mark> D'OU L'ON VEUT </mark></h3>
+                <p>Notre équipe utilise un pool de technos pour répondre au plus près de vos besoins. Le site est adaptée sur MAC, Windows, Smartphones, Tablettes & autres outils numériques pour un confort d'utilisation optimal. Une application dédiée est disponible dès maintenant.</p>
+                <a href="https://download.fr"><img src="./assets/img/google_app-removebg-preview.png" alt="google_play_store" width="50%"></a>
+            </div>
+            <div id="ordi">
+                <img src="./assets/img/ordi_png.png" alt="ordinateur" height="100%">
+            </div>
         </div>
     </div>
     <div id="bloc_accueil_texte_trois">
@@ -123,6 +111,14 @@ $errors = [];
                 <div class="icon-cards__item d-flex align-items-center justify-content-center"><span class="h1">
                             <h5>Christophe CARON</h5> LE TOP POUR TRAVAILLER A DISTANCE <br> ⭐⭐⭐⭐⭐ <br> <br> Avec le covid, c'était beaucoup trop compliqué pour moi de gérer. heureusement il y a même une interface mobile lié. C'est vraiment génial. 🔌
                         </span></div>
+                </div>
+            </figure>
+        </div>
+
+       <!--  <div id="bloc_accueil_texte_quatre">
+            <div class="accueil_texte_quatre" id="text_left">
+                <h1>Des forfaits <br> pour chaque <br> besoin</h1>
+
             </div>
         </figure>
     </div>
@@ -157,6 +153,7 @@ $errors = [];
             </div>
             <div id="card_accueil_right">
                 <h4>Inclus:</h4>
+        </div> 
 
                 <ul>
                     <li>✅ Affichage des LOGS</li>
@@ -167,7 +164,7 @@ $errors = [];
                 <a href="">
                     <button id="bouton_obtenir">OBTENIR</button>
                 </a>
-            </div>
+            </div>-->
         </div>
     </div>
 </main>

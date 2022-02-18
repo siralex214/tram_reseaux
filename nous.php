@@ -19,7 +19,7 @@ $errors = [];
     <title>NovaLink | Qui sommes-nous ? </title>
 </head>
 
-<body>
+<body class="body_qsn">
 <?php include_once "./inclu/header.php" ?>
 
 
@@ -130,45 +130,41 @@ $errors = [];
 
             <div class="img-slider_qsn">
                 <div class="slide_qsn test">
-                    <img src="./assets/img/graphiques.png" alt="">
+                    <img src="./assets/img/graphiques.png" alt="" class="graph_qsn">
                     <div class="info_qsn">
 
 
                     </div>
                 </div>
                 <div class="slide_qsn">
-                    <img src="./assets/img/natur.jpg" alt="">
+                    <img src="./assets/img/graph1.png" alt="" class="graph_qsn">
                     <div class="info_qsn">
 
 
                     </div>
                 </div>
                 <div class="slide_qsn">
-                    <img src="./assets/img/christmas.jpg" alt="">
+                    <img src="./assets/img/graph2.png" alt="" class="graph_qsn">
                     <div class="info_qsn">
 
 
                     </div>
                 </div>
                 <div class="slide_qsn">
-                    <img src="./assets/img/mountains.jpg" alt="">
+                    <img src="./assets/img/graph3.png" alt="" class="graph_qsn">
                     <div class="info_qsn">
 
 
                     </div>
                 </div>
 
-                <div class="slide_qsn">
-                    <img src="./assets/img/tree.jpg" alt="">
-                    <div class="info_qsn">
-                    </div>
-                </div>
+                
                 <div class="navigation_qsn">
                     <div class="btn_qsn test"></div>
                     <div class="btn_qsn"></div>
                     <div class="btn_qsn"></div>
                     <div class="btn_qsn"></div>
-                    <div class="btn_qsn"></div>
+                   
                 </div>
             </div>
 

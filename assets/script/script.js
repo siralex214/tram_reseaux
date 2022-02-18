@@ -150,7 +150,7 @@ let repeat = function(activeClass) {
                 return;
             }
             repeater();
-        }, 6000);
+        }, 3000);
     }
     repeater();
 }
