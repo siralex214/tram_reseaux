@@ -1653,7 +1653,7 @@ label {
 }
 
 /* necessary to give position: relative to parent. */
-input[type="text"] {
+input[type="text"],input[type="password"] {
     font: 25px/24px "Lato", Arial, sans-serif;
     background-color: transparent;
     color: #000;
