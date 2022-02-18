@@ -33,8 +33,9 @@ $errors = [];
 <!-- DARK MODE END -->
 
     <?php include_once "./inclu/header.php" ?>
-    <main style="padding-bottom: 300px;">
-        <img src="./assets/img/fond_novalink.png" alt="background" width="100%">
+    <main class="main_accueil">
+    <div class="background_accueil"></div>
+        
 
         <h1 class="animate-text"> LES SPECIALISTES DE L'ANALYSE RESEAU SUR LE WEB</h1>
 
@@ -71,7 +72,7 @@ $errors = [];
 
         <div id="bloc_accueil_texte_deux">
             <div id="telephone">
-                <img src="./assets/img/iphone.png" alt="iphone6" height="100%">
+                <img src="./assets/img/iphone_png.png" alt="iphone6" height="100%">
             </div>
             <div id="text_telephone">
                 <h3> <mark> TRAVAILLER OU ON VEUT </mark> </h3>
@@ -80,7 +81,7 @@ $errors = [];
                 <a href="https://download.fr"><img src="./assets/img/google_app.png" alt="google_play_store" width="50%"></a>
             </div>
             <div id="ordi">
-                <img src="./assets/img/ordi.png" alt="ordinateur" height="100%">
+                <img src="./assets/img/ordi_png.png" alt="ordinateur" height="100%">
             </div>
         </div>
         <div id="bloc_accueil_texte_trois">
@@ -100,7 +101,7 @@ $errors = [];
             </figure>
         </div>
 
-        <div id="bloc_accueil_texte_quatre">
+       <!--  <div id="bloc_accueil_texte_quatre">
             <div class="accueil_texte_quatre" id="text_left">
                 <h1>Des forfaits <br> pour chaque <br> besoin</h1>
 
@@ -138,7 +139,7 @@ $errors = [];
                     <a href=""><button>OBTENIR</button></a>
                 </div>
             </div>
-        </div>
+        </div> -->
     </main>
 
     <?php include_once "./inclu/footer.php" ?>
