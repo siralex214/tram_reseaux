@@ -475,6 +475,7 @@ img.img_qsn {
 }
 
 .h1-qsn {
+    position: relative;
     width: 500px;
     display: flex;
     color: white;
@@ -482,7 +483,8 @@ img.img_qsn {
     background: #8DA9E0;
     margin: 0 auto;
     padding: 1rem;
-    margin-bottom: 2rem;
+    top: 38px;
+    margin-bottom: 3rem;
     justify-content: center;
     border-top: 1rem solid #5775A8;
 
@@ -964,7 +966,15 @@ section.blue, section.red {
         right: 0rem;
         
     }
-   
+
+    body {
+        background: #121519;
+    }
+    #nav{
+        display: none;
+    }
+
+
 }
 
 @media (max-width: 325px) { /*GALAXY FOLD*/
@@ -999,8 +1009,7 @@ section.blue, section.red {
     }
     
 .toggle_qsn {
-    right: 0rem;
-    top: 9rem;
+   display: none;
 }
 }
 
@@ -1056,19 +1065,9 @@ section.blue, section.red {
         height: 8px;
         margin: 6px;
     }
-    .graph_qsn {
-        height: 28vh !important;
-    }
-    header , footer {
-        display: none;
-    }
-    ul#developpeurs {
-        display: none;
-    }
-    body.body_qsn.dark {
-background: #121519 !important;
+   
 }
-   } 
+    
 
 @media (max-width: 420px) {
     .img-slider_qsn {

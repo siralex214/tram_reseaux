@@ -245,7 +245,7 @@ $errors = [];
     </section>
     </section>
 </main>
-<?php include_once "./inclu/footer.php" ?>
+
 </body>
 
 </html>
