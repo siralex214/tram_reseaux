@@ -74,13 +74,22 @@ ul {
 }
 
 /* HEADER */
+#ul_deux{
+    margin-right: 20px;
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 2%;
+    
+}
 header img {
-     
+    margin-left: 20px;
+    padding: 3px;
 }
 header {
     width: 100%;
     height: 70px;
-    background-color: #5b3edf;
+    background-color: #279b8f;
     display: flex;
     flex-direction: row;
     color: white;
@@ -88,18 +97,41 @@ header {
     position: fixed;
     
 }
+.bouton_li_header a {
+    
+    color: white;
+    cursor: pointer;
+    font-family: 'Reem Kufi', cursive;
+    border: 3px solid white;
+    border-radius: 30px;
+    padding: 7px 10px 7px 10px;
+    text-decoration: none;
+}
+
+.bouton_li_header a :hover{
+    
+    color: #279b8f;
+    cursor: pointer;
+    font-family: 'Reem Kufi', cursive;
+    border: 3px solid #279b8f;
+    border-radius: 30px;
+    padding: 7px 10px 7px 10px;
+    text-decoration: none;
+    background-color: white;
+}
+
 header ul{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
-
+    width: 50%;
+    justify-content: flex-end;
 }
+
 header li{
-    margin-left: 20%;
-    width: 33%;
+    width: 30%;
     list-style: none;
-    display: flex;
+    /* display: flex; */
+    
 
 }
 
@@ -1010,6 +1042,7 @@ section.red {
 .content h1 {
     margin: 0;
     position: relative;
+    color: black;
 }
 
 /*.content p {*/
@@ -1020,16 +1053,14 @@ section.red {
 
 .front {
     z-index: 2;
-    background: #279b8f;
-    background: linear-gradient(223deg, #279b8f 0%, #279b8f 10%, rgba(255, 255, 255, 1) 100%);
+    background: #ffffff;
 }
 
 .back {
     transform: rotateY(180deg);
     z-index: 0;
     padding-top: 10px;
-    background: #279b8f;
-    background: linear-gradient(138deg, #279b8f 0%, #279b8f 10%, rgba(255, 255, 255, 1) 100%);
+    background: #ffffff;
 }
 
 form {
@@ -1500,7 +1531,7 @@ input[type="text"] {
 }
 
 .last_button {
-    margin-top: 0;
+    margin-top: 50px;
     width: 100%;
 }
 
@@ -1517,7 +1548,7 @@ input[type="text"] {
     border-radius: 3rem;
     padding: 1rem 1.5rem;
     overflow: hidden;
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 
 
@@ -1609,6 +1640,7 @@ input[type="text"] {
 #content_connexion {
     align-items: center;
     display: flex;
+    margin-top: 50px;
 }
 
 .form_connexion {

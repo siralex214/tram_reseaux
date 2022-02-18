@@ -1,10 +1,11 @@
 <header>
+    
+    <ul id="ul_deux">
+        <li class="bouton_li_header"><a href="./index.php">Accueil</a></li>
+        <li class="bouton_li_header"><a href="./nous.php">Qui sommes-nous ?</a></li>
+    </ul>
     <img src="./assets/img/logo_novalink.png" alt="logo">
     <ul>
-
-
-        <li><a href="./index.php">Accueil</li>
-        <li><a href="./nous.php">Qui sommes-nous ?</a></li>
         <input id="button" type='checkbox'>
         <li><label for="switch" class="button" id="button_label">SE CONNECTER</label></li>
 
@@ -16,7 +17,7 @@
                         <div class="content">
                             <h1>Connexion</h1>
                             <div id="content_connexion">
-                                <img id="img_connexion" src="../assets/img/lock_novalink.png" alt="img_connexion">
+                                <img id="img_connexion" src="./assets/img/lock_novalink.png" alt="img_connexion">
 
                                 <form class="form_connexion" action="" method="POST">
 
@@ -111,7 +112,7 @@
         </div>
 
     </ul>
-    
+
 
 
 </header>

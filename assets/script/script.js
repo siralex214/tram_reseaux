@@ -457,7 +457,7 @@ if (email_connexion != null && password_connexion != null) {
             formData.append("email", email_connexion.value)
             formData.append("password", password_connexion.value)
             formData.append("type", submit_connexion.value)
-            fetch("../../login/login.php", {
+            fetch("http://localhost/php/tram_reseaux/login/login.php", {
                 method: "POST",
                 body: formData
             })
@@ -600,7 +600,7 @@ if (submit_inscription != null) {
             formData1.append("password", password_inscription.value)
             formData1.append("type", submit_inscription.value)
             formData1.append("cgu", cgu_inscription.checked)
-            fetch("../../login/login.php", {
+            fetch("http://localhost/php/tram_reseaux/login/login.php", {
                 method: "POST",
                 body: formData1
             })
